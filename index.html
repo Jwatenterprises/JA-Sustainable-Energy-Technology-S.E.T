@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>S.E.T. INC — Stop Renting Power from JPS. Own Your Energy Security.</title>
+<meta name="description" content="S.E.T. INC delivers energy independence, financial protection, and reliable backup power for Jamaican homes and businesses. Rooftop solar, hybrid battery, and plug-and-play solar generators — backed by transparent ROI math in JMD." />
+<meta name="theme-color" content="#2D7A3E" />
+<style>
+  :root {
+    --green:#2D7A3E;
+    --green-deep:#1F5A2C;
+    --blue:#1E5F8B;
+    --blue-deep:#143F5C;
+    --sun:#F39C12;
+    --sun-deep:#D97E10;
+    --earth:#C0392B;
+    --cream:#FBF7EE;
+    --ink:#1B2A2F;
+    --ink-soft:#41525A;
+    --muted:#6C7A82;
+    --line:#E4DFD0;
+    --card:#FFFFFF;
+    --shadow:0 8px 24px rgba(20,40,30,.08);
+    --shadow-lg:0 16px 48px rgba(20,40,30,.14);
+    --radius:14px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .container{max-width:1180px;margin:0 auto;padding:0 24px}
+  .btn{display:inline-block;padding:14px 26px;border-radius:999px;font-weight:700;font-size:15px;letter-spacing:.2px;transition:transform .15s ease, box-shadow .15s ease, background .15s ease;border:none;cursor:pointer;text-align:center}
+  .btn-primary{background:var(--sun);color:#fff;box-shadow:0 6px 20px rgba(243,156,18,.35)}
+  .btn-primary:hover{background:var(--sun-deep);text-decoration:none;transform:translateY(-1px)}
+  .btn-ghost{background:transparent;color:var(--green-deep);border:2px solid var(--green);padding:12px 24px}
+  .btn-ghost:hover{background:var(--green);color:#fff;text-decoration:none}
+  .btn-dark{background:var(--green);color:#fff;box-shadow:0 6px 18px rgba(45,122,62,.3)}
+  .btn-dark:hover{background:var(--green-deep);text-decoration:none;transform:translateY(-1px)}
+  .btn-light{background:#fff;color:var(--green-deep);box-shadow:0 6px 18px rgba(0,0,0,.1)}
+  .btn-light:hover{background:var(--cream);text-decoration:none;transform:translateY(-1px)}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(251,247,238,.94);backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;position:relative}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand img{height:54px;width:auto;display:block}
+  .brand .word{display:flex;flex-direction:column;line-height:1.05}
+  .brand .word .top{font-size:14px;font-weight:800;color:var(--green-deep);letter-spacing:.5px}
+  .brand .word .bot{font-size:11px;font-weight:700;color:var(--blue-deep);letter-spacing:1.2px}
+  nav.menu{display:flex;gap:22px;align-items:center}
+  nav.menu a{color:var(--ink-soft);font-weight:600;font-size:14.5px}
+  nav.menu a:hover{color:var(--green-deep);text-decoration:none}
+  .menu .cta{margin-left:8px}
+  .hamburger{display:none;background:none;border:none;font-size:24px;cursor:pointer;color:var(--green-deep)}
+
+  /* Hero */
+  .hero{position:relative;padding:90px 0 80px;background:radial-gradient(900px 500px at 85% 10%, rgba(243,156,18,.18), transparent 60%),radial-gradient(700px 500px at 10% 90%, rgba(45,122,62,.12), transparent 60%),var(--cream);overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+  .eyebrow{display:inline-block;padding:6px 14px;border-radius:999px;background:rgba(45,122,62,.12);color:var(--green-deep);font-weight:700;font-size:12.5px;letter-spacing:.8px;text-transform:uppercase;margin-bottom:18px}
+  h1{font-size:54px;line-height:1.05;margin:0 0 18px;font-weight:800;letter-spacing:-.5px;color:var(--ink)}
+  h1 .accent{color:var(--green-deep);position:relative}
+  h1 .accent:after{content:"";position:absolute;left:0;right:0;bottom:4px;height:10px;background:rgba(243,156,18,.35);z-index:-1;border-radius:6px}
+  .lede{font-size:19px;color:var(--ink-soft);margin:0 0 28px;max-width:580px}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-art{position:relative;aspect-ratio:4/3;background:linear-gradient(135deg,#fff 0%,#F4EFDC 100%);border-radius:var(--radius);box-shadow:var(--shadow-lg);display:grid;place-items:center;padding:24px;border:1px solid var(--line)}
+  .hero-art img{width:80%;height:auto;filter:drop-shadow(0 12px 24px rgba(20,40,30,.18))}
+
+  /* Trust strip */
+  .trust{background:var(--green-deep);color:#fff}
+  .trust-row{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+  .trust-cell{padding:22px 18px;text-align:center;border-right:1px solid rgba(255,255,255,.12);font-size:15px;font-weight:600}
+  .trust-cell:last-child{border-right:none}
+  .trust-cell .icn{font-size:22px;display:block;margin-bottom:6px;color:var(--sun)}
+
+  /* Sections */
+  section{padding:84px 0}
+  .section-head{text-align:center;max-width:760px;margin:0 auto 48px}
+  .section-eyebrow{display:inline-block;padding:5px 12px;border-radius:999px;background:rgba(30,95,139,.1);color:var(--blue-deep);font-weight:700;font-size:12px;letter-spacing:.8px;text-transform:uppercase;margin-bottom:14px}
+  h2{font-size:38px;line-height:1.12;margin:0 0 14px;font-weight:800;letter-spacing:-.3px;color:var(--ink)}
+  h3{font-size:22px;margin:0 0 10px;font-weight:700;color:var(--ink)}
+  .section-lede{font-size:17px;color:var(--ink-soft);margin:0}
+
+  /* Philosophy pillars */
+  .pillars{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .pillar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .pillar{background:linear-gradient(180deg,#fff 0%,var(--cream) 100%);border:1px solid var(--line);border-radius:var(--radius);padding:28px;text-align:left;transition:transform .15s ease, box-shadow .15s ease}
+  .pillar:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+  .pillar .emoji{font-size:36px;line-height:1;margin-bottom:12px}
+  .pillar h3{margin-bottom:8px;font-size:19px}
+  .pillar p{color:var(--ink-soft);margin:0;font-size:15px}
+
+  /* Solutions Portfolio */
+  .solutions{background:var(--cream)}
+  .solutions-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+  .sol-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:32px;box-shadow:var(--shadow);display:flex;flex-direction:column;position:relative;overflow:hidden}
+  .sol-card.rooftop:before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--green) 0%, var(--blue) 100%)}
+  .sol-card.portable:before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--sun) 0%, var(--earth) 100%)}
+  .sol-tag{display:inline-block;padding:5px 12px;border-radius:999px;font-size:11.5px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;margin-bottom:14px}
+  .sol-tag.r{background:rgba(45,122,62,.12);color:var(--green-deep)}
+  .sol-tag.p{background:rgba(243,156,18,.18);color:var(--sun-deep)}
+  .sol-card h3{font-size:24px;margin-bottom:8px}
+  .sol-target{font-size:14px;color:var(--blue-deep);font-weight:700;margin-bottom:14px}
+  .sol-features{list-style:none;padding:0;margin:0 0 18px}
+  .sol-features li{padding:8px 0;border-top:1px solid var(--line);font-size:15px;color:var(--ink-soft);display:flex;gap:10px;align-items:flex-start}
+  .sol-features li:first-child{border-top:none}
+  .sol-features li:before{content:"✓";color:var(--green);font-weight:800;flex-shrink:0}
+  .sol-pitch{background:var(--cream);border-radius:10px;padding:14px 16px;font-style:italic;color:var(--ink);margin-bottom:18px;font-size:15px;border-left:3px solid var(--green)}
+  .sol-card .btn{align-self:flex-start;margin-top:auto}
+
+  /* Calculator (dual) */
+  .calc{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .calc-tabs{display:flex;gap:8px;justify-content:center;margin-bottom:32px;flex-wrap:wrap}
+  .calc-tab{padding:12px 24px;border-radius:999px;border:2px solid var(--line);background:#fff;color:var(--ink-soft);font-weight:700;font-size:14.5px;cursor:pointer;transition:all .15s ease}
+  .calc-tab.active{background:var(--green-deep);color:#fff;border-color:var(--green-deep)}
+  .calc-tab:hover:not(.active){border-color:var(--green);color:var(--green-deep)}
+  .calc-shell{display:grid;grid-template-columns:1.05fr 1fr;gap:36px;align-items:start;background:linear-gradient(135deg,#F8F5E9 0%,#FFFFFF 100%);border:1px solid var(--line);border-radius:18px;padding:36px;box-shadow:var(--shadow)}
+  .calc-pane{display:none}
+  .calc-pane.active{display:grid;grid-template-columns:1.05fr 1fr;gap:36px;align-items:start}
+  .calc-controls h3{margin-bottom:6px}
+  .calc-sub{color:var(--ink-soft);margin:0 0 22px;font-size:15px}
+  .field{margin-bottom:18px}
+  .field label{display:block;font-size:13px;font-weight:700;color:var(--ink-soft);margin-bottom:8px;letter-spacing:.3px;text-transform:uppercase}
+  .field input[type="text"], .field input[type="number"], .field select{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:15px;font-family:inherit;background:#fff;color:var(--ink)}
+  .field input:focus, .field select:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(45,122,62,.15)}
+  .radio-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+  .radio-grid input[type="radio"]{display:none}
+  .radio-grid label{display:flex;flex-direction:column;justify-content:center;padding:14px;border:2px solid var(--line);border-radius:12px;cursor:pointer;background:#fff;transition:all .15s ease;text-transform:none;letter-spacing:0;font-weight:600;color:var(--ink);font-size:14px;margin:0}
+  .radio-grid label small{display:block;font-weight:500;color:var(--muted);font-size:12px;margin-top:2px}
+  .radio-grid input[type="radio"]:checked + label{border-color:var(--green);background:rgba(45,122,62,.06);box-shadow:0 4px 12px rgba(45,122,62,.18)}
+  .calc-output{background:linear-gradient(160deg, var(--green-deep) 0%, var(--blue-deep) 100%);color:#fff;border-radius:14px;padding:28px;position:sticky;top:90px}
+  .calc-output.alt{background:linear-gradient(160deg, var(--sun-deep) 0%, var(--earth) 100%)}
+  .calc-output .title{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;opacity:.8;margin-bottom:8px}
+  .calc-output .system-name{font-size:22px;font-weight:800;margin:0 0 18px}
+  .result-row{display:flex;justify-content:space-between;padding:14px 0;border-top:1px solid rgba(255,255,255,.14);gap:12px}
+  .result-row:first-of-type{border-top:none}
+  .result-row .k{font-size:13.5px;opacity:.9}
+  .result-row .v{font-size:18px;font-weight:800;text-align:right}
+  .result-row.big .v{font-size:24px;color:var(--sun)}
+  .calc-output.alt .result-row.big .v{color:#fff}
+  .calc-foot{font-size:11.5px;opacity:.75;margin-top:18px;line-height:1.5}
+
+  /* Financial Advantage */
+  .advantage{background:linear-gradient(180deg, var(--cream) 0%, #F2EFE0 100%)}
+  .adv-banner{background:linear-gradient(135deg,var(--green-deep) 0%,var(--blue-deep) 100%);color:#fff;border-radius:18px;padding:48px;text-align:center;margin-bottom:40px;box-shadow:var(--shadow-lg)}
+  .adv-banner h2{color:#fff;font-size:42px;margin:0 0 6px}
+  .adv-banner p{color:rgba(255,255,255,.85);font-size:17px;margin:0;max-width:640px;margin:0 auto}
+  .adv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .adv-card{background:#fff;border-radius:var(--radius);padding:28px;border:1px solid var(--line);box-shadow:var(--shadow)}
+  .adv-card .icon{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;font-size:22px;background:rgba(45,122,62,.12);color:var(--green-deep);margin-bottom:14px;font-weight:800}
+  .adv-card.alt .icon{background:rgba(30,95,139,.12);color:var(--blue-deep)}
+  .adv-card.alt2 .icon{background:rgba(243,156,18,.18);color:var(--sun-deep)}
+  .adv-card p{color:var(--ink-soft);margin:0}
+
+  /* Projection table */
+  .table-wrap{overflow-x:auto;border-radius:14px;box-shadow:var(--shadow);background:#fff;margin-top:32px}
+  table.proj{width:100%;border-collapse:collapse;font-size:15px}
+  table.proj thead{background:var(--green-deep);color:#fff}
+  table.proj th{padding:16px 18px;text-align:left;font-weight:700;font-size:13.5px;letter-spacing:.4px;text-transform:uppercase}
+  table.proj td{padding:16px 18px;border-bottom:1px solid var(--line);color:var(--ink-soft)}
+  table.proj tr:last-child td{border-bottom:none}
+  table.proj tbody tr:nth-child(even){background:#FAF7EC}
+  table.proj td:first-child{font-weight:700;color:var(--ink)}
+  table.proj .pay{color:var(--green-deep);font-weight:700}
+  table.proj .gain{color:var(--sun-deep);font-weight:700}
+
+  /* Parish coverage */
+  .parish{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .parish-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .parish-card{background:linear-gradient(180deg,#fff 0%,var(--cream) 100%);border:1px solid var(--line);border-radius:18px;padding:28px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+  .parish-card .badge{position:absolute;top:18px;right:18px;background:rgba(45,122,62,.12);color:var(--green-deep);padding:5px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase}
+  .parish-card .loc{font-size:13.5px;color:var(--blue-deep);font-weight:700;letter-spacing:.5px;text-transform:uppercase;margin-bottom:6px}
+  .parish-card h3{font-size:21px;line-height:1.25;margin-bottom:14px}
+  .parish-card .metric{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:14px}
+  .parish-card .metric .v{font-size:24px;font-weight:800;color:var(--green-deep)}
+  .parish-card .metric .v.alt{color:var(--sun-deep)}
+  .parish-card .metric .l{font-size:12.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
+  .parish-card p{color:var(--ink-soft);margin:0;font-size:14.5px}
+  .parish-disclaimer{text-align:center;font-size:12.5px;color:var(--muted);margin-top:22px;max-width:760px;margin-left:auto;margin-right:auto}
+
+  /* CTA band */
+  .ctaband{background:linear-gradient(135deg, var(--green) 0%, var(--blue) 100%);color:#fff;padding:64px 0;text-align:center}
+  .ctaband h2{color:#fff;margin-bottom:8px}
+  .ctaband p{color:rgba(255,255,255,.88);max-width:620px;margin:0 auto 24px;font-size:17px}
+  .ctaband .btn-primary{background:#fff;color:var(--green-deep);box-shadow:0 8px 24px rgba(0,0,0,.18)}
+  .ctaband .btn-primary:hover{background:var(--cream)}
+
+  /* About */
+  .about{background:var(--cream)}
+  .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+  .about-points{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:14px}
+  .about-points li{display:flex;gap:12px;align-items:flex-start;font-size:16px;color:var(--ink-soft)}
+  .about-points li .dot{flex-shrink:0;width:24px;height:24px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:800;font-size:13px}
+  .about-art{background:linear-gradient(135deg,#fff 0%,#F4EFDC 100%);border-radius:18px;padding:32px;box-shadow:var(--shadow-lg);display:grid;place-items:center;border:1px solid var(--line)}
+  .about-art img{width:90%;height:auto}
+
+  /* Contact */
+  .contact{background:#fff;border-top:1px solid var(--line)}
+  .contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:36px;align-items:start}
+  .contact-info{background:linear-gradient(160deg,var(--green-deep) 0%, var(--blue-deep) 100%);color:#fff;border-radius:14px;padding:32px;box-shadow:var(--shadow)}
+  .contact-info h3{color:#fff;margin-bottom:18px}
+  .info-row{display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-top:1px solid rgba(255,255,255,.15)}
+  .info-row:first-of-type{border-top:none;padding-top:0}
+  .info-row .icn{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.12);color:var(--sun);display:grid;place-items:center;flex-shrink:0;font-weight:800;font-size:16px}
+  .info-row .v{font-weight:700;color:#fff}
+  .info-row .k{font-size:12px;color:rgba(255,255,255,.7);letter-spacing:.4px;text-transform:uppercase}
+  form.lead{background:#fff;border-radius:14px;padding:32px;border:1px solid var(--line);box-shadow:var(--shadow)}
+  form.lead .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  form.lead label{display:block;font-size:12.5px;font-weight:700;color:var(--ink-soft);letter-spacing:.4px;text-transform:uppercase;margin-bottom:6px}
+  form.lead input, form.lead select, form.lead textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:15px;font-family:inherit;background:#fff;color:var(--ink)}
+  form.lead input:focus, form.lead select:focus, form.lead textarea:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(45,122,62,.15)}
+  form.lead .field{margin-bottom:14px}
+  form.lead textarea{resize:vertical;min-height:110px}
+  form.lead button{width:100%;margin-top:8px}
+
+  /* Footer */
+  footer{background:var(--green-deep);color:rgba(255,255,255,.78);padding:56px 0 24px}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:32px;margin-bottom:32px}
+  footer h4{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:1px;margin:0 0 14px}
+  footer a{color:rgba(255,255,255,.78)}
+  footer a:hover{color:#fff;text-decoration:none}
+  footer ul{list-style:none;padding:0;margin:0;display:grid;gap:8px;font-size:14.5px}
+  .foot-brand img{height:48px;width:auto;display:block;margin-bottom:14px;filter:brightness(0) invert(1)}
+  .foot-brand p{font-size:14px;margin:0 0 16px;line-height:1.6}
+  .foot-social{display:flex;gap:10px;margin-top:6px}
+  .foot-social a{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);color:#fff;font-weight:800;font-size:14px;transition:background .15s ease}
+  .foot-social a:hover{background:var(--sun);color:#fff;text-decoration:none}
+  .foot-newsletter p{font-size:13.5px;color:rgba(255,255,255,.78);margin:0 0 12px;line-height:1.5}
+  .foot-newsletter form{display:flex;gap:8px;flex-wrap:wrap}
+  .foot-newsletter input[type="email"]{flex:1 1 180px;min-width:0;padding:11px 14px;border-radius:8px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.08);color:#fff;font-size:14px;font-family:inherit}
+  .foot-newsletter input[type="email"]::placeholder{color:rgba(255,255,255,.55)}
+  .foot-newsletter input[type="email"]:focus{outline:none;border-color:var(--sun);background:rgba(255,255,255,.14)}
+  .foot-newsletter button{padding:11px 18px;border-radius:8px;border:none;background:var(--sun);color:#fff;font-weight:700;font-size:14px;cursor:pointer;transition:background .15s ease}
+  .foot-newsletter button:hover{background:var(--sun-deep)}
+  .foot-newsletter .msg{margin-top:10px;font-size:13px;color:var(--sun)}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.15);padding-top:18px;font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+  @media (max-width: 920px){
+    .hero-grid, .about-grid, .contact-grid{grid-template-columns:1fr;gap:28px}
+    .calc-pane.active{grid-template-columns:1fr}
+    .hero{padding:64px 0 48px}
+    .hero-art{aspect-ratio:16/11;max-width:520px;margin:0 auto}
+    h1{font-size:38px}
+    .solutions-grid, .pillar-grid, .adv-grid, .parish-grid{grid-template-columns:1fr 1fr}
+    .pillar-grid{grid-template-columns:1fr 1fr}
+    .trust-row{grid-template-columns:1fr}
+    .trust-cell{border-right:none;border-bottom:1px solid rgba(255,255,255,.12)}
+    .trust-cell:last-child{border-bottom:none}
+    .foot-grid{grid-template-columns:1fr 1fr}
+    nav.menu{display:none;position:absolute;top:78px;left:0;right:0;background:var(--cream);padding:18px;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:14px;z-index:60}
+    nav.menu.open{display:flex}
+    .hamburger{display:block}
+    .calc-output{position:static}
+    h2{font-size:28px}
+    .adv-banner h2{font-size:30px}
+    form.lead .row{grid-template-columns:1fr}
+  }
+  @media (max-width: 540px){
+    .solutions-grid, .pillar-grid, .adv-grid, .parish-grid{grid-template-columns:1fr}
+    h1{font-size:30px}
+    section{padding:60px 0}
+    .calc-shell{padding:22px}
+    .adv-banner{padding:32px 22px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#top" aria-label="S.E.T. INC home">
+      <img src="logo.png" alt="S.E.T. INC logo" />
+      <span class="word">
+        <span class="top">Sustainable Energy Technology</span>
+        <span class="bot">S.E.T. INC &nbsp;·&nbsp; Jamaica</span>
+      </span>
+    </a>
+    <button class="hamburger" aria-label="Toggle menu" onclick="document.querySelector('nav.menu').classList.toggle('open')">☰</button>
+    <nav class="menu" aria-label="Primary">
+      <a href="#top">Home</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#calculators">The Math</a>
+      <a href="#parish">Parish Coverage</a>
+      <a href="#about">About Us</a>
+      <a href="#contact" class="btn btn-dark cta">Get Your Custom ROI Proposal</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- 1. HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Jamaica · Caribbean · Solar Specialists</span>
+      <h1>Stop Renting Power from JPS. <span class="accent">Own Your Energy Security.</span></h1>
+      <p class="lede">S.E.T. INC delivers energy independence, financial protection, and reliable backup power for Jamaican homes and businesses. Protect your property against rate hikes and grid outages today.</p>
+      <div class="hero-ctas">
+        <a href="#calculators" class="btn btn-primary">Calculate My Rooftop ROI →</a>
+        <a href="#sol-portable" class="btn btn-ghost">Explore Backup Solar Generators</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <img src="logo.png" alt="" />
+    </div>
+  </div>
+</section>
+
+<!-- Trust Banner -->
+<div class="trust">
+  <div class="container trust-row">
+    <div class="trust-cell">
+      <span class="icn">★</span>
+      Built for Jamaica's 2026 Renewable Push
+    </div>
+    <div class="trust-cell">
+      <span class="icn">%</span>
+      Qualifies for 30% Gov. Tax Credit
+    </div>
+    <div class="trust-cell">
+      <span class="icn">✓</span>
+      100% GCT Exempt Equipment
+    </div>
+  </div>
+</div>
+
+<!-- 2. CORE PHILOSOPHY -->
+<section class="pillars" id="philosophy">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">The S.E.T. Core Philosophy</span>
+      <h2>We don't sell panels. We sell four outcomes.</h2>
+      <p class="section-lede">Solar is a financial decision, not a hardware purchase. Every S.E.T. INC system is engineered to deliver across these four pillars — measurable, defensible, and built for Jamaica's grid.</p>
+    </div>
+    <div class="pillar-grid">
+
+      <div class="pillar">
+        <div class="emoji">⚡</div>
+        <h3>Energy Independence</h3>
+        <p>Generate your own power. Break free from the fluctuating ~$65 JMD/kWh retail electricity rates and the fuel surcharges baked into every JPS bill.</p>
+      </div>
+
+      <div class="pillar">
+        <div class="emoji">🛡️</div>
+        <h3>Financial Protection</h3>
+        <p>Lock in your energy costs for 25 years. Shield your household or SME from sudden fuel surcharges, currency moves, and annual utility inflation.</p>
+      </div>
+
+      <div class="pillar">
+        <div class="emoji">🔋</div>
+        <h3>Reliable Backup Power</h3>
+        <p>Zero downtime. Our hybrid systems and solar generators keep your lights, AC, refrigeration, and critical business operations running through the worst storms and grid failures.</p>
+      </div>
+
+      <div class="pillar">
+        <div class="emoji">📈</div>
+        <h3>Long-Term Investment Security</h3>
+        <p>Turn a monthly liability into an appreciating asset. Most residential systems pay for themselves in under 4 years — then deliver 20+ years of pure return.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 3. SOLUTIONS PORTFOLIO -->
+<section class="solutions" id="solutions">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">Solutions Portfolio</span>
+      <h2>Two ways to take back control of your power.</h2>
+      <p class="section-lede">Whether you're integrating your whole property or just protecting your critical loads, S.E.T. INC has a system sized for your bill, your roof, and your risk profile.</p>
+    </div>
+
+    <div class="solutions-grid">
+
+      <div class="sol-card rooftop" id="sol-rooftop">
+        <span class="sol-tag r">Option A · Permanent Installation</span>
+        <h3>Rooftop & Hybrid Solar Installations</h3>
+        <div class="sol-target">For: Homeowners (35–55) and Commercial SMEs</div>
+        <ul class="sol-features">
+          <li>Tier-1 monocrystalline solar panels with 25-year manufacturer warranty</li>
+          <li>Lithium-ion battery storage (hybrid systems) sized to your nightly load</li>
+          <li>Smart inverters with JPS grid-tie certification</li>
+          <li>Full incentive paperwork: 30% tax credit + GCT-exempt invoicing</li>
+        </ul>
+        <div class="sol-pitch">"Total grid independence. Best for slashing high monthly AC bills and utilizing accelerated capital allowances for businesses."</div>
+        <a href="#calc-rooftop" class="btn btn-dark">Calculate My Rooftop ROI →</a>
+      </div>
+
+      <div class="sol-card portable" id="sol-portable">
+        <span class="sol-tag p">Option B · Plug-and-Play</span>
+        <h3>Solar Generators (Portable Backup)</h3>
+        <div class="sol-target">For: Renters, clinics, home offices, and SMEs needing isolated critical-load backup</div>
+        <ul class="sol-features">
+          <li>Portable high-capacity battery units (2 kWh to 5+ kWh)</li>
+          <li>Foldable or modular solar panels — no roof install required</li>
+          <li>Silent, fuel-free operation (no petrol, no diesel, no fumes)</li>
+          <li>Ready in minutes — perfect for renters and storm-season prep</li>
+        </ul>
+        <div class="sol-pitch">"Instant, silent, and fuel-free reliable backup power. Perfect for keeping medical equipment, refrigeration, and home offices online during blackouts."</div>
+        <a href="#calc-backup" class="btn btn-dark">Size My Backup System →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 4. INTERACTIVE ROI CALCULATORS -->
+<section class="calc" id="calculators">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">Interactive ROI Calculators</span>
+      <h2>The Math. Run your numbers in 30 seconds.</h2>
+      <p class="section-lede">Pick the calculator that matches your situation. All figures are in JMD and reflect 2026 JPS retail rates plus the 30% residential tax credit and 15% GCT exemption.</p>
+    </div>
+
+    <div class="calc-tabs" role="tablist">
+      <button class="calc-tab active" data-tab="rooftop" id="tab-rooftop">A · Rooftop Home & SME</button>
+      <button class="calc-tab" data-tab="backup" id="tab-backup">B · Solar Generator / Backup Power</button>
+    </div>
+
+    <div class="calc-shell">
+
+      <!-- Calculator A: Rooftop -->
+      <div class="calc-pane active" id="calc-rooftop" data-pane="rooftop">
+        <div class="calc-controls">
+          <h3>Rooftop Home & SME Calculator</h3>
+          <p class="calc-sub">Tell us your bill and property type — we'll recommend a system and run the math.</p>
+
+          <div class="field">
+            <label for="rBill">Average monthly JPS bill (JMD)</label>
+            <input type="number" id="rBill" min="0" step="1000" value="50000" />
+          </div>
+
+          <div class="field">
+            <label>Property type</label>
+            <div class="radio-grid">
+              <input type="radio" name="rType" id="rRes" value="res" checked />
+              <label for="rRes">Residential <small>Home / family</small></label>
+              <input type="radio" name="rType" id="rCom" value="com" />
+              <label for="rCom">Commercial (SME) <small>Office / shop / clinic</small></label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="rParish">Parish</label>
+            <select id="rParish">
+              <option>Kingston</option>
+              <option>St. Andrew</option>
+              <option>St. Catherine</option>
+              <option>Clarendon</option>
+              <option>Manchester</option>
+              <option>St. Elizabeth</option>
+              <option>Westmoreland</option>
+              <option>Hanover</option>
+              <option>St. James</option>
+              <option>Trelawny</option>
+              <option>St. Ann</option>
+              <option>St. Mary</option>
+              <option>Portland</option>
+              <option>St. Thomas</option>
+            </select>
+          </div>
+
+          <a href="#contact" class="btn btn-primary" style="margin-top:8px">Book a Free Site Assessment →</a>
+        </div>
+
+        <aside class="calc-output" aria-live="polite">
+          <div class="title">Your Rooftop ROI Snapshot</div>
+          <div class="system-name" id="rSys">5 kW Residential Grid-Tied</div>
+
+          <div class="result-row"><span class="k">Recommended system</span><span class="v" id="rSize">5 kW</span></div>
+          <div class="result-row"><span class="k">Net cost (after incentives)</span><span class="v" id="rCost">J$1,150,000</span></div>
+          <div class="result-row"><span class="k">30% income tax credit</span><span class="v" id="rCredit">J$493,000</span></div>
+          <div class="result-row"><span class="k">15% GCT savings (already applied)</span><span class="v" id="rGct">J$215,000</span></div>
+          <div class="result-row"><span class="k">Estimated annual savings</span><span class="v" id="rSave">J$300,000 / yr</span></div>
+          <div class="result-row"><span class="k">Simple payback</span><span class="v" id="rPay">3.8 years</span></div>
+          <div class="result-row big"><span class="k">20-year net wealth</span><span class="v" id="rGain">~J$4,850,000</span></div>
+
+          <div class="calc-foot">
+            Recommendations are based on your bill, property type, and Jamaica's average 5 peak-sun hours / day. Final sizing and pricing are confirmed during your free site assessment.
+          </div>
+        </aside>
+      </div>
+
+      <!-- Calculator B: Backup Power -->
+      <div class="calc-pane" id="calc-backup" data-pane="backup" style="grid-template-columns:1.05fr 1fr">
+        <div class="calc-controls">
+          <h3>Solar Generator / Backup Power Calculator</h3>
+          <p class="calc-sub">Tell us what you need to keep running and how often the grid drops.</p>
+
+          <div class="field">
+            <label>Critical load you need to back up</label>
+            <div class="radio-grid">
+              <input type="radio" name="bLoad" id="bL1" value="lite" checked />
+              <label for="bL1">Lights + Fridge <small>Home essentials</small></label>
+              <input type="radio" name="bLoad" id="bL2" value="office" />
+              <label for="bL2">Home Office <small>Lights + computer + Wi-Fi</small></label>
+              <input type="radio" name="bLoad" id="bL3" value="sme" />
+              <label for="bL3">Full SME <small>Office + refrigeration + POS</small></label>
+              <input type="radio" name="bLoad" id="bL4" value="clinic" />
+              <label for="bL4">Clinic / Medical <small>Lights + meds fridge + equipment</small></label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="bOutage">Average outage hours per month in your area</label>
+            <input type="number" id="bOutage" min="0" step="1" value="20" />
+          </div>
+
+          <a href="#contact" class="btn btn-primary" style="margin-top:8px">Shop Solar Generators Now →</a>
+        </div>
+
+        <aside class="calc-output alt" aria-live="polite">
+          <div class="title">Your Backup Power Snapshot</div>
+          <div class="system-name" id="bSys">2 kWh Portable Generator</div>
+
+          <div class="result-row"><span class="k">Recommended unit</span><span class="v" id="bUnit">2 kWh Portable</span></div>
+          <div class="result-row"><span class="k">Annual fuel saved vs petrol generator</span><span class="v" id="bFuel">J$26,400 / yr</span></div>
+          <div class="result-row"><span class="k">Business interruption avoided</span><span class="v" id="bBiz">J$160,000 / yr</span></div>
+          <div class="result-row big"><span class="k">5-year value of avoided downtime</span><span class="v" id="bVal">~J$800,000</span></div>
+
+          <div class="calc-foot">
+            Backup-power value is a function of how often your area loses grid power and what stops running when it does. Fuel-savings figure assumes typical Jamaica petrol (~$220 JMD/L) and a small generator burning ~0.5 L/hr. Business interruption figure is sourced from S.E.T. INC's 2026 SME baseline.
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 5. THE JAMAICAN FINANCIAL ADVANTAGE -->
+<section class="advantage" id="incentives">
+  <div class="container">
+    <div class="adv-banner">
+      <span class="section-eyebrow" style="background:rgba(255,255,255,.15);color:#fff">The Jamaican Financial Advantage</span>
+      <h2>The Government Wants to Pay for 30% of Your System.</h2>
+      <p>Jamaica's 50% renewable energy target by 2030 is backed by aggressive fiscal policy. The result: solar is cheaper here than almost anywhere in the Caribbean — if you know how to stack the incentives.</p>
+    </div>
+
+    <div class="adv-grid">
+
+      <div class="adv-card">
+        <div class="icon">%</div>
+        <h3>The 30% Tax Credit</h3>
+        <p>Residential buyers can claim a 30% income-tax credit on the purchase and installation of solar PV systems — up to J$1.2 million JMD applied directly against your income tax.</p>
+      </div>
+
+      <div class="adv-card alt">
+        <div class="icon">0%</div>
+        <h3>0% GCT &amp; Import Duties</h3>
+        <p>S.E.T. INC equipment is imported duty-free, and solar panels, inverters, and lithium batteries are exempt from the 15% GCT. We pass that 15% immediate discount directly to you.</p>
+      </div>
+
+      <div class="adv-card alt2">
+        <div class="icon">📊</div>
+        <h3>Corporate Write-Offs</h3>
+        <p>Jamaican SMEs can leverage accelerated capital allowances in 2025 and 2026 to write off the equipment cost against corporate taxes in the first few years of ownership.</p>
+      </div>
+
+    </div>
+
+    <div class="table-wrap">
+      <table class="proj">
+        <thead>
+          <tr>
+            <th>System</th>
+            <th>Avg. Net Cost</th>
+            <th>Est. Annual Savings</th>
+            <th>Simple Payback</th>
+            <th>20-Year Net Gain</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>3 kW Residential (Grid-Tied)</td><td>J$750,000</td><td>J$180,000</td><td class="pay">4.2 years</td><td class="gain">~J$2,850,000</td></tr>
+          <tr><td>5 kW Residential (Grid-Tied)</td><td>J$1,150,000</td><td>J$300,000</td><td class="pay">3.8 years</td><td class="gain">~J$4,850,000</td></tr>
+          <tr><td>5 kW Hybrid (with Battery)</td><td>J$2,300,000</td><td>J$336,000</td><td class="pay">6.8 years</td><td class="gain">~J$6,400,000</td></tr>
+          <tr><td>10 kW Commercial (SME)</td><td>J$2,100,000</td><td>J$900,000</td><td class="pay">2.3 years</td><td class="gain">~J$20,000,000</td></tr>
+          <tr><td>Solar Water Heater</td><td>J$210,000</td><td>J$85,000</td><td class="pay">2.5 years</td><td class="gain">~J$1,500,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="text-align:center;color:var(--muted);font-size:13px;margin-top:18px;max-width:760px;margin-left:auto;margin-right:auto">All figures are estimates based on standard system performance and current JPS retail rates. Net costs reflect the 30% residential tax credit and 15% GCT exemption on qualifying equipment. Actual results depend on roof orientation, shading, consumption profile, and self-consumption vs Net Billing mix.</p>
+  </div>
+</section>
+
+<!-- 6. PARISH SUCCESS STORIES -->
+<section class="parish" id="parish">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">Parish Coverage</span>
+      <h2>What S.E.T. INC delivers, parish by parish.</h2>
+      <p class="section-lede">Representative ROI outcomes drawn from the typical S.E.T. INC project profile in each region of Jamaica. Your actual results depend on your bill, roof, and load profile.</p>
+    </div>
+    <div class="parish-grid">
+
+      <div class="parish-card">
+        <span class="badge">SME Focus</span>
+        <div class="loc">Kingston &amp; St. Andrew</div>
+        <h3>How a Kingston law firm cut J$900,000 from Year 1 expenses with a 10kW system.</h3>
+        <div class="metric">
+          <div class="v">J$900,000</div>
+          <div class="l">First-year energy savings</div>
+        </div>
+        <p>A mid-size law firm with heavy daytime AC and computing load installed a 10 kW grid-tied system and stacked accelerated capital allowances on top of the GCT exemption. Payback under 2.5 years.</p>
+      </div>
+
+      <div class="parish-card">
+        <span class="badge">Residential</span>
+        <div class="loc">Portmore &amp; St. Catherine</div>
+        <h3>How a local family eliminated their summer AC bill and hit a 3.5-year payback.</h3>
+        <div class="metric">
+          <div class="v alt">3.5 yrs</div>
+          <div class="l">Simple payback period</div>
+        </div>
+        <p>A four-bedroom Portmore home sized at 5 kW grid-tied, sized for daytime AC self-consumption. Net Billing handles weekend overproduction. Income-tax credit filed in Year 1.</p>
+      </div>
+
+      <div class="parish-card">
+        <span class="badge">Resilience</span>
+        <div class="loc">Montego Bay &amp; St. James</div>
+        <h3>How an Airbnb villa guaranteed 5-star reviews by keeping the lights on through the last storm.</h3>
+        <div class="metric">
+          <div class="v">5★</div>
+          <div class="l">Storm-season guest reviews</div>
+        </div>
+        <p>Hybrid 5 kW + battery installation on a Montego Bay short-term rental. Guests rode out a multi-day grid outage with full AC and Wi-Fi — translating directly into review scores and rebooking rate.</p>
+      </div>
+
+    </div>
+    <p class="parish-disclaimer">Parish ROI scenarios reflect typical outcomes for S.E.T. INC project profiles in each region. Specific client identities are kept private. Your final ROI is confirmed in your free site assessment.</p>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="ctaband">
+  <div class="container">
+    <h2>Stop watching your money leave on the JPS bill.</h2>
+    <p>Get a free, site-specific ROI proposal in Jamaican Dollars. No obligation — and we'll show you the math whether we're the right fit or not.</p>
+    <a href="#contact" class="btn btn-primary">Get Your Custom ROI Proposal →</a>
+  </div>
+</section>
+
+<!-- 7. ABOUT -->
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div>
+      <span class="section-eyebrow">About S.E.T. INC</span>
+      <h2>Built for Jamaica's grid. Engineered for Jamaica's storms.</h2>
+      <p class="section-lede">Sustainable Energy Technology S.E.T. INC was founded to solve one problem: Jamaicans are paying among the highest electricity rates in the Caribbean while sitting under some of the best solar radiation on earth. We turn that gap into measurable ROI for our clients.</p>
+      <ul class="about-points">
+        <li><span class="dot">✓</span><span><strong>Transparent pricing in JMD.</strong> Every proposal shows net cost after the 30% tax credit and 15% GCT exemption — no hidden duty fees.</span></li>
+        <li><span class="dot">✓</span><span><strong>Hybrid by default for churches &amp; SMEs.</strong> After Hurricane Melissa, business continuity is a line item, not an afterthought.</span></li>
+        <li><span class="dot">✓</span><span><strong>20-year financial modeling.</strong> We show payback, annual savings, and net gain over the asset's full life — not just the install quote.</span></li>
+        <li><span class="dot">✓</span><span><strong>Caribbean-wide on request.</strong> Headquartered in Jamaica, available across the Caribbean for qualifying commercial projects.</span></li>
+      </ul>
+    </div>
+    <div class="about-art">
+      <img src="logo.png" alt="S.E.T. INC brand mark" />
+    </div>
+  </div>
+</section>
+
+<!-- 8. CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">Talk to S.E.T. INC</span>
+      <h2>Tell us about your bill. We'll tell you the math.</h2>
+      <p class="section-lede">A team member responds within 1 business day with next steps or a request for additional details.</p>
+    </div>
+    <div class="contact-grid">
+
+      <aside class="contact-info">
+        <h3>Reach us directly</h3>
+        <div class="info-row">
+          <div class="icn">✉</div>
+          <div>
+            <div class="k">Email</div>
+            <div class="v">[Jamaica email — TBD]</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="icn">☎</div>
+          <div>
+            <div class="k">Phone / WhatsApp</div>
+            <div class="v">[Jamaica phone — TBD]</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="icn">⌖</div>
+          <div>
+            <div class="k">Service area</div>
+            <div class="v">All 14 parishes &nbsp;·&nbsp; Caribbean on request</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="icn">⏱</div>
+          <div>
+            <div class="k">Response time</div>
+            <div class="v">Within 1 business day</div>
+          </div>
+        </div>
+      </aside>
+
+      <form class="lead" onsubmit="return handleLead(event)">
+        <div class="row">
+          <div class="field">
+            <label for="lname">Full name</label>
+            <input type="text" id="lname" name="name" required placeholder="Your full name" />
+          </div>
+          <div class="field">
+            <label for="lphone">Phone / WhatsApp</label>
+            <input type="tel" id="lphone" name="phone" required placeholder="+1 (876) ..." />
+          </div>
+        </div>
+        <div class="field">
+          <label for="lemail">Email</label>
+          <input type="email" id="lemail" name="email" required placeholder="you@example.com" />
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="lparish">Parish</label>
+            <input type="text" id="lparish" name="parish" placeholder="e.g., Kingston / St. Andrew" />
+          </div>
+          <div class="field">
+            <label for="lsystem">Interest</label>
+            <select id="lsystem" name="system">
+              <option>Rooftop — 3 kW Residential</option>
+              <option selected>Rooftop — 5 kW Residential</option>
+              <option>Rooftop — 5 kW Hybrid (Battery)</option>
+              <option>Rooftop — 10 kW Commercial (SME)</option>
+              <option>Solar Water Heater</option>
+              <option>Portable Solar Generator (Backup)</option>
+              <option>Not sure — recommend for me</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="lbill">Average monthly JPS bill (JMD) — optional</label>
+          <input type="text" id="lbill" name="bill" placeholder="e.g., J$45,000" />
+        </div>
+        <div class="field">
+          <label for="lmsg">Anything else we should know?</label>
+          <textarea id="lmsg" name="message" placeholder="Roof type, business hours, outage concerns, timeline..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send My Inquiry →</button>
+        <p style="font-size:12.5px;color:var(--muted);margin:10px 0 0;text-align:center">By submitting, you agree to be contacted by S.E.T. INC about your solar project.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+
+      <div class="foot-brand">
+        <img src="logo.png" alt="S.E.T. INC" />
+        <p><strong style="color:#fff">S.E.T. Sustainable Energy Technology</strong><br/>Jamaica, Caribbean<br/><br/>Solar PV, hybrid battery, water-heating, and portable backup installs across Jamaica and the wider Caribbean. Independent ROI projections in JMD on every proposal.</p>
+        <div class="foot-social" aria-label="Follow S.E.T. INC on social">
+          <a href="#" aria-label="LinkedIn" title="LinkedIn">in</a>
+          <a href="#" aria-label="Instagram" title="Instagram">IG</a>
+          <a href="#" aria-label="Facebook" title="Facebook">f</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#maintenance">Maintenance Services</a></li>
+          <li><a href="#warranty">Warranty Info</a></li>
+          <li><a href="#privacy">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="#sol-rooftop">Rooftop &amp; Hybrid Installs</a></li>
+          <li><a href="#sol-portable">Portable Solar Generators</a></li>
+          <li><a href="#calculators">Rooftop ROI Calculator</a></li>
+          <li><a href="#calculators">Backup Power Calculator</a></li>
+          <li><a href="#parish">Parish Coverage</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-newsletter">
+        <h4>Stay Updated</h4>
+        <p>Subscribe to our newsletter for updates on Jamaican solar tax incentives and new solar generator drops.</p>
+        <form onsubmit="return handleNewsletter(event)">
+          <input type="email" id="nlEmail" name="email" required placeholder="your.email@example.com" />
+          <button type="submit">Subscribe</button>
+        </form>
+        <div class="msg" id="nlMsg" role="status" aria-live="polite"></div>
+      </div>
+
+    </div>
+    <div class="foot-bottom">
+      <div>© <span id="yr"></span> S.E.T. Sustainable Energy Technology · S.E.T. INC. All rights reserved.</div>
+      <div>Jamaica · Caribbean &nbsp;·&nbsp; Built for ROI</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  /* ---------- TABS ---------- */
+  document.querySelectorAll('.calc-tab').forEach(t => {
+    t.addEventListener('click', () => {
+      const target = t.getAttribute('data-tab');
+      document.querySelectorAll('.calc-tab').forEach(x => x.classList.toggle('active', x === t));
+      document.querySelectorAll('.calc-pane').forEach(p => {
+        p.classList.toggle('active', p.getAttribute('data-pane') === target);
+      });
+    });
+  });
+  // Deep-link tab open on anchor
+  function openTabFromHash(){
+    if (location.hash === '#calc-backup') document.getElementById('tab-backup').click();
+    if (location.hash === '#calc-rooftop') document.getElementById('tab-rooftop').click();
+  }
+  window.addEventListener('hashchange', openTabFromHash);
+  openTabFromHash();
+
+  /* ---------- ROOFTOP CALCULATOR (A) ---------- */
+  // Pre-tax-credit cost back-calculated as net / 0.7 (rough); 30% credit derived, capped at J$1.2M.
+  // GCT savings derived as 15/115 of pre-credit cost (since GCT is exempted in pricing).
+  const ROOFTOP = {
+    res3:  { name:'3 kW Residential Grid-Tied', size:'3 kW',  cost:750000,  preCredit:1071000, save:180000, payback:4.2, gain20:2850000, com:false },
+    res5:  { name:'5 kW Residential Grid-Tied', size:'5 kW',  cost:1150000, preCredit:1643000, save:300000, payback:3.8, gain20:4850000, com:false },
+    hyb5:  { name:'5 kW Hybrid (Solar + Battery)', size:'5 kW Hybrid', cost:2300000, preCredit:3286000, save:336000, payback:6.8, gain20:6400000, com:false },
+    com10: { name:'10 kW Commercial SME System', size:'10 kW Commercial', cost:2100000, preCredit:3000000, save:900000, payback:2.3, gain20:20000000, com:true }
+  };
+  const CREDIT_CAP = 1200000;
+
+  function recommendRooftop(bill, isCom){
+    if (isCom){
+      // commercial → 10 kW for any bill above ~$60k; below that we still recommend 10 kW but note it
+      return 'com10';
+    }
+    if (bill < 30000)  return 'res3';
+    if (bill < 60000)  return 'res5';
+    return 'hyb5';
+  }
+
+  function fmtJMD(n){ return 'J$' + Math.round(n).toLocaleString(); }
+
+  function recalcRooftop(){
+    const bill = Number(document.getElementById('rBill').value || 0);
+    const isCom = document.querySelector('input[name="rType"]:checked').value === 'com';
+    const key = recommendRooftop(bill, isCom);
+    const s = ROOFTOP[key];
+
+    document.getElementById('rSys').textContent = s.name;
+    document.getElementById('rSize').textContent = s.size;
+    document.getElementById('rCost').textContent = fmtJMD(s.cost);
+
+    if (s.com){
+      document.getElementById('rCredit').textContent = 'Acc. capital allowance (SME)';
+    } else {
+      const credit = Math.min(s.preCredit * 0.30, CREDIT_CAP);
+      document.getElementById('rCredit').textContent = fmtJMD(credit);
+    }
+
+    const gctSavings = s.preCredit * (15/115);
+    document.getElementById('rGct').textContent = fmtJMD(gctSavings);
+    document.getElementById('rSave').textContent = fmtJMD(s.save) + ' / yr';
+    document.getElementById('rPay').textContent = s.payback + ' years';
+    document.getElementById('rGain').textContent = '~' + fmtJMD(s.gain20);
+  }
+
+  document.getElementById('rBill').addEventListener('input', recalcRooftop);
+  document.querySelectorAll('input[name="rType"]').forEach(r => r.addEventListener('change', recalcRooftop));
+  recalcRooftop();
+
+  /* ---------- BACKUP POWER CALCULATOR (B) ---------- */
+  const BACKUP = {
+    lite:   { name:'2 kWh Portable Generator',   unit:'2 kWh Portable',     petrolLph:0.5, bizMonthly:0      },
+    office: { name:'3 kWh Portable Generator',   unit:'3 kWh Portable',     petrolLph:0.7, bizMonthly:18000  },
+    sme:    { name:'5 kWh Standalone System',    unit:'5 kWh Standalone',   petrolLph:1.0, bizMonthly:13334  }, // ~$160K/yr from Wayne data
+    clinic: { name:'5 kWh Standalone System',    unit:'5 kWh Standalone',   petrolLph:0.9, bizMonthly:20000  }
+  };
+  const PETROL_PRICE = 220; // JMD per L
+
+  function recalcBackup(){
+    const load = document.querySelector('input[name="bLoad"]:checked').value;
+    const outageHrs = Number(document.getElementById('bOutage').value || 0);
+    const b = BACKUP[load];
+
+    const annualOutageHrs = outageHrs * 12;
+    const fuelSaved = annualOutageHrs * b.petrolLph * PETROL_PRICE;
+    const annualBiz = b.bizMonthly * 12 * (outageHrs > 0 ? 1 : 0);
+    const fiveYearValue = (fuelSaved + annualBiz) * 5;
+
+    document.getElementById('bSys').textContent = b.name;
+    document.getElementById('bUnit').textContent = b.unit;
+    document.getElementById('bFuel').textContent = fmtJMD(fuelSaved) + ' / yr';
+    document.getElementById('bBiz').textContent = annualBiz > 0 ? fmtJMD(annualBiz) + ' / yr' : 'N/A (residential)';
+    document.getElementById('bVal').textContent = '~' + fmtJMD(fiveYearValue);
+  }
+
+  document.querySelectorAll('input[name="bLoad"]').forEach(r => r.addEventListener('change', recalcBackup));
+  document.getElementById('bOutage').addEventListener('input', recalcBackup);
+  recalcBackup();
+
+  /* ---------- NEWSLETTER ---------- */
+  function handleNewsletter(e){
+    e.preventDefault();
+    const email = document.getElementById('nlEmail').value.trim();
+    if (!email) return false;
+    // v1 placeholder — wire to Mailchimp / Beehiiv / Substack / Formspree before launch
+    document.getElementById('nlMsg').textContent = "Thanks — you're on the list. We'll send Jamaican solar incentive updates only (no spam).";
+    document.getElementById('nlEmail').value = '';
+    return false;
+  }
+
+  /* ---------- LEAD FORM ---------- */
+  function handleLead(e){
+    e.preventDefault();
+    const f = e.target;
+    const body =
+      'Name: '   + f.name.value + '\n' +
+      'Phone: '  + f.phone.value + '\n' +
+      'Email: '  + f.email.value + '\n' +
+      'Parish: ' + f.parish.value + '\n' +
+      'System interest: ' + f.system.value + '\n' +
+      'Avg JPS bill: ' + f.bill.value + '\n\n' +
+      'Notes:\n' + f.message.value;
+    window.location.href = 'mailto:[Jamaica email TBD]?subject=' + encodeURIComponent('S.E.T. INC inquiry — ' + f.name.value) + '&body=' + encodeURIComponent(body);
+    return false;
+  }
+</script>
+
+</body>
+</html>

@@ -108,6 +108,24 @@
   .sol-pitch{background:var(--cream);border-radius:10px;padding:14px 16px;font-style:italic;color:var(--ink);margin-bottom:18px;font-size:15px;border-left:3px solid var(--green)}
   .sol-card .btn{align-self:flex-start;margin-top:auto}
 
+  /* Commerce and partner channels */
+  .commerce{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .commerce-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .commerce-card{background:linear-gradient(180deg,#fff 0%,var(--cream) 100%);border:1px solid var(--line);border-radius:18px;padding:28px;box-shadow:var(--shadow);display:flex;flex-direction:column;min-height:100%}
+  .commerce-card h3{font-size:21px}
+  .commerce-card .tag{display:inline-block;width:max-content;padding:5px 11px;border-radius:999px;background:rgba(30,95,139,.1);color:var(--blue-deep);font-size:11.5px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;margin-bottom:12px}
+  .commerce-card ul{padding-left:18px;margin:8px 0 18px;color:var(--ink-soft);font-size:15px}
+  .commerce-card li{margin:7px 0}
+  .commerce-note{margin-top:24px;padding:18px 20px;border-radius:14px;background:rgba(243,156,18,.13);border:1px solid rgba(243,156,18,.32);color:var(--ink-soft);font-size:15px}
+  .partner{background:var(--cream)}
+  .partner-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .partner-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px;box-shadow:var(--shadow)}
+  .partner-card h3{font-size:23px}
+  .partner-list{list-style:none;padding:0;margin:16px 0 0}
+  .partner-list li{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-top:1px solid var(--line);color:var(--ink-soft);font-size:15px}
+  .partner-list li:first-child{border-top:none}
+  .partner-list li:before{content:"+";font-weight:900;color:var(--green);flex-shrink:0}
+
   /* Calculator (dual) */
   .calc{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .calc-tabs{display:flex;gap:8px;justify-content:center;margin-bottom:32px;flex-wrap:wrap}
@@ -241,7 +259,7 @@
     .hero{padding:64px 0 48px}
     .hero-art{aspect-ratio:16/11;max-width:520px;margin:0 auto}
     h1{font-size:38px}
-    .solutions-grid, .pillar-grid, .adv-grid, .parish-grid{grid-template-columns:1fr 1fr}
+    .solutions-grid, .pillar-grid, .adv-grid, .parish-grid, .commerce-grid, .partner-grid{grid-template-columns:1fr 1fr}
     .pillar-grid{grid-template-columns:1fr 1fr}
     .trust-row{grid-template-columns:1fr}
     .trust-cell{border-right:none;border-bottom:1px solid rgba(255,255,255,.12)}
@@ -256,7 +274,7 @@
     form.lead .row{grid-template-columns:1fr}
   }
   @media (max-width: 540px){
-    .solutions-grid, .pillar-grid, .adv-grid, .parish-grid{grid-template-columns:1fr}
+    .solutions-grid, .pillar-grid, .adv-grid, .parish-grid, .commerce-grid, .partner-grid{grid-template-columns:1fr}
     h1{font-size:30px}
     section{padding:60px 0}
     .calc-shell{padding:22px}
@@ -279,6 +297,8 @@
     <nav class="menu" aria-label="Primary">
       <a href="#top">Home</a>
       <a href="#solutions">Solutions</a>
+      <a href="#shop">Shop Plan</a>
+      <a href="#partners">Partners</a>
       <a href="#calculators">The Math</a>
       <a href="#parish">Parish Coverage</a>
       <a href="#about">About Us</a>
@@ -316,11 +336,11 @@
     </div>
     <div class="trust-cell">
       <span class="icn">%</span>
-      Qualifies for 30% Gov. Tax Credit
+      Incentive Review Before Final Quote
     </div>
     <div class="trust-cell">
       <span class="icn">✓</span>
-      100% GCT Exempt Equipment
+      Customs & Tax Treatment Verified Per Shipment
     </div>
   </div>
 </div>
@@ -382,7 +402,7 @@
           <li>Tier-1 monocrystalline solar panels with 25-year manufacturer warranty</li>
           <li>Lithium-ion battery storage (hybrid systems) sized to your nightly load</li>
           <li>Smart inverters with JPS grid-tie certification</li>
-          <li>Full incentive paperwork: 30% tax credit + GCT-exempt invoicing</li>
+          <li>Incentive and import-duty review before final quote</li>
         </ul>
         <div class="sol-pitch">"Total grid independence. Best for slashing high monthly AC bills and utilizing accelerated capital allowances for businesses."</div>
         <a href="#calc-rooftop" class="btn btn-dark">Calculate My Rooftop ROI →</a>
@@ -406,13 +426,104 @@
   </div>
 </section>
 
-<!-- 4. INTERACTIVE ROI CALCULATORS -->
+<!-- 4. SHOP + PROCUREMENT MODEL -->
+<section class="commerce" id="shop">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">Shop + Procurement Model</span>
+      <h2>Built for WooCommerce later. Quote-first for serious solar now.</h2>
+      <p class="section-lede">S.E.T. will separate low-ticket energy products from installed solar systems so customers can buy simple items online while major systems stay professionally quoted, sourced, and installed.</p>
+    </div>
+
+    <div class="commerce-grid">
+      <div class="commerce-card">
+        <span class="tag">WooCommerce lane</span>
+        <h3>Low-ticket online products</h3>
+        <p>For future shop.setjamaica.com checkout once SSL, payment rails, shipping rules, and supplier feeds are ready.</p>
+        <ul>
+          <li>Solar security and motion lights</li>
+          <li>Emergency chargers and power banks</li>
+          <li>LED bulbs, smart plugs, and energy monitors</li>
+          <li>Solar panel cleaning kits and small accessories</li>
+        </ul>
+        <a href="#contact" class="btn btn-dark">Request Product Updates</a>
+      </div>
+
+      <div class="commerce-card">
+        <span class="tag">Alibaba sourcing</span>
+        <h3>Wholesale solar procurement</h3>
+        <p>For panels, inverters, LiFePO4 batteries, mounting hardware, charge controllers, and full system kits.</p>
+        <ul>
+          <li>RFQs and Trade Assurance quotes</li>
+          <li>Datasheets, certifications, and warranty review</li>
+          <li>Sample orders before customer-facing listings</li>
+          <li>Freight, customs, and landed-cost estimate per project</li>
+        </ul>
+        <a href="#partners" class="btn btn-dark">Supplier Partnership Intake</a>
+      </div>
+
+      <div class="commerce-card">
+        <span class="tag">Syncee + CJ tests</span>
+        <h3>Dropship test catalog</h3>
+        <p>For consumer-friendly accessories only. High-ticket or safety-critical electrical items stay out of auto-checkout until tested.</p>
+        <ul>
+          <li>Syncee for vetted marketplace suppliers and sync</li>
+          <li>CJdropshipping for trend tests and samples</li>
+          <li>Jamaica shipping confirmed before listing</li>
+          <li>Returns/refunds confirmed in writing before launch</li>
+        </ul>
+        <a href="#contact" class="btn btn-dark">Ask About Available Products</a>
+      </div>
+    </div>
+
+    <div class="commerce-note">
+      Major solar systems are quote-based: system design, freight quote, customs estimate, electrical compatibility review, and installation consultation come before any final price. Taxes, exemptions, and import treatment are verified per shipment before being used in a binding quote.
+    </div>
+  </div>
+</section>
+
+<!-- 5. PARTNERSHIP INTAKE -->
+<section class="partner" id="partners">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">Partner With S.E.T.</span>
+      <h2>Suppliers, installers, and affiliates can plug into one Jamaica energy channel.</h2>
+      <p class="section-lede">S.E.T. is building a practical partner network: vetted products, reliable installation capacity, and transparent referral paths for Jamaican homeowners, SMEs, churches, and schools.</p>
+    </div>
+
+    <div class="partner-grid">
+      <div class="partner-card">
+        <h3>Supplier + affiliate partners</h3>
+        <p>For manufacturers, distributors, and dropship suppliers that can support Jamaica-bound customers with clear specs, shipping, and warranty terms.</p>
+        <ul class="partner-list">
+          <li>Solar lights, portable power, inverters, batteries, full kits, and energy-saving accessories</li>
+          <li>WooCommerce, CSV, API, Syncee, CJdropshipping, or manual quote support</li>
+          <li>Datasheets, CE/UL/IEC specs where applicable, and written warranty terms</li>
+          <li>Sample order path before public listing or paid promotion</li>
+        </ul>
+      </div>
+
+      <div class="partner-card">
+        <h3>Installation partners</h3>
+        <p>For licensed electricians, solar crews, engineers, and Jamaican installation firms that can support site visits, installs, maintenance, and after-sales work.</p>
+        <ul class="partner-list">
+          <li>Residential, SME, church, school, and hurricane-prep projects</li>
+          <li>Rooftop PV, hybrid battery systems, solar water heating, and maintenance</li>
+          <li>Proof of experience, insurance, electrical licensing, and customer references</li>
+          <li>Clear service area, response time, warranty handoff, and referral agreement</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. INTERACTIVE ROI CALCULATORS -->
 <section class="calc" id="calculators">
   <div class="container">
     <div class="section-head">
       <span class="section-eyebrow">Interactive ROI Calculators</span>
       <h2>The Math. Run your numbers in 30 seconds.</h2>
-      <p class="section-lede">Pick the calculator that matches your situation. All figures are in JMD and reflect 2026 JPS retail rates plus the 30% residential tax credit and 15% GCT exemption.</p>
+      <p class="section-lede">Pick the calculator that matches your situation. All figures are in JMD and provide planning estimates only; incentives, taxes, and import treatment are verified before any final quote.</p>
     </div>
 
     <div class="calc-tabs" role="tablist">
@@ -471,9 +582,9 @@
           <div class="system-name" id="rSys">5 kW Residential Grid-Tied</div>
 
           <div class="result-row"><span class="k">Recommended system</span><span class="v" id="rSize">5 kW</span></div>
-          <div class="result-row"><span class="k">Net cost (after incentives)</span><span class="v" id="rCost">J$1,150,000</span></div>
-          <div class="result-row"><span class="k">30% income tax credit</span><span class="v" id="rCredit">J$493,000</span></div>
-          <div class="result-row"><span class="k">15% GCT savings (already applied)</span><span class="v" id="rGct">J$215,000</span></div>
+          <div class="result-row"><span class="k">Planning net cost</span><span class="v" id="rCost">J$1,150,000</span></div>
+          <div class="result-row"><span class="k">Potential incentive review</span><span class="v" id="rCredit">J$493,000</span></div>
+          <div class="result-row"><span class="k">Tax/import review item</span><span class="v" id="rGct">J$215,000</span></div>
           <div class="result-row"><span class="k">Estimated annual savings</span><span class="v" id="rSave">J$300,000 / yr</span></div>
           <div class="result-row"><span class="k">Simple payback</span><span class="v" id="rPay">3.8 years</span></div>
           <div class="result-row big"><span class="k">20-year net wealth</span><span class="v" id="rGain">~J$4,850,000</span></div>
@@ -531,33 +642,33 @@
   </div>
 </section>
 
-<!-- 5. THE JAMAICAN FINANCIAL ADVANTAGE -->
+<!-- 7. THE JAMAICAN FINANCIAL ADVANTAGE -->
 <section class="advantage" id="incentives">
   <div class="container">
     <div class="adv-banner">
       <span class="section-eyebrow" style="background:rgba(255,255,255,.15);color:#fff">The Jamaican Financial Advantage</span>
-      <h2>The Government Wants to Pay for 30% of Your System.</h2>
-      <p>Jamaica's 50% renewable energy target by 2030 is backed by aggressive fiscal policy. The result: solar is cheaper here than almost anywhere in the Caribbean — if you know how to stack the incentives.</p>
+      <h2>Every proposal should show the full landed-cost math.</h2>
+      <p>Solar decisions in Jamaica depend on system design, shipping, customs treatment, available incentives, financing, and installation quality. S.E.T. separates the estimate from the final quote so the numbers stay defensible.</p>
     </div>
 
     <div class="adv-grid">
 
       <div class="adv-card">
         <div class="icon">%</div>
-        <h3>The 30% Tax Credit</h3>
-        <p>Residential buyers can claim a 30% income-tax credit on the purchase and installation of solar PV systems — up to J$1.2 million JMD applied directly against your income tax.</p>
+        <h3>Incentive Review</h3>
+        <p>We flag possible residential or business incentives during planning, then verify eligibility before using any incentive in a final customer quote.</p>
       </div>
 
       <div class="adv-card alt">
         <div class="icon">0%</div>
-        <h3>0% GCT &amp; Import Duties</h3>
-        <p>S.E.T. INC equipment is imported duty-free, and solar panels, inverters, and lithium batteries are exempt from the 15% GCT. We pass that 15% immediate discount directly to you.</p>
+        <h3>Customs &amp; Import Review</h3>
+        <p>Supplier quotes are reviewed for freight, duties, fees, taxes, documentation, and product classification before S.E.T. presents a binding landed cost.</p>
       </div>
 
       <div class="adv-card alt2">
         <div class="icon">📊</div>
-        <h3>Corporate Write-Offs</h3>
-        <p>Jamaican SMEs can leverage accelerated capital allowances in 2025 and 2026 to write off the equipment cost against corporate taxes in the first few years of ownership.</p>
+        <h3>Business Case Support</h3>
+        <p>SME proposals can include a planning view of bill reduction, backup value, financing, maintenance, and documentation to review with the customer's accountant or advisor.</p>
       </div>
 
     </div>
@@ -567,7 +678,7 @@
         <thead>
           <tr>
             <th>System</th>
-            <th>Avg. Net Cost</th>
+            <th>Planning Cost</th>
             <th>Est. Annual Savings</th>
             <th>Simple Payback</th>
             <th>20-Year Net Gain</th>
@@ -582,11 +693,11 @@
         </tbody>
       </table>
     </div>
-    <p style="text-align:center;color:var(--muted);font-size:13px;margin-top:18px;max-width:760px;margin-left:auto;margin-right:auto">All figures are estimates based on standard system performance and current JPS retail rates. Net costs reflect the 30% residential tax credit and 15% GCT exemption on qualifying equipment. Actual results depend on roof orientation, shading, consumption profile, and self-consumption vs Net Billing mix.</p>
+    <p style="text-align:center;color:var(--muted);font-size:13px;margin-top:18px;max-width:760px;margin-left:auto;margin-right:auto">All figures are planning estimates based on standard system performance and current retail-rate assumptions. Final pricing depends on supplier quote, freight, customs treatment, installation scope, site conditions, and verified incentive eligibility.</p>
   </div>
 </section>
 
-<!-- 6. PARISH SUCCESS STORIES -->
+<!-- 8. PARISH SUCCESS STORIES -->
 <section class="parish" id="parish">
   <div class="container">
     <div class="section-head">
@@ -604,7 +715,7 @@
           <div class="v">J$900,000</div>
           <div class="l">First-year energy savings</div>
         </div>
-        <p>A mid-size law firm with heavy daytime AC and computing load installed a 10 kW grid-tied system and stacked accelerated capital allowances on top of the GCT exemption. Payback under 2.5 years.</p>
+        <p>A mid-size law firm with heavy daytime AC and computing load modeled a 10 kW grid-tied system, then reviewed incentives, tax treatment, and financing before moving to final procurement.</p>
       </div>
 
       <div class="parish-card">
@@ -615,7 +726,7 @@
           <div class="v alt">3.5 yrs</div>
           <div class="l">Simple payback period</div>
         </div>
-        <p>A four-bedroom Portmore home sized at 5 kW grid-tied, sized for daytime AC self-consumption. Net Billing handles weekend overproduction. Income-tax credit filed in Year 1.</p>
+        <p>A four-bedroom Portmore home modeled a 5 kW grid-tied system sized for daytime AC self-consumption, with Net Billing and incentive eligibility reviewed before final quote.</p>
       </div>
 
       <div class="parish-card">
@@ -651,7 +762,7 @@
       <h2>Built for Jamaica's grid. Engineered for Jamaica's storms.</h2>
       <p class="section-lede">Sustainable Energy Technology S.E.T. INC was founded to solve one problem: Jamaicans are paying among the highest electricity rates in the Caribbean while sitting under some of the best solar radiation on earth. We turn that gap into measurable ROI for our clients.</p>
       <ul class="about-points">
-        <li><span class="dot">✓</span><span><strong>Transparent pricing in JMD.</strong> Every proposal shows net cost after the 30% tax credit and 15% GCT exemption — no hidden duty fees.</span></li>
+        <li><span class="dot">✓</span><span><strong>Transparent pricing in JMD.</strong> Every proposal separates equipment, freight, customs review, installation, and verified incentive assumptions.</span></li>
         <li><span class="dot">✓</span><span><strong>Hybrid by default for churches &amp; SMEs.</strong> After Hurricane Melissa, business continuity is a line item, not an afterthought.</span></li>
         <li><span class="dot">✓</span><span><strong>20-year financial modeling.</strong> We show payback, annual savings, and net gain over the asset's full life — not just the install quote.</span></li>
         <li><span class="dot">✓</span><span><strong>Caribbean-wide on request.</strong> Headquartered in Jamaica, available across the Caribbean for qualifying commercial projects.</span></li>
@@ -773,6 +884,8 @@
       <div>
         <h4>Quick Links</h4>
         <ul>
+          <li><a href="#shop">Shop Plan</a></li>
+          <li><a href="#partners">Partner With S.E.T.</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#maintenance">Maintenance Services</a></li>
           <li><a href="#warranty">Warranty Info</a></li>
@@ -831,8 +944,8 @@
   openTabFromHash();
 
   /* ---------- ROOFTOP CALCULATOR (A) ---------- */
-  // Pre-tax-credit cost back-calculated as net / 0.7 (rough); 30% credit derived, capped at J$1.2M.
-  // GCT savings derived as 15/115 of pre-credit cost (since GCT is exempted in pricing).
+  // Planning-only incentive estimate. Final eligibility must be verified before quote.
+  // Tax/import review item is a planning placeholder, not a guaranteed exemption.
   const ROOFTOP = {
     res3:  { name:'3 kW Residential Grid-Tied', size:'3 kW',  cost:750000,  preCredit:1071000, save:180000, payback:4.2, gain20:2850000, com:false },
     res5:  { name:'5 kW Residential Grid-Tied', size:'5 kW',  cost:1150000, preCredit:1643000, save:300000, payback:3.8, gain20:4850000, com:false },

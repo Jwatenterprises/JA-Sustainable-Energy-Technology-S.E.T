@@ -36,13 +36,13 @@ Free aliases to add after Gmail is live:
 - contact@setjamaica.com
 
 After MX records are active:
-1. Add aliases in Google Admin.
-2. Configure "Send mail as" in Gmail for public aliases.
-3. Generate DKIM in Google Admin and add the CNAME in Cloudflare.
-4. Add DMARC TXT:
+1. [ ] Add aliases in Google Admin.
+2. [ ] Configure "Send mail as" in Gmail for public aliases.
+3. [x] Generate DKIM in Google Admin and add the CNAME in Cloudflare.
+4. [x] Add DMARC TXT:
 
 ```text
-v=DMARC1; p=none; rua=mailto:postmaster@setjamaica.com
+v=DMARC1; p=none; rua=mailto:info@setjamaica.com
 ```
 
 Cloudflare MX record:

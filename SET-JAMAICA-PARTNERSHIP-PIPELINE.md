@@ -6,13 +6,13 @@ Status legend: `research`, `shortlist`, `contacted`, `sample/meeting`, `approved
 
 These are potential installer, maintenance, or overflow partners. Do not represent any as S.E.T. partners until a written agreement exists.
 
-| Priority | Company | Type | Public URL | Public contact found | Fit | Status | Next action |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Saddle Energy Limited | Residential/commercial solar installer | https://www.saddleenergy.com/ | info@saddleenergy.com; WhatsApp/phone listed publicly | Kingston-based, islandwide installs, rooftop and hybrid systems | research | Send partnership intro and ask about referral/overflow install capacity |
-| 2 | Hovaro Energy Solutions | Custom residential/commercial PV installer | https://hovaroenergy.com/ | Website quote/contact route | Strong fit for custom design + installation + support | research | Ask about subcontract/lead-share model and service areas |
-| 3 | EcoPower Jamaica | Solar and battery installer | https://ecopowerja.com/ | Website contact route | Long operating history claim, residential/commercial/water heating | research | Verify licensing, insurance, warranties, and install capacity |
-| 4 | Solar King Jamaica | Solar panels, batteries, inverters, maintenance | https://solarkingja.com/ | Website contact route | Potential equipment + install partner | research | Ask about dealer pricing and maintenance partnership |
-| 5 | Paragon Renewable Energy | Residential/commercial solar | https://www.paragonrenewable.com/ | paragonrenewable@gmail.com; +1-876-419-9619 listed publicly | Portmore-area partner candidate, residential/commercial | research | Contact for referral arrangement and installer credentials |
+| Priority | Company | Type | Public URL | Vetting/Research Insights | Status | Next action |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | **Saddle Energy Limited** | Premium Installer | https://www.saddleenergy.com/ | **Leader:** Dr. Kirk Abbott (PhD, JREA Board). **Brands:** High-tier, custom engineering. **Ref:** Drax Hall, Mineral Heights. | research | Approach as a "High-End Authority" partner. |
+| 2 | **Hovaro Energy Solutions** | Residential PV Expert | https://hovaroenergy.com/ | **Brands:** PowMr Hybrid Inverters, DCHOUSE LFP batteries. **Strength:** Phase-based "end-to-end" solar transitions. | research | Ask about lead-share for residential AC-heavy installs. |
+| 3 | **EcoPower Jamaica** | Financial Pioneer | https://ecopowerja.com/ | **Partners:** COK Credit Union (Solar Loans), YAPU Solutions (IDB Lab). **Strength:** 13+ years, 100+ installs. | research | Propose as the "Financing-Ready" partner. |
+| 4 | **Solar King Jamaica** | Appliance & PV Distributor | https://solarkingja.com/ | **Brands:** Huawei, Luxpower, Suntask (Water heaters), TCL (Solar AC). | research | Ask about dealer pricing on Suntask/TCL units. |
+| 5 | **Paragon Renewable Energy** | Residential/Commercial | https://www.paragonrenewable.com/ | Portmore-area specialist. High transparency on shingle/concrete mounts. | research | Contact for Portmore-area referral agreement. |
 | 6 | IREE Solar | Residential/commercial solar contractor | https://www.ireesolar.com/ | Website contact route | Caribbean solar/water-heating support | research | Ask for installer package and service area |
 | 7 | Isratech Energy Solutions | Renewable energy and solar water heater distributor/installer | https://isratech.com/divisions/isratech-energy-solutions/ | Website contact route | Possible solar water heater and commercial partner | research | Ask about distributor/dealer relationship |
 | 8 | Sedai-Jam | Solar installation/maintenance | https://sedai-jam.com/ | sedai.jamaica@gmail.com listed publicly | Engineering and maintenance fit | research | Contact for maintenance/inspection partnership |
@@ -36,7 +36,7 @@ Use these as search starting points, not approved suppliers. Every supplier must
 | Priority | Platform | Role | Fit | Status | Next action |
 | --- | --- | --- | --- | --- | --- |
 | 1 | Syncee | WooCommerce supplier sync and marketplace | Cleaner store experience for vetted low-ticket products | research | Open account, filter products by Jamaica shipping, request supplier terms |
-| 2 | CJdropshipping | WooCommerce product testing and fulfillment | Trend tests and sample-first accessories | research | Open account, test 5 products, confirm shipping cost/time to Jamaica |
+| 2 | CJdropshipping | Testing & Fulfillment | **Shipping:** ~$335 for 10kW inverter + 16kWh battery to Kingston. **Affiliate:** 2% revenue commission, 365-day cookie. | research | Set up affiliate link for low-ticket accessory tests. |
 | 3 | WooCommerce | Future shop engine on `shop.setjamaica.com` | Needed for checkout, product feeds, order sync | pending | Defer until SSL/email/payment rails are stable |
 
 ## Priority 4 - Affiliate Candidates

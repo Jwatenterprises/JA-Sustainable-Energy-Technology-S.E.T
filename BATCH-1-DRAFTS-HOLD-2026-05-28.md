@@ -34,9 +34,9 @@
 
 Hello Dr. Abbott,
 
-My name is Wayne Walters, founder of S.E.T. INC (Sustainable Energy Technology), a Jamaica-based renewable energy brand serving homeowners, SMEs, churches, and hurricane-preparedness buyers across the island.
+My name is Wayne Walters, founder of S.E.T. INC (Sustainable Energy Technology), a Jamaica-based renewable energy brand serving homeowners, SMEs, and hurricane-preparedness buyers across the island.
 
-We are in the early stage of building a vetted network of engineering and installation partners for high-end residential and commercial rooftop solar projects. Saddle Energy's engineering depth and your published work in Drax Hall and Mineral Heights are precisely the standard of execution we want associated with projects we route out.
+We are in the early stage of building a vetted network of engineering and installation partners. Saddle Energy's engineering depth — particularly the high-ROI results you delivered for PuzzleIT! Jamaica and your contributions to the national Technology Needs Assessment (TNA) — are exactly the standard of execution we want associated with projects we route out.
 
 We are not asking for any exclusive arrangement. At this stage I am simply hoping to open a conversation and understand whether Saddle is open to inbound project inquiries on a non-exclusive basis.
 
@@ -65,7 +65,7 @@ Hello Alex,
 
 My name is Wayne Walters, founder of S.E.T. INC (Sustainable Energy Technology), a Jamaica-focused renewable energy brand serving homeowners, SMEs, and hurricane-preparedness clients.
 
-I am reaching out because IREE Solar's reputation for solid residential and commercial contracting, combined with your engagement with the Jamaica Renewable Energy Association, makes you one of the partners I would like to vet first as S.E.T. builds out its installer network.
+I am reaching out because IREE Solar's technical success with the Forest Hill Solar Park and your leadership as President of the JREA make you one of the partners I would like to vet first as S.E.T. builds out its islandwide installer network. We are particularly interested in your work at the intersection of the water-energy nexus, as many of our leads are looking for similar utility-scale efficiency.
 
 We are not in a position to promise volume or exclusivity. What I am hoping to do is open a short, low-pressure conversation to understand whether a future subcontract or joint-proposal model could work between our brands.
 

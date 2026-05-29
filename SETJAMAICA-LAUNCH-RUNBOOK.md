@@ -53,12 +53,15 @@ Cloudflare MX record:
 
 Remove any other MX records before activating Gmail.
 
-## Site Wiring
-- Lead form currently opens a prefilled email to info@setjamaica.com.
-- Newsletter is still a local confirmation stub; wire to Mailchimp, Beehiiv, Substack, or Formspree before paid traffic.
-- Footer social links are placeholders until real S.E.T. Jamaica profiles exist.
-- Footer FAQ / Maintenance / Warranty / Privacy links point to planned sections or pages.
+## Secure Sending (Maya/Cassidy)
+- **Primary Provider:** Brevo (API Key in `.env`)
+- **Config:** `email_config.json` set to `auth_type: brevo`.
+- **Sender:** info@setjamaica.com (Verified in Brevo)
 
+To test:
+```bash
+py C:\Users\Milli\.kiyomimax\send_email.py --test
+```
 ## Redirect
 Set `www-set-jamaica.com` to 301 redirect to:
 

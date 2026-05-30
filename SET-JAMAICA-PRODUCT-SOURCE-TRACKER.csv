@@ -8,3 +8,6 @@ checkout,SET-ACC-LIGHT-001,Solar Motion Security Light,Supplier TBD,,draft_hidde
 checkout,SET-ACC-LANTERN-001,Emergency Solar Lantern,Supplier TBD,,draft_hidden,Jamaica shipping; battery safety; sample; warranty; replacements,Shortlist supplier candidates
 checkout,SET-ACC-FAN-001,Portable Rechargeable Fan,Supplier TBD,,draft_hidden,Jamaica shipping; sample; warranty; replacement policy,Shortlist supplier candidates
 checkout,SET-ACC-MONITOR-001,Plug-In Energy Monitor,Supplier TBD,,draft_hidden,Jamaica voltage/plug compatibility; sample; warranty; replacements,Shortlist supplier candidates
+candidate,SET-ACC-POWERBANK-001,Solar Power Bank / Emergency Charger,CJdropshipping,https://cjdropshipping.com/product/window-type-solar-mobile-power-charging-treasure-p-02B2FA38-DA0C-4CA5-A7D6-4F5583A3053B.html,draft_hidden,Jamaica shipping; battery safety; sample; refund process,Create hidden draft candidate and sample before listing
+candidate,SET-ACC-SMARTPLUG-001,Smart Plug With Energy Monitoring,Syncee,https://syncee.com/product/539473_80608_9840660381861/smart-plug-single,draft_hidden,Jamaica plug/voltage compatibility; app region; warranty; shipping,Create hidden draft candidate and verify supplier terms
+candidate,SET-ACC-CLEAN-001,Solar Panel Cleaning Kit,Alibaba RFQ,,research,Jamaica shipping; materials; warranty/returns; sample,Find cleaner supplier candidate

@@ -45,9 +45,12 @@ Use these as search starting points, not approved suppliers. Every supplier must
 | --- | --- | --- | --- | --- | --- |
 | 1 | BLUETTI affiliate program | Portable power stations and solar generators | Strong S.E.T. Solar US alignment; possible JA content bridge if shipping works | research | Confirm Jamaica shipping, payout region, and allowed traffic sources |
 | 2 | EcoFlow affiliate program | Portable power stations, solar panels, home backup | Strong brand for hurricane-prep content | research | Apply/confirm Caribbean terms and direct shipping |
-| 3 | HQ SolarLighting affiliate | Solar lights | Fits low-ticket lighting category | research | Check Jamaica shipping, commission, cookie, returns |
-| 4 | SanTan Solar affiliate | Solar panels/equipment | Useful for content monetization, less likely direct Jamaica fulfillment | research | Check program geography and shipping limitations |
-| 5 | Solar Direct affiliate | Solar equipment | Possible catalog/content monetization | research | Check product fit and shipping geography |
+| 3 | ALLPOWERS Awin programme | Portable power stations and solar panels | Active Awin relationship; possible hurricane-prep content if shipping works | research | Confirm Jamaica shipping, warranty route, payout region, and traffic-source restrictions |
+| 4 | LiTime Awin programme | LiFePO4 batteries and battery accessories | Active Awin relationship discovered 2026-05-30; product fit is strong but safety/warranty risk is higher | research | Confirm certifications, Jamaica shipping, warranty handling, and whether Caribbean traffic is allowed |
+| 5 | Nature's Generator Awin programme | Portable power and solar/wind generator kits | Active Awin relationship; possible backup-power content | research | Confirm Jamaica shipping, warranty route, and programme restrictions |
+| 6 | HQ SolarLighting affiliate | Solar lights | Fits low-ticket lighting category | research | Check Jamaica shipping, commission, cookie, returns |
+| 7 | SanTan Solar affiliate | Solar panels/equipment | Useful for content monetization, less likely direct Jamaica fulfillment | research | Check program geography and shipping limitations |
+| 8 | Solar Direct affiliate | Solar equipment | Possible catalog/content monetization | research | Check product fit and shipping geography |
 
 ## Outreach Rules
 

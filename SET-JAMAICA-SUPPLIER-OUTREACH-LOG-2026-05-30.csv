@@ -1,0 +1,5 @@
+date,channel,recipient_or_platform,subject_or_rfq,status,message_id,next_action
+2026-05-30,Alibaba RFQ,Alibaba.com supplier RFQ/chat,2000Wh and 3000Wh LiFePO4 solar generator RFQs,prepared_login_required,,Send inside Alibaba account with Trade Assurance required
+2026-05-30,Alibaba RFQ,Alibaba.com supplier RFQ/chat,550W-650W solar panel RFQs,prepared_login_required,,Send inside Alibaba account with IEC document requirements and CIF Kingston request
+2026-05-30,email,Syncee support <support@syncee.com>,Jamaica shipping confirmation for S.E.T. solar accessories,delivered_opened,<202605301733.73437990609@smtp-relay.mailin.fr>,Await shipping/supplier guidance before Syncee listing
+2026-05-30,email,CJdropshipping support <support@cjdropshipping.com>,Jamaica shipping and battery document confirmation for S.E.T. sample products,delivered,<202605301733.95798687490@smtp-relay.mailin.fr>,Await shipping/battery documentation before sample order

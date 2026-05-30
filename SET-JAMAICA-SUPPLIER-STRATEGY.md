@@ -77,17 +77,17 @@ Commerce model:
 - Professional installation consultation
 - No automatic checkout until procurement and compliance are locked.
 
-## Jamaica Customs Working Assumptions
+## Jamaica Customs Pricing Notes
 
-These points came from project research and must be verified directly before being used in public copy, checkout logic, or binding quotes:
+Verified against Jamaica Customs Agency public guidance on 2026-05-30:
 
-- Solar panels and solar inverters may qualify for 0% import duty and GCT exemption using ANC EC3.
-- SCF, Environmental Levy, and CAF may still apply.
-- Ordinary ecommerce goods with FOB value US$100 or less may not be charged duties/taxes.
-- If FOB value exceeds US$100, duties/taxes may be charged on the full CIF value.
+- Solar panels and solar inverters: 0% import duty and GCT exempt using ANC EC3.
+- SCF, Environmental Levy, and CAF still apply.
+- Ordinary ecommerce goods with FOB value US$100 or less are not charged duties/taxes.
+- If FOB value exceeds US$100, duties/taxes are charged on the full CIF value.
 
 Action:
-- Verify with Jamaica Customs or a licensed customs broker before publishing or quoting final landed-cost estimates.
+- Use these as planning rules. Verify final landed cost with the supplier, courier/freight forwarder, Jamaica Customs, or a licensed customs broker before checkout logic or binding quotes.
 
 ## Supplier Vetting Rules
 
@@ -128,7 +128,7 @@ Subject: Jamaica Dropship / Wholesale Partnership Inquiry - S.E.T Solar & Energy
 
 Hello [Supplier Name],
 
-My name is Wayne Walters, and I represent S.E.T Sustainable Energy Technology, a Jamaica-focused renewable-energy and energy-saving ecommerce brand.
+My name is Wayne Walters, and I represent S.E.T Sun Energy Technology, a Jamaica-focused renewable-energy and energy-saving ecommerce brand.
 
 We are building a WooCommerce store for Jamaican homeowners, small businesses, and energy-conscious customers. We are interested in your products for possible dropshipping, wholesale purchasing, affiliate promotion, and long-term supply partnership.
 
@@ -148,6 +148,5 @@ We are especially interested in solar lighting, portable power, inverters, batte
 Regards,
 
 Wayne Walters  
-S.E.T Sustainable Energy Technology  
+S.E.T Sun Energy Technology  
 info@setjamaica.com  
-+1-876-356-1541

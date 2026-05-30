@@ -36,21 +36,19 @@ Use these as search starting points, not approved suppliers. Every supplier must
 | Priority | Platform | Role | Fit | Status | Next action |
 | --- | --- | --- | --- | --- | --- |
 | 1 | Syncee | WooCommerce supplier sync and marketplace | Cleaner store experience for vetted low-ticket products | research | Open account, filter products by Jamaica shipping, request supplier terms |
-| 2 | CJdropshipping | Testing & Fulfillment | **Shipping:** ~$335 for 10kW inverter + 16kWh battery to Kingston. **Affiliate:** 2% revenue commission, 365-day cookie. | research | Set up affiliate link for low-ticket accessory tests. |
+| 2 | CJdropshipping | Testing & Fulfillment | Use for low-risk product tests only. Require samples first and avoid high-ticket or safety-critical electrical items until tested. | research | Request sample options for low-ticket accessory tests. |
 | 3 | WooCommerce | Future shop engine on `shop.setjamaica.com` | Needed for checkout, product feeds, order sync | pending | Defer until SSL/email/payment rails are stable |
 
-## Priority 4 - Affiliate Candidates
+## Priority 4 - Ecommerce Supplier Channels
 
-| Priority | Program | Product lane | Fit | Status | Next action |
+USA-only affiliate programmes are not part of the S.E.T. Jamaica product plan. Use supplier and dropship channels that can confirm Jamaica fulfilment, warranty handling, and returns.
+
+| Priority | Channel | Product lane | Fit | Status | Next action |
 | --- | --- | --- | --- | --- | --- |
-| 1 | BLUETTI affiliate program | Portable power stations and solar generators | Strong S.E.T. Solar US alignment; possible JA content bridge if shipping works | research | Confirm Jamaica shipping, payout region, and allowed traffic sources |
-| 2 | EcoFlow affiliate program | Portable power stations, solar panels, home backup | Strong brand for hurricane-prep content | research | Apply/confirm Caribbean terms and direct shipping |
-| 3 | ALLPOWERS Awin programme | Portable power stations and solar panels | Active Awin relationship; possible hurricane-prep content if shipping works | research | Confirm Jamaica shipping, warranty route, payout region, and traffic-source restrictions |
-| 4 | LiTime Awin programme | LiFePO4 batteries and battery accessories | Active Awin relationship discovered 2026-05-30; product fit is strong but safety/warranty risk is higher | research | Confirm certifications, Jamaica shipping, warranty handling, and whether Caribbean traffic is allowed |
-| 5 | Nature's Generator Awin programme | Portable power and solar/wind generator kits | Active Awin relationship; possible backup-power content | research | Confirm Jamaica shipping, warranty route, and programme restrictions |
-| 6 | HQ SolarLighting affiliate | Solar lights | Fits low-ticket lighting category | research | Check Jamaica shipping, commission, cookie, returns |
-| 7 | SanTan Solar affiliate | Solar panels/equipment | Useful for content monetization, less likely direct Jamaica fulfillment | research | Check program geography and shipping limitations |
-| 8 | Solar Direct affiliate | Solar equipment | Possible catalog/content monetization | research | Check product fit and shipping geography |
+| 1 | Alibaba.com | Panels, inverters, LiFePO4 batteries, hybrid systems, charge controllers, mounting hardware, full kits | Best overall for serious solar procurement and quote-based sales | research | Build vetted supplier shortlist and request Trade Assurance quotes/RFQs |
+| 2 | Syncee | Low-ticket WooCommerce add-ons | Best for cleaner product sync, order sync, and vetted marketplace suppliers | research | Open/filter supplier list for Jamaica shipping and consumer-friendly energy products |
+| 3 | CJdropshipping | Low-risk trending product tests | Best for samples and demand testing, not high-ticket electrical products | research | Request samples first; verify support and Jamaica delivery before listing |
+| 4 | Direct Jamaica/local suppliers | Install support, warranty support, emergency replacement, customer trust | Useful for backup sourcing and local service confidence | research | Add local product distributors after written terms are confirmed |
 
 ## Outreach Rules
 

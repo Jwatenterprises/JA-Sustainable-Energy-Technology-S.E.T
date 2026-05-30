@@ -1,8 +1,9 @@
 lane,sku_or_partner,name,channel,source_url_or_link,status,must_verify_before_publish,next_action
-affiliate,AWIN-40342,ALLPOWERS (US & CA),Awin,https://www.awin1.com/awclick.php?mid=40342&id=2881111,hold,Jamaica shipping; warranty route; return process; traffic-source rules,Confirm terms before public S.E.T. Jamaica link
-affiliate,AWIN-59271,BLUETTI US,Awin,https://www.awin1.com/awclick.php?mid=59271&id=2881111,hold,Jamaica shipping; freight-forwarder allowance; warranty route; traffic-source rules,Confirm terms before public S.E.T. Jamaica link
-affiliate,AWIN-82429,LiTime,Awin,https://www.awin1.com/awclick.php?mid=82429&id=2881111,hold,Battery certifications; Jamaica shipping; warranty; return process; terms,Review as battery affiliate/product lane
-affiliate,AWIN-98409,"Nature's Generator, Inc.",Awin,https://www.awin1.com/awclick.php?mid=98409&id=2881111,hold,Jamaica shipping; warranty; return process; traffic-source rules,Confirm terms before public S.E.T. Jamaica link
+sourcing,ALIBABA-SOLAR-KITS,3kW/5kW/10kW quote-based solar kits,Alibaba.com,,research,Supplier rating 4.6+; 500+ orders/proven B2B; 90%+ response; Jamaica freight; datasheets; CE/UL/IEC where applicable; Trade Assurance,Build RFQ shortlist
+sourcing,ALIBABA-LFP-BATTERY,LiFePO4 battery bundles,Alibaba.com,,research,Certifications; MSDS/UN38.3 where applicable; inverter compatibility; Jamaica freight; written warranty; Trade Assurance,Build supplier shortlist
+sourcing,ALIBABA-HYBRID-INVERTER,Hybrid inverters,Alibaba.com,,research,Grid compatibility; datasheets; CE/UL/IEC where applicable; Jamaica freight; warranty; installer manual,Build supplier shortlist
+sync,SYNCEE-LOW-TICKET,Consumer-friendly low-ticket add-ons,Syncee,,research,Jamaica shipping; supplier rating; product feed quality; warranty; return process; WooCommerce sync,Open/filter supplier list
+testing,CJ-LOW-RISK,Trending low-risk accessory tests,CJdropshipping,,research,Sample ordered; Jamaica delivery; support response; warranty/return process,Request samples first
 checkout,SET-ACC-LIGHT-001,Solar Motion Security Light,Supplier TBD,,draft_hidden,Jamaica shipping; IP rating; battery chemistry; sample; warranty; replacements,Shortlist supplier candidates
 checkout,SET-ACC-LANTERN-001,Emergency Solar Lantern,Supplier TBD,,draft_hidden,Jamaica shipping; battery safety; sample; warranty; replacements,Shortlist supplier candidates
 checkout,SET-ACC-FAN-001,Portable Rechargeable Fan,Supplier TBD,,draft_hidden,Jamaica shipping; sample; warranty; replacement policy,Shortlist supplier candidates

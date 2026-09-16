@@ -1,4 +1,4 @@
-# S.E.T. Jamaica Main Product Sourcing: Solar Generators + Solar Panels
+# S.E.T. Sustainable Energy Technology in Jamaica Main Product Sourcing: Solar Generators + Solar Panels
 
 Updated: 2026-05-30
 

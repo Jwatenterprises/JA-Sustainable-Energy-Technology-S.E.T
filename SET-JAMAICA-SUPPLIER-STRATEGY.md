@@ -1,9 +1,9 @@
-# S.E.T. Jamaica Supplier Strategy
+# S.E.T. Sustainable Energy Technology in Jamaica Supplier Strategy
 
 ## Platform Roles
 
 ### Alibaba.com
-Best overall fit for the serious solar side of S.E.T. Jamaica.
+Best overall fit for the serious solar side of S.E.T. Sustainable Energy Technology in Jamaica.
 
 Use for:
 - Solar panels
@@ -128,7 +128,7 @@ Subject: Jamaica Dropship / Wholesale Partnership Inquiry - S.E.T Solar & Energy
 
 Hello [Supplier Name],
 
-My name is Wayne Walters, and I represent S.E.T Sun Energy Technology, a Jamaica-focused renewable-energy and energy-saving ecommerce brand.
+My name is Wayne Walters, and I represent S.E.T. Sustainable Energy Technology in Jamaica, a Jamaica-focused renewable-energy and energy-saving ecommerce brand.
 
 We are building a WooCommerce store for Jamaican homeowners, small businesses, and energy-conscious customers. We are interested in your products for possible dropshipping, wholesale purchasing, affiliate promotion, and long-term supply partnership.
 
@@ -148,5 +148,5 @@ We are especially interested in solar lighting, portable power, inverters, batte
 Regards,
 
 Wayne Walters  
-S.E.T Sun Energy Technology  
+S.E.T. Sustainable Energy Technology in Jamaica  
 info@setjamaica.com  

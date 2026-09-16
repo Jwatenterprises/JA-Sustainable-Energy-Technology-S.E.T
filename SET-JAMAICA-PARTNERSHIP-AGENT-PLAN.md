@@ -1,4 +1,4 @@
-# S.E.T. Jamaica Partnerships Outreach Agent Plan
+# S.E.T. Sustainable Energy Technology in Jamaica Partnerships Outreach Agent Plan
 
 Purpose: operate a dedicated research and drafting agent for Jamaica solar installer, service, supplier, dropship, and affiliate partnerships. The agent prepares research notes and outbound drafts only. Wayne Walters must approve every message before anything is sent.
 
@@ -34,7 +34,7 @@ The agent may not:
    - Use existing targets first before adding new prospects.
 
 2. Research
-   - Capture company name, public URL, contact route, service area, product focus, visible credentials, brands carried, and fit for S.E.T. Jamaica.
+   - Capture company name, public URL, contact route, service area, product focus, visible credentials, brands carried, and fit for S.E.T. Sustainable Energy Technology in Jamaica.
    - Flag uncertainty clearly. Do not treat website claims, search snippets, or social profiles as verified proof.
    - For installers, look for licensing, insurance, references, service parishes, maintenance capacity, and preferred equipment standards.
    - For suppliers, look for Jamaica shipping, datasheets, certifications, warranty terms, response history, protected checkout, and sample availability.
@@ -69,7 +69,7 @@ Priority:
 Status:
 Public URL:
 Contact route:
-Fit for S.E.T. Jamaica:
+Fit for S.E.T. Sustainable Energy Technology in Jamaica:
 Verified facts:
 Unverified claims / unknowns:
 Required proof:

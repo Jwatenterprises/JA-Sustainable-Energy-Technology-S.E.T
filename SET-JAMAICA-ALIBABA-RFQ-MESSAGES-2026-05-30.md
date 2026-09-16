@@ -1,4 +1,4 @@
-# S.E.T. Jamaica Alibaba RFQ Messages
+# S.E.T. Sustainable Energy Technology in Jamaica Alibaba RFQ Messages
 
 Updated: 2026-05-30
 
@@ -10,7 +10,7 @@ Subject: Jamaica RFQ - 2000Wh LiFePO4 Portable Solar Generator, 120V/60Hz
 
 Hello,
 
-My name is Wayne Walters, and I represent S.E.T. - Sun Energy Technology, a Jamaica-focused renewable-energy and energy-saving ecommerce brand.
+My name is Wayne Walters, and I represent S.E.T. Sustainable Energy Technology in Jamaica, a Jamaica-focused renewable-energy and energy-saving ecommerce brand.
 
 We are sourcing 2000Wh-class LiFePO4 portable solar generators for Jamaican homeowners, renters, small businesses, churches, schools, and hurricane-preparedness customers.
 
@@ -30,7 +30,7 @@ Please also confirm whether you have shipped lithium power stations to Jamaica o
 
 Thank you,
 Wayne Walters
-S.E.T. - Sun Energy Technology
+S.E.T. Sustainable Energy Technology in Jamaica
 info@setjamaica.com
 
 ## RFQ 2: 3000Wh+ LiFePO4 UPS Solar Generators
@@ -39,7 +39,7 @@ Subject: Jamaica RFQ - 3000Wh+ LiFePO4 UPS Portable Power Station
 
 Hello,
 
-S.E.T. - Sun Energy Technology is sourcing 3000Wh+ LiFePO4 portable power stations with UPS capability for small businesses, churches, schools, event use, and home backup customers in Jamaica.
+S.E.T. Sustainable Energy Technology in Jamaica is sourcing 3000Wh+ LiFePO4 portable power stations with UPS capability for small businesses, churches, schools, event use, and home backup customers in Jamaica.
 
 Please quote:
 - 1 sample unit.
@@ -57,7 +57,7 @@ Please include the exact model datasheet and confirm whether the listed price ch
 
 Thank you,
 Wayne Walters
-S.E.T. - Sun Energy Technology
+S.E.T. Sustainable Energy Technology in Jamaica
 info@setjamaica.com
 
 ## RFQ 3: 550W-650W Solar Panels
@@ -66,7 +66,7 @@ Subject: Jamaica RFQ - 550W-650W Mono/TOPCon/Bifacial Solar Panels
 
 Hello,
 
-S.E.T. - Sun Energy Technology is sourcing solar panels for Jamaica-based installed systems and wholesale/procurement quotes.
+S.E.T. Sustainable Energy Technology in Jamaica is sourcing solar panels for Jamaica-based installed systems and wholesale/procurement quotes.
 
 Please quote 550W-650W panels with:
 - Mono PERC, N-Type TOPCon, or bifacial dual-glass options.
@@ -84,5 +84,5 @@ We will not proceed without exact model/certificate matching and written freight
 
 Thank you,
 Wayne Walters
-S.E.T. - Sun Energy Technology
+S.E.T. Sustainable Energy Technology in Jamaica
 info@setjamaica.com

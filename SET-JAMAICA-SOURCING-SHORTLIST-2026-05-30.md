@@ -1,4 +1,4 @@
-# S.E.T. Jamaica Sourcing Shortlist
+# S.E.T. Sustainable Energy Technology in Jamaica Sourcing Shortlist
 
 Updated: 2026-05-30
 
@@ -10,7 +10,7 @@ Status legend:
 
 ## Rules Applied
 
-- USA-only affiliate partners are disregarded for S.E.T. Jamaica.
+- USA-only affiliate partners are disregarded for S.E.T. Sustainable Energy Technology in Jamaica.
 - Affiliate/referral opportunities remain acceptable only if the partner ships to Jamaica and meets S.E.T. vetting rules.
 - Low-ticket products should target FOB US$100 or less where practical.
 - High-ticket solar equipment stays quote-only with freight/customs/install review.
@@ -49,7 +49,7 @@ CJ candidates are for low-risk tests only. Do not use high-ticket solar systems 
 | C2 | Sample-first | Window-type solar power bank | https://cjdropshipping.com/product/window-type-solar-mobile-power-charging-treasure-p-02B2FA38-DA0C-4CA5-A7D6-4F5583A3053B.html | Fits emergency charger/power bank lane | CJ page lists 5200 mAh option, 5-5.5V 0.6W solar, USB output, SKU CJSJSJCD00070, $10.68, 330 g, refund eligibility | Battery capacity is modest; sample and safety check required; calculate Jamaica shipping |
 | C3 | Sample-first | Outdoor solar camping tent light | https://cjdropshipping.com/product/outdoor-solar-camping-tent-light-p-1798308218993774592.html | Fits emergency lantern/camping light lane | CJ page lists LED, solar charging, SKU CJJT205413601AZ, $4.78-$5.03, 269 g, refund eligibility | Calculate Jamaica shipping; sample; verify brightness and runtime |
 | C4 | Sample-first | Portable outdoor aluminum alloy camping lantern | https://cjdropshipping.com/product/portable-outdoor-aluminum-alloy-camping-lantern-p-2506290947141613500.html | Fits low-cost emergency light but not solar-specific | CJ page lists 3W, 500 mAh, Type-C, SKU CJYD241489101AZ, $1.53-$1.74, 120-140 g, refund eligibility | Low battery capacity; use only as add-on after sample test |
-| C5 | Reject-for-now | Solar fan hats / novelty solar fans | https://cjdropshipping.com/product/solar-charging-fan-hat---breathable-mesh-uv-protection-baseball-cap-for-men-women-summer-outdoor-sun-hat-p-1784813306574802944.html | Not aligned enough with S.E.T. Jamaica energy brand | Solar/USB charging fan hat found, but it reads as novelty apparel | Reject for launch; revisit only as summer/outdoor content item |
+| C5 | Reject-for-now | Solar fan hats / novelty solar fans | https://cjdropshipping.com/product/solar-charging-fan-hat---breathable-mesh-uv-protection-baseball-cap-for-men-women-summer-outdoor-sun-hat-p-1784813306574802944.html | Not aligned enough with S.E.T. Sustainable Energy Technology in Jamaica energy brand | Solar/USB charging fan hat found, but it reads as novelty apparel | Reject for launch; revisit only as summer/outdoor content item |
 
 ## Immediate Shortlist Decisions
 

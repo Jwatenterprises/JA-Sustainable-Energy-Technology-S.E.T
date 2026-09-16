@@ -42,8 +42,10 @@ After MX records are active:
 4. [x] Add DMARC TXT:
 
 ```text
-v=DMARC1; p=none; rua=mailto:info@setjamaica.com
+v=DMARC1; p=none; rua=mailto:info+dmarc@setjamaica.com
 ```
+
+2026-06-06 update: DMARC aggregate reports were moved away from the plain `info@setjamaica.com` reporting address to the report-specific Google Workspace plus address `info+dmarc@setjamaica.com`. Next cleanup option: create a Gmail filter for mail delivered to `info+dmarc@setjamaica.com` or replace this with a true dedicated `dmarc@setjamaica.com` mailbox/parser address after it is provisioned.
 
 Cloudflare MX record:
 
@@ -67,4 +69,69 @@ Set `www-set-jamaica.com` to 301 redirect to:
 
 ```text
 https://setjamaica.com
+```
+
+## WooCommerce Store - shop.setjamaica.com
+
+Decision confirmed 2026-05-29:
+- Keep the main site on GitHub Pages.
+- Build WordPress + WooCommerce separately on `shop.setjamaica.com`.
+- Use quote-first solar packages plus low-ticket accessory checkout only after supplier verification.
+
+Prepared files:
+- `SET-JAMAICA-WOOCOMMERCE-SETUP.md`
+- `SET-JAMAICA-WOOCOMMERCE-STARTER-PRODUCTS.csv`
+- `SET-JAMAICA-WOOCOMMERCE-POLICIES.md`
+
+DNS completed 2026-05-29:
+
+```text
+Type: A
+Name: shop
+Target: 82.29.157.110
+Proxy: DNS only
+```
+
+```text
+Type: AAAA
+Name: shop
+Target: 2a02:4780:2b:2016:0:c0d:e830:2
+Proxy: DNS only
+```
+
+Hostinger website:
+
+```text
+Domain: shop.setjamaica.com
+Hosting plan: Hostinger Business
+Hosting username: u202238000
+Order ID: 1009426716
+Root: /home/u202238000/domains/shop.setjamaica.com/public_html
+```
+
+Verified:
+- `http://shop.setjamaica.com` returns `200`.
+- `http://shop.setjamaica.com/wp-json/` returns `200`.
+- `/wp-admin/` is reachable and redirects to WordPress login.
+
+Pending:
+- Enable/provision SSL for `https://shop.setjamaica.com`.
+- Log in to WordPress and install WooCommerce + setup plugins.
+
+When the WordPress/WooCommerce host provides DNS instructions, add one of:
+
+```text
+Type: CNAME
+Name: shop
+Target: [host-provided-cname]
+Proxy: DNS only for first SSL provisioning
+```
+
+or:
+
+```text
+Type: A
+Name: shop
+IPv4 address: [host-provided-ip]
+Proxy: DNS only for first SSL provisioning
 ```

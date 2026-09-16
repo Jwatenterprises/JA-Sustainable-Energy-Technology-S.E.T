@@ -1,8 +1,8 @@
-# S.E.T. Jamaica Ecommerce Supplier Control
+# S.E.T. Sustainable Energy Technology in Jamaica Ecommerce Supplier Control
 
 Updated: 2026-05-30
 
-Purpose: govern the S.E.T. Jamaica shop using supplier-led ecommerce, not USA-only affiliate links.
+Purpose: govern the S.E.T. Sustainable Energy Technology in Jamaica shop using supplier-led ecommerce, not USA-only affiliate links.
 
 ## Brand Match
 
@@ -103,7 +103,7 @@ Subject: Jamaica Dropship / Wholesale Partnership Inquiry - S.E.T Solar & Energy
 
 Hello [Supplier Name],
 
-My name is Wayne Walters, and I represent S.E.T Sun Energy Technology, a Jamaica-focused renewable-energy and energy-saving ecommerce brand.
+My name is Wayne Walters, and I represent S.E.T. Sustainable Energy Technology in Jamaica, a Jamaica-focused renewable-energy and energy-saving ecommerce brand.
 
 We are building a WooCommerce store for Jamaican homeowners, small businesses, and energy-conscious customers. We are interested in your products for possible dropshipping, wholesale purchasing, affiliate promotion, and long-term supply partnership.
 
@@ -123,5 +123,5 @@ We are especially interested in solar lighting, portable power, inverters, batte
 Regards,
 
 Wayne Walters  
-S.E.T Sun Energy Technology  
+S.E.T. Sustainable Energy Technology in Jamaica  
 info@setjamaica.com

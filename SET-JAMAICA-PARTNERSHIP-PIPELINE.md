@@ -1,4 +1,4 @@
-# S.E.T. Jamaica Partnership Pipeline
+# S.E.T. Sustainable Energy Technology in Jamaica Partnership Pipeline
 
 Status legend: `research`, `shortlist`, `contacted`, `sample/meeting`, `approved`, `rejected`.
 
@@ -41,7 +41,7 @@ Use these as search starting points, not approved suppliers. Every supplier must
 
 ## Priority 4 - Ecommerce Supplier Channels
 
-USA-only affiliate programmes are not part of the S.E.T. Jamaica product plan. Use supplier and dropship channels that can confirm Jamaica fulfilment, warranty handling, and returns.
+USA-only affiliate programmes are not part of the S.E.T. Sustainable Energy Technology in Jamaica product plan. Use supplier and dropship channels that can confirm Jamaica fulfilment, warranty handling, and returns.
 
 | Priority | Channel | Product lane | Fit | Status | Next action |
 | --- | --- | --- | --- | --- | --- |

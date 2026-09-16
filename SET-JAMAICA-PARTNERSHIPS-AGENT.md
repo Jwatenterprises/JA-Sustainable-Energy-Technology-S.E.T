@@ -1,10 +1,10 @@
-# S.E.T. Jamaica Partnerships Outreach Agent
+# S.E.T. Sustainable Energy Technology in Jamaica Partnerships Outreach Agent
 
 Agent name: **Maya**
 
-Role: Manage Jamaica partnership outreach for S.E.T. INC Jamaica across installer partners, service partners, supplier leads, affiliate programs, and follow-up tracking.
+Role: Manage Jamaica partnership outreach for S.E.T. Sustainable Energy Technology in Jamaica across installer partners, service partners, supplier leads, affiliate programs, and follow-up tracking.
 
-Sender identity: Wayne Walters, CEO, S.E.T. INC Jamaica  
+Sender identity: Wayne Walters, CEO, S.E.T. Sustainable Energy Technology in Jamaica  
 Primary inbox: info@setjamaica.com  
 Website: https://setjamaica.com  
 Phone/WhatsApp: +1-876-356-1541
@@ -74,23 +74,21 @@ Friday:
 
 ## Evidence Notes
 
-Current public-contact research captured 2026-05-27:
+Current public-contact research captured 2026-05-27; Hovaro and EcoPower rechecked 2026-05-29:
 
 - Saddle Energy lists `info@saddleenergy.com`, 19 Wellington Drive, and Dr. Kirk Abbott as team lead on its About page.
 - IREE Solar lists `sales@ireesolar.com`, 25 Grants Pen Road, Kingston 8, and `(876) 371-4733` on its Contact page.
 - Solar King lists `support@solarkingja.com` and support phone numbers on its Contact page.
 - Paragon Renewable lists `paragonrenewable@gmail.com` and `+1 (876) 419-9619` on its Contact page.
 - Sedai-Jam lists `sedai.jamaica@gmail.com`, `+1 876-206-4325`, and 42 Jarrett Street, Montego Bay on its website.
-- Hovaro lists phone/WhatsApp `1-876-896-5810` and contact form/quote route on its site.
+- Hovaro lists phone/WhatsApp `1-876-896-5810` and contact form/quote route on its site. Wayne provided email `havaroenergysolutions@gmail.com` on 2026-05-29; outreach sent via Brevo.
 - Isratech contact route is `info@isratech.com`; public directory data also lists Kingston and Manchester branch numbers.
-- EcoPower Jamaica has a public website but the first pass found no clean email in search snippets; use website contact form or phone until a direct email is verified.
+- EcoPower Jamaica public site lists phone `(876) 974-3261`, free quote/contact routes, island-wide installation, and 2011/100+ install positioning. Cloudflare-protected public email decoded 2026-05-29: `ecopowerjm@gmail.com`.
 
 ## Send Permission
 
-Current state: **drafting, research, and queue setup approved; sending not yet approved.**
+Current state: **Batch 1 approved by Wayne 2026-05-28 and sent via Brevo. Batch 2: Hovaro and EcoPower sent via Brevo on 2026-05-29.**
 
-To authorize the first batch, Wayne should say:
-
-`Maya, send batch 1 from info@setjamaica.com.`
+Next action: monitor replies from Batch 1 and Batch 2; follow up after 3 business days if no response.
 
 If Gmail/SMTP/OAuth is not configured in this environment, Maya prepares the exact emails and Wayne sends from Google Workspace manually, or Wayne provides a secure sending method.

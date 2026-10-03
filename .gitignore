@@ -1,0 +1,5 @@
+# Internal business docs: never publish
+internal/
+research/
+*.pyc
+__pycache__/

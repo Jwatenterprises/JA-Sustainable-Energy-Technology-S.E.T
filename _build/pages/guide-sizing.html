@@ -1,0 +1,101 @@
+<!-- title: What Size Power Station or Battery Do I Need? Jamaica Outage Calculator | S.E.T. Jamaica | description: Add the appliances you want to keep running during a JPS outage and see the battery size and power rating you need. Free calculator for Jamaican homes. | path: guides/sizing.html | nav: guides -->
+<article class="article">
+  <div class="wrap narrow">
+    <p class="eyebrow">Sizing guide</p>
+    <h1>What size power station or battery do I need?</h1>
+    <p class="byline">By the S.E.T. Jamaica team &middot; Typical appliance figures; check the label on your own appliances for exact numbers</p>
+
+    <div class="answer">
+      <p><strong>Short answer:</strong> to keep a fridge, a fan, a few lights, the TV, router and phones going through an evening outage (about 8 hours), plan on roughly <strong>2&ndash;2.5 kWh</strong> of battery and at least <strong>1,500 W</strong> of output (a fridge needs a start-up surge). Our ~2 kWh / 2,400 W power station covers most evening outages; for longer ones, add a solar panel to recharge in the day. The calculator below starts with that list, so adjust it for your home.</p>
+    </div>
+
+    <h2>Two numbers that matter</h2>
+    <ul>
+      <li><strong>Watt-hours (Wh) = how long it lasts.</strong> A 2,000 Wh battery can run a 100 W load for roughly 17 hours after conversion losses.</li>
+      <li><strong>Watts (W) = how much it can run at once.</strong> Add up everything running together. Fridges and pumps also need a short start-up surge of 2&ndash;3&times; their running watts.</li>
+    </ul>
+
+    <h2>Outage calculator</h2>
+    <div class="calc" id="calc">
+      <div class="calc-row calc-head"><span>Appliance (typical watts)</span><span>How many</span><span>Hours</span></div>
+    </div>
+    <p class="small muted">The result allows for about 15% inverter losses and keeps 10% in reserve. Fridge figures are average running watts (the compressor cycles on and off).</p>
+
+    <h2>Typical appliance power</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Appliance</th><th>Running watts (typical)</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Fridge (average over a day)</td><td>~60&ndash;100 W</td><td>Start-up surge ~600&ndash;1,200 W. Needs pure sine wave</td></tr>
+          <tr><td>Chest freezer (average)</td><td>~50&ndash;80 W</td><td>Keep the lid shut in an outage</td></tr>
+          <tr><td>Standing / ceiling fan</td><td>40&ndash;75 W</td><td>Solar DC fans use less</td></tr>
+          <tr><td>LED bulb</td><td>8&ndash;12 W</td><td></td></tr>
+          <tr><td>TV (40&ndash;55")</td><td>60&ndash;120 W</td><td></td></tr>
+          <tr><td>Wi-Fi router + modem</td><td>10&ndash;20 W</td><td></td></tr>
+          <tr><td>Laptop</td><td>45&ndash;90 W</td><td></td></tr>
+          <tr><td>Phone charging</td><td>5&ndash;20 W</td><td></td></tr>
+          <tr><td>CPAP machine (no humidifier)</td><td>30&ndash;60 W</td><td>Humidifier can double it. Check your machine</td></tr>
+          <tr><td>Water pump (&frac12; hp)</td><td>~400&ndash;750 W</td><td>Big start-up surge. Ask us before relying on a station</td></tr>
+          <tr><td>Microwave / kettle / iron</td><td>1,000&ndash;1,800 W</td><td>Short use only; drains a battery fast</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout">
+      <strong>Not recommended on a power station:</strong> AC units, electric water heaters and stoves. They draw too much for too long. For whole-home backup, you need a home battery with a solar inverter.
+    </div>
+
+    <h2>Which S.E.T. product fits?</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Your need</th><th>Good fit</th></tr></thead>
+        <tbody>
+          <tr><td>Fans, lights, router, phones, CPAP overnight</td><td>Compact ~600 Wh power station</td></tr>
+          <tr><td>Fridge + fans + TV + lights through an outage</td><td>~2 kWh / 2,400 W power station</td></tr>
+          <tr><td>Recharge during multi-day outages</td><td>Hurricane bundle (2 kWh station + 200W solar panel)</td></tr>
+          <tr><td>Home solar system with a LuxPower or Deye inverter</td><td>51.2V 5 kWh wall or rack battery (stackable)</td></tr>
+          <tr><td>Replace a 12V lead-acid battery (off-grid, boat, shop)</td><td>12.8V 100Ah lithium battery</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="btn-row">
+      <a class="btn btn-sun" href="{{up}}shop/">See what's coming</a>
+      <a class="btn btn-wa" href="{{wa:Hi S.E.T. Jamaica, can you help me size a power station? I want to run: }}">Get sizing help on WhatsApp</a>
+    </div>
+  </div>
+</article>
+<script>
+(function () {
+  var items = [
+    ["Fridge (average)", 80, 1, 8], ["Chest freezer (average)", 65, 0, 8], ["Fan", 55, 1, 8],
+    ["LED bulb", 10, 4, 5], ["TV", 90, 1, 3], ["Wi-Fi router", 15, 1, 8], ["Laptop", 60, 0, 4],
+    ["Phone charging", 10, 2, 3], ["CPAP (no humidifier)", 45, 0, 8]
+  ];
+  var calc = document.getElementById("calc");
+  items.forEach(function (it, i) {
+    var row = document.createElement("div");
+    row.className = "calc-row";
+    row.innerHTML = '<label for="q' + i + '">' + it[0] + ' (' + it[1] + ' W)</label>' +
+      '<input id="q' + i + '" type="number" min="0" max="20" value="' + it[2] + '" aria-label="How many ' + it[0] + '">' +
+      '<input id="h' + i + '" type="number" min="0" max="24" value="' + it[3] + '" aria-label="Hours for ' + it[0] + '">';
+    calc.appendChild(row);
+  });
+  var res = document.createElement("div");
+  res.className = "calc-result";
+  res.innerHTML = '<div>Energy needed<strong id="r-wh">0 Wh</strong></div><div>Battery to look for<strong id="r-bat">0 Wh</strong></div><div>Output (watts) at once<strong id="r-w">0 W</strong></div>';
+  calc.appendChild(res);
+  function update() {
+    var wh = 0, w = 0;
+    items.forEach(function (it, i) {
+      var q = Math.max(0, +document.getElementById("q" + i).value || 0);
+      var h = Math.max(0, +document.getElementById("h" + i).value || 0);
+      wh += it[1] * q * h; w += it[1] * q;
+    });
+    var bat = Math.ceil(wh / 0.85 / 0.9 / 50) * 50;
+    document.getElementById("r-wh").textContent = wh.toLocaleString() + " Wh";
+    document.getElementById("r-bat").textContent = bat.toLocaleString() + " Wh+";
+    document.getElementById("r-w").textContent = w.toLocaleString() + " W";
+  }
+  calc.addEventListener("input", update);
+  update();
+})();
+</script>

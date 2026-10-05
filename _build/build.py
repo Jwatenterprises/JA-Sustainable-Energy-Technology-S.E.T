@@ -15,7 +15,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 PAGES = ROOT / "_build" / "pages"
 PRODUCTS = json.loads((ROOT / "_build" / "products.json").read_text(encoding="utf-8"))["products"]
 SITE = "https://setjamaica.com"
-WA_NUMBER = "18763561541"   # S.E.T. JA WhatsApp (set May 2026; Wayne to re-confirm)
+WA_NUMBER = "18574459407"   # Wayne's WhatsApp, temporary (2026-10-05); swap for the JA business line later
 EMAIL = "info@setjamaica.com"
 ADDRESS = "11 Hill View Avenue, Kingston 10, Jamaica"
 FORM_ENDPOINT = f"https://formsubmit.co/ajax/{EMAIL}"   # needs one-time activation from the info@ inbox
@@ -152,7 +152,7 @@ def layout(meta, body):
 <div class="util"><div class="wrap"><span>Island-wide delivery</span><span>Pay by card, Lynk, bank transfer or PayPal</span><span>{ADDRESS.replace(", Jamaica", "")}</span></div></div>
 <header class="site-header">
   <div class="wrap header-row">
-    <a class="brand" href="{up}index.html" aria-label="S.E.T. Sustainable Energy Technology in Jamaica, home"><picture><source srcset="{up}images/logo-lockup.webp" type="image/webp"><img src="{up}images/logo-lockup.png" alt="Sustainable Energy Technology S.E.T. logo" width="533" height="180"></picture></a>
+    <a class="brand" href="{up}index.html" aria-label="S.E.T. Sustainable Energy Technology in Jamaica, home"><picture><source srcset="{up}images/logo-lockup.webp" type="image/webp"><img src="{up}images/logo-lockup.png" alt="Sustainable Energy Technology S.E.T. logo" width="554" height="180"></picture></a>
     <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
     <nav id="primary-nav" class="nav" aria-label="Primary">{nav}</nav>
     <div class="header-cta"><a class="btn btn-wa" href="{wa('Hi S.E.T. Jamaica, ')}">WhatsApp us</a></div>
@@ -164,7 +164,7 @@ def layout(meta, body):
 <footer class="site-footer">
   <div class="wrap footer-grid">
     <div>
-      <picture><source srcset="{up}images/logo-full.webp" type="image/webp"><img class="footer-logo" src="{up}images/logo-full.png" alt="Sustainable Energy Technology S.E.T. logo" width="300" height="428" loading="lazy"></picture>
+      <picture><source srcset="{up}images/logo-full.webp" type="image/webp"><img class="footer-logo" src="{up}images/logo-full.png" alt="Sustainable Energy Technology S.E.T. logo" width="300" height="421" loading="lazy"></picture>
       <p class="footer-brand">S.E.T. Sustainable Energy Technology in Jamaica</p>
       <p>Solar batteries, power stations and solar gear, stocked in Kingston. Every AC product is checked for Jamaica's 110V / 50Hz grid.</p>
       <p>{ADDRESS}<br>Pickup by appointment</p>
@@ -179,7 +179,7 @@ def layout(meta, body):
     </div>
     <div>
       <p class="footer-head">Contact</p>
-      <a href="{wa('Hi S.E.T. Jamaica, I have a question.')}">WhatsApp 876-356-1541</a><a href="mailto:{EMAIL}">{EMAIL}</a><a href="{up}about.html">About</a><a href="{up}contact.html">Contact</a><a href="{up}privacy-policy.html">Privacy</a><a href="{up}terms.html">Terms</a>
+      <a href="{wa('Hi S.E.T. Jamaica, I have a question.')}">WhatsApp 857-445-9407</a><a href="mailto:{EMAIL}">{EMAIL}</a><a href="{up}about.html">About</a><a href="{up}contact.html">Contact</a><a href="{up}privacy-policy.html">Privacy</a><a href="{up}terms.html">Terms</a>
     </div>
   </div>
   <p class="wrap copyright">&copy; {YEAR} S.E.T. Sustainable Energy Technology in Jamaica. Prices in Jamaican dollars (J$), GCT included.</p>
@@ -243,7 +243,7 @@ def main():
         if meta["path"] == "index.html":
             meta["head"] = '<script type="application/ld+json">' + json.dumps({
                 "@context": "https://schema.org", "@type": "Store", "name": "S.E.T. Sustainable Energy Technology in Jamaica",
-                "url": SITE, "email": EMAIL, "telephone": "+1-876-356-1541", "image": f"{SITE}/logo.png",
+                "url": SITE, "email": EMAIL, "telephone": "+1-857-445-9407", "image": f"{SITE}/logo.png",
                 "address": {"@type": "PostalAddress", "streetAddress": "11 Hill View Avenue", "addressLocality": "Kingston 10",
                             "addressRegion": "Kingston", "addressCountry": "JM"}}) + "</script>"
         out = ROOT / meta["path"]

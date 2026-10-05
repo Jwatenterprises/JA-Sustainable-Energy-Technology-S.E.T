@@ -1,86 +1,48 @@
-<!-- title: Shop Solar Batteries, Power Stations & Solar Gear | S.E.T. Jamaica | description: S.E.T. Jamaica's first stock of LiFePO4 solar batteries, 50Hz-verified power stations and solar lifestyle gear lands in Kingston in December. Reserve yours, with no payment until it arrives. | path: shop/index.html | nav: shop -->
-<section class="hero">
+<!-- title: Shop Solar Generators, Lithium Batteries & Solar Gear | S.E.T. Jamaica | description: S.E.T. Jamaica's first stock of 50Hz-verified power stations, LiFePO4 home batteries and everyday solar gear lands in Kingston in December. Reserve yours, with no payment until it arrives. | path: shop/index.html | nav: shop -->
+<section class="hero" style="padding-bottom:24px">
   <div class="wrap narrow">
     <p class="eyebrow">Shop</p>
     <h1>First stock lands in Kingston this December.</h1>
-    <p class="lead">We're finalising suppliers and testing samples now. Product pages with full specs, photos and J$ prices go up as each item is confirmed. Reserve today and we'll message you first. <strong>No payment until your item is in Kingston.</strong></p>
-    <div class="btn-row">
-      <a class="btn btn-wa" href="{{wa:Hi S.E.T. Jamaica, please reserve for me / notify me about: }}">Reserve on WhatsApp</a>
-      <a class="btn btn-ghost" href="mailto:{{email}}?subject=Reserve%20%2F%20notify%20me">Reserve by email</a>
+    <p class="lead">We're finalising suppliers and testing samples now. Prices, photos and full specs go up as each item is confirmed. Reserve today and we'll message you first. <strong>No payment until your item is in Kingston.</strong></p>
+    <div class="btn-row"><a class="btn btn-primary" href="#reserve">Reserve now</a><a class="btn btn-ghost" href="{{up}}guides/sizing.html">What size do I need?</a></div>
+  </div>
+</section>
+
+<section class="section" id="power-stations" style="padding-top:24px">
+  <div class="wrap">
+    <div class="section-head"><div><p class="eyebrow">Outage backup</p><h2>Power stations</h2><p>Plug-in backup power with no gas, fumes or noise. Every unit must output 110–120V at 50Hz, pure sine wave, and charge on JPS power. <a href="{{up}}guides/50hz-power-stations-jamaica.html">Why we're strict about this</a>.</p></div></div>
+    {{products:power-stations}}
+  </div>
+</section>
+
+<section class="section section-alt" id="batteries">
+  <div class="wrap">
+    <div class="section-head"><div><p class="eyebrow">Cut my JPS bill</p><h2>Home batteries (LiFePO4)</h2><p>Lithium iron phosphate with Grade-A named cells, UN38.3 safety testing and inverter compatibility lists for LuxPower and Deye.</p></div></div>
+    {{products:batteries}}
+    <div class="card" style="margin-top:14px;flex-direction:row;flex-wrap:wrap;align-items:center;gap:14px;justify-content:space-between">
+      <div style="min-width:0;flex:1 1 280px"><span class="badge">Installers</span><h3 style="margin-top:.6rem">Trade pricing on 5+ batteries</h3><p class="muted" style="margin:0">Volume pricing, invoices with GCT details and local stock with no import wait.</p></div>
+      <a class="btn btn-wa" href="{{wa:Hi S.E.T. Jamaica, I'm an installer. Please send trade pricing when available.}}">Ask about trade pricing</a>
     </div>
   </div>
 </section>
 
-<section class="section" id="batteries">
+<section class="section" id="everyday-solar">
   <div class="wrap">
-    <span class="badge">Line 1</span>
-    <h2 style="margin-top:.6rem">Solar batteries (LiFePO4)</h2>
-    <p class="muted">Lithium iron phosphate, the safest and longest-lasting lithium chemistry for home solar. We require Grade-A named cells, UN38.3 safety testing, and inverter compatibility lists before we stock a model.</p>
-    <div class="grid-3">
-      <div class="card">
-        <span class="badge badge-sun">Coming December</span>
-        <h3 style="margin-top:.7rem">12.8V 100Ah lithium battery</h3>
-        <ul><li>1.28 kWh, Bluetooth battery monitor</li><li>Replaces 12V lead-acid and AGM</li><li>Off-grid, boats, shops, small solar</li></ul>
-        <a class="btn btn-wa" href="{{wa:Hi S.E.T. Jamaica, please notify me when the 12.8V 100Ah lithium battery lands.}}">Notify me</a>
-      </div>
-      <div class="card">
-        <span class="badge badge-sun">Coming December</span>
-        <h3 style="margin-top:.7rem">51.2V 5 kWh home battery</h3>
-        <ul><li>Wall-mount and rack versions</li><li>Works with LuxPower and Deye inverters (CAN/RS485)</li><li>Stackable as your system grows</li></ul>
-        <a class="btn btn-wa" href="{{wa:Hi S.E.T. Jamaica, please notify me when the 51.2V 5 kWh home battery lands.}}">Notify me</a>
-      </div>
-      <div class="card">
-        <span class="badge">Installers</span>
-        <h3 style="margin-top:.7rem">Trade pricing</h3>
-        <ul><li>Volume pricing on 5+ batteries</li><li>Invoices with GCT details</li><li>Local stock, no import wait</li></ul>
-        <a class="btn btn-wa" href="{{wa:Hi S.E.T. Jamaica, I'm an installer. Please send trade pricing when available.}}">Ask about trade pricing</a>
-      </div>
-    </div>
-    <p class="small muted" style="margin-top:1rem">Not sure what size you need? <a href="{{up}}guides/sizing.html">Try our outage calculator</a>.</p>
+    <div class="section-head"><div><p class="eyebrow">Everyday solar</p><h2>Solar fans, lights, cameras &amp; power banks</h2><p>Everyday solar gear for the home, yard, farm and gifts.</p></div></div>
+    {{products:everyday-solar}}
   </div>
 </section>
 
-<section class="section section-alt" id="power-stations">
+<section class="section" id="reserve" style="padding-top:0">
   <div class="wrap">
-    <span class="badge">Line 2</span>
-    <h2 style="margin-top:.6rem">Power stations</h2>
-    <p class="muted">Plug-in backup power: charge from the wall or a solar panel, then run your essentials through an outage with no gas, no fumes and no noise. Every unit must charge on 50Hz and output 110&ndash;120V at 50Hz, pure sine wave.</p>
-    <div class="grid-3">
-      <div class="card">
-        <span class="badge badge-sun">Coming December</span>
-        <h3 style="margin-top:.7rem">~2 kWh power station</h3>
-        <ul><li>About 2,000 Wh / 2,400 W, LiFePO4</li><li>Runs a fridge, fans, TV and lights</li><li>Bench-tested on JPS power before sale</li></ul>
-        <a class="btn btn-wa" href="{{wa:Hi S.E.T. Jamaica, please notify me when the 2 kWh power station lands.}}">Notify me</a>
+    <div class="reserve-box">
+      <div>
+        <p class="eyebrow">First shipment · December</p>
+        <h2>Reserve yours. Pay nothing until it lands.</h2>
+        <p class="lead">We'll message you on WhatsApp the day your item clears Kingston, with the final price, before it goes on open sale.</p>
+        <p class="small muted">Prefer to chat? <a href="{{wa:Hi S.E.T. Jamaica, please reserve for me: }}">Reserve on WhatsApp</a>.</p>
       </div>
-      <div class="card">
-        <span class="badge badge-sun">Coming December</span>
-        <h3 style="margin-top:.7rem">Hurricane bundle</h3>
-        <ul><li>~2 kWh power station</li><li>200W folding solar panel + cable</li><li>Recharge from the sun when the grid is down</li></ul>
-        <a class="btn btn-wa" href="{{wa:Hi S.E.T. Jamaica, please notify me when the hurricane bundle lands.}}">Notify me</a>
-      </div>
-      <div class="card">
-        <span class="badge badge-sun">Coming soon</span>
-        <h3 style="margin-top:.7rem">Compact power station</h3>
-        <ul><li>About 600 Wh, LiFePO4</li><li>Fans, router, TV, CPAP, phones</li><li>Light enough to carry room to room</li></ul>
-        <a class="btn btn-wa" href="{{wa:Hi S.E.T. Jamaica, please notify me when the compact power station lands.}}">Notify me</a>
-      </div>
-    </div>
-    <p class="small muted" style="margin-top:1rem">Why we're strict about this: <a href="{{up}}guides/50hz-power-stations-jamaica.html">Will a US power station work in Jamaica?</a></p>
-  </div>
-</section>
-
-<section class="section" id="solar-lifestyle">
-  <div class="wrap">
-    <span class="badge">Line 3</span>
-    <h2 style="margin-top:.6rem">Solar lifestyle gear</h2>
-    <p class="muted">Everyday solar products for the home, yard, farm and gifts.</p>
-    <div class="grid-3">
-      <div class="card"><h3>Solar standing fans</h3><p class="muted">16" rechargeable fans with a solar panel, LED light and USB phone charging.</p><a class="btn btn-wa" href="{{wa:Hi S.E.T. Jamaica, please notify me when the solar fans land.}}">Notify me</a></div>
-      <div class="card"><h3>Solar security lights</h3><p class="muted">Motion-sensor flood lights with honest brightness ratings, not inflated "1000W" claims.</p><a class="btn btn-wa" href="{{wa:Hi S.E.T. Jamaica, please notify me when the solar security lights land.}}">Notify me</a></div>
-      <div class="card"><h3>Solar 4G cameras</h3><p class="muted">Wire-free security cameras with SIM versions for areas without Wi-Fi.</p><a class="btn btn-wa" href="{{wa:Hi S.E.T. Jamaica, please notify me when the solar 4G cameras land.}}">Notify me</a></div>
-      <div class="card"><h3>Solar power banks</h3><p class="muted">20,000&ndash;30,000 mAh with fast charging and a flashlight.</p><a class="btn btn-wa" href="{{wa:Hi S.E.T. Jamaica, please notify me when the solar power banks land.}}">Notify me</a></div>
-      <div class="card"><h3>Solar fan hats</h3><p class="muted">Built-in fans for farmers, vendors, sports and school.</p><a class="btn btn-wa" href="{{wa:Hi S.E.T. Jamaica, please notify me when the solar fan hats land.}}">Notify me</a></div>
-      <div class="card"><h3>Solar string lights</h3><p class="muted">Fairy and bulb-style lights for the yard, verandah and Christmas.</p><a class="btn btn-wa" href="{{wa:Hi S.E.T. Jamaica, please notify me when the solar string lights land.}}">Notify me</a></div>
+      {{reserve_form}}
     </div>
   </div>
 </section>

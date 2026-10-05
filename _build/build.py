@@ -18,7 +18,7 @@ SITE = "https://setjamaica.com"
 WA_NUMBER = "18574459407"   # Wayne's WhatsApp, temporary (2026-10-05); swap for the JA business line later
 EMAIL = "info@setjamaica.com"
 ADDRESS = "11 Hill View Avenue, Kingston 10, Jamaica"
-FORM_ENDPOINT = f"https://formsubmit.co/ajax/{EMAIL}"   # needs one-time activation from the info@ inbox
+FORM_ENDPOINT = "https://formsubmit.co/ajax/1aa6a339d1afc580d4f6abe8fc176a5c"   # FormSubmit alias for info@setjamaica.com (activated 2026-10-05)
 YEAR = datetime.date.today().year
 FONTS = ("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800"
          "&family=Plus+Jakarta+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap")

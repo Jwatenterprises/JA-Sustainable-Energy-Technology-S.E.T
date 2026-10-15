@@ -1,48 +1,41 @@
-<!-- title: Shop Solar Generators, Lithium Batteries & Solar Gear | S.E.T. Jamaica | description: S.E.T. Jamaica's first stock of 50Hz-verified power stations, LiFePO4 home batteries and everyday solar gear lands in Kingston in December. Reserve yours, with no payment until it arrives. | path: shop/index.html | nav: shop -->
+<!-- title: 50Hz-Verified Power Stations for Jamaica | US Prices | S.E.T. Jamaica | description: The US power stations and solar panels that are rated for Jamaica's 110V / 50Hz grid, with today's US store price and how to ship them home with Dennis Shipping. | path: shop/index.html | nav: shop -->
 <section class="hero" style="padding-bottom:24px">
   <div class="wrap narrow">
-    <p class="eyebrow">Shop</p>
-    <h1>First stock lands in Kingston this December.</h1>
-    <p class="lead">We're finalising suppliers and testing samples now. Prices, photos and full specs go up as each item is confirmed. Reserve today and we'll message you first. <strong>No payment until your item is in Kingston.</strong></p>
-    <div class="btn-row"><a class="btn btn-primary" href="#reserve">Reserve now</a><a class="btn btn-ghost" href="{{up}}guides/sizing.html">What size do I need?</a></div>
+    <p class="eyebrow">50Hz picks</p>
+    <h1>US power stations that work on JPS power.</h1>
+    <p class="lead">Jamaica uses US-style plugs at 110V, but our grid runs at 50Hz. These models are rated by their manufacturers for 50Hz charging and output, so you can buy at US prices and <a href="{{up}}shop-and-ship.html">ship them home with Dennis Shipping</a>.</p>
+    <div class="btn-row"><a class="btn btn-primary" href="{{up}}shop-and-ship.html">How Shop &amp; Ship works</a><a class="btn btn-ghost" href="{{up}}guides/sizing.html">What size do I need?</a></div>
   </div>
 </section>
 
 <section class="section" id="power-stations" style="padding-top:24px">
   <div class="wrap">
-    <div class="section-head"><div><p class="eyebrow">Outage backup</p><h2>Power stations</h2><p>Plug-in backup power with no gas, fumes or noise. Every unit must output 110–120V at 50Hz, pure sine wave, and charge on JPS power. <a href="{{up}}guides/50hz-power-stations-jamaica.html">Why we're strict about this</a>.</p></div></div>
-    {{products:power-stations}}
+    <div class="section-head"><div><p class="eyebrow">Checked against the manuals</p><h2>Our picks</h2><p>Prices are what each US store showed when we checked. Tap a button for today's price; deals change often.</p></div></div>
+    {{picks}}
   </div>
 </section>
 
-<section class="section section-alt" id="batteries">
+<section class="section section-alt" id="avoid">
   <div class="wrap">
-    <div class="section-head"><div><p class="eyebrow">Cut my JPS bill</p><h2>Home batteries (LiFePO4)</h2><p>Lithium iron phosphate with Grade-A named cells, UN38.3 safety testing and inverter compatibility lists for LuxPower and Deye.</p></div></div>
-    {{products:batteries}}
-    <div class="card" style="margin-top:14px;flex-direction:row;flex-wrap:wrap;align-items:center;gap:14px;justify-content:space-between">
-      <div style="min-width:0;flex:1 1 280px"><span class="badge">Installers</span><h3 style="margin-top:.6rem">Trade pricing on 5+ batteries</h3><p class="muted" style="margin:0">Volume pricing, invoices with GCT details and local stock with no import wait.</p></div>
-      <a class="btn btn-wa" href="{{wa:Hi S.E.T. Jamaica, I'm an installer. Please send trade pricing when available.}}">Ask about trade pricing</a>
-    </div>
+    <div class="section-head"><div><p class="eyebrow">Skip these for Jamaica</p><h2>Popular US units that aren't a good fit</h2><p>Based on the manufacturers' US manuals and spec pages, checked 1 October 2026.</p></div></div>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Model</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>Jackery Explorer 1000 v2 / 2000 v2 (US)</td><td class="no">AC charging is rated 60Hz only</td></tr>
+        <tr><td>Anker SOLIX C1000 (US)</td><td class="no">AC charging is rated 60Hz only</td></tr>
+        <tr><td>EcoFlow RIVER 3 Plus, DELTA Pro, DELTA Pro 3 (US)</td><td class="warn">Charges on 50Hz, but AC output is 60Hz only. Fine for phones and laptops; not guaranteed for fridges, fans and other motors</td></tr>
+        <tr><td>EcoFlow DELTA 3 Plus (US)</td><td class="warn">Unverified: the US manual doesn't say how to set 50Hz output</td></tr>
+      </tbody>
+    </table></div>
+    <p class="small" style="margin-top:10px"><a href="{{up}}guides/50hz-power-stations-jamaica.html">Read the full 50Hz guide →</a></p>
   </div>
 </section>
 
-<section class="section" id="everyday-solar">
+<section class="section">
   <div class="wrap">
-    <div class="section-head"><div><p class="eyebrow">Everyday solar</p><h2>Solar fans, lights, cameras &amp; power banks</h2><p>Everyday solar gear for the home, yard, farm and gifts.</p></div></div>
-    {{products:everyday-solar}}
-  </div>
-</section>
-
-<section class="section" id="reserve" style="padding-top:0">
-  <div class="wrap">
-    <div class="reserve-box">
-      <div>
-        <p class="eyebrow">First shipment · December</p>
-        <h2>Reserve yours. Pay nothing until it lands.</h2>
-        <p class="lead">We'll message you on WhatsApp the day your item clears Kingston, with the final price, before it goes on open sale.</p>
-        <p class="small muted">Prefer to chat? <a href="{{wa:Hi S.E.T. Jamaica, please reserve for me: }}">Reserve on WhatsApp</a>.</p>
-      </div>
-      {{reserve_form}}
+    <div class="card" style="flex-direction:row;flex-wrap:wrap;align-items:center;gap:14px;justify-content:space-between">
+      <div style="min-width:0;flex:1 1 280px"><span class="badge">Free help</span><h3 style="margin-top:.6rem">Not sure which one?</h3><p class="muted" style="margin:0">Tell us what you need running in an outage and your parish. We'll suggest a size. No fee, no obligation.</p></div>
+      <a class="btn btn-wa" href="{{wa:Hi S.E.T. Jamaica, please help me pick a power station. I need to run: }}">Ask on WhatsApp</a>
     </div>
   </div>
 </section>

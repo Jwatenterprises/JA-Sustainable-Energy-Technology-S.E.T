@@ -23,9 +23,34 @@ YEAR = datetime.date.today().year
 FONTS = ("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800"
          "&family=Plus+Jakarta+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap")
 
-NAV = [("shop", "Shop", "shop/"), ("sizing", "What size do I need?", "guides/sizing.html"),
-       ("hurricane", "Hurricane ready", "guides/hurricane-prep.html"), ("diaspora", "Send power home", "diaspora.html"),
-       ("order", "How to order", "how-to-order.html"), ("guides", "Guides", "guides/")]
+NAV = [("shopship", "Shop & Ship", "shop-and-ship.html"), ("shop", "50Hz picks", "shop/"),
+       ("sizing", "What size do I need?", "guides/sizing.html"), ("hurricane", "Hurricane ready", "guides/hurricane-prep.html"),
+       ("diaspora", "Send power home", "diaspora.html"), ("guides", "Guides", "guides/")]
+# Shop & Ship model (2026-10-15): S.E.T. recommends 50Hz-verified US models and earns an affiliate commission;
+# the buyer purchases from the US store and ships it home with Dennis Shipping as a personal import.
+# Prices are what the brand store showed on PICKS_CHECKED; the button always opens today's price.
+PICKS_CHECKED = "Oct 15, 2026"
+AWIN = "https://www.awin1.com/cread.php?awinaffid=2881111&awinmid="
+PICKS = [
+    {"name": "EcoFlow DELTA 2 Max", "kicker": "Best for a whole-home outage", "img": "images/picks/ecoflow-delta-2-max.webp",
+     "specs": ["2,048 Wh", "2,400 W", "LiFePO4", "50/60Hz in & out"],
+     "runs": "Fridge, 2 fans, TV and Wi-Fi (about 300 W) for roughly 6 hours.", "price": "US$1,049", "store": "EcoFlow US store",
+     "url": AWIN + "59181&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Fdelta-2-max-portable-power-station&clickref=setja-picks"},
+    {"name": "BLUETTI AC180", "kicker": "Best value", "img": "images/picks/bluetti-ac180.webp",
+     "specs": ["1,152 Wh", "1,800 W", "LiFePO4", "50/60Hz switchable"],
+     "runs": "Fans, LED lights and Wi-Fi (about 150 W) for roughly 6 hours. Set it to 50Hz once (2-button switch).", "price": "US$499", "store": "BLUETTI US store",
+     "url": AWIN + "59271&ued=https%3A%2F%2Fwww.bluettipower.com%2Fproducts%2Fac180&clickref=setja-picks"},
+    {"name": "EcoFlow DELTA 2", "kicker": "Mid-size backup", "img": "images/picks/ecoflow-delta-2.webp",
+     "specs": ["1,024 Wh", "1,800 W", "LiFePO4", "50/60Hz in & out"],
+     "runs": "Fridge and a fan (about 150 W) for roughly 5 hours. No longer on EcoFlow's US store, so compare sellers on Amazon.", "price": "Varies", "store": "Amazon",
+     "url": "https://www.amazon.com/s?k=EcoFlow+DELTA+2+Portable+Power+Station&tag=sunenergytec2-20"},
+    {"name": "BLUETTI 200W Solar Panel", "kicker": "Recharge from the sun", "img": "images/picks/bluetti-200w-solar-panel.webp",
+     "specs": ["200 W", "Folding", "DC: no 50Hz issue"],
+     "runs": "Recharges a power station when the grid is down for days.", "price": "US$399", "store": "BLUETTI US store",
+     "url": AWIN + "59271&ued=https%3A%2F%2Fwww.bluettipower.com%2Fproducts%2Fbluetti-sp200l-solar-panel-200w&clickref=setja-picks"},
+]
+DISCLOSURE = ("We earn a commission when you buy through our store links, at no extra cost to you. "
+              "As an Amazon Associate we earn from qualifying purchases. S.E.T. is not affiliated with Dennis Shipping.")
 LINES = {"power-stations": "Power station", "batteries": "Home battery", "everyday-solar": "Everyday solar"}
 
 
@@ -63,6 +88,18 @@ def product_card(p, up):
   <div class="body"><span class="line">{esc(p.get("kicker", LINES[p["line"]]))}</span>{tag and f'<div>{tag}</div>'}
     <h3>{title}</h3><div class="specs">{specs}</div><p class="runs">{esc(p.get("runs", ""))}</p>
     <div class="foot">{price}{cta}</div></div></article>"""
+
+
+def picks_grid(up):
+    cards = []
+    for p in PICKS:
+        specs = "".join(f'<span class="spec">{esc(x)}</span>' for x in p["specs"])
+        cards.append(f"""<article class="card pcard"><div class="pic"><img src="{up}{esc(p['img'])}" alt="{esc(p['name'])}" loading="lazy"></div>
+  <div class="body"><span class="line">{esc(p['kicker'])}</span><div><span class="badge-50">50Hz-verified</span></div>
+    <h3>{esc(p['name'])}</h3><div class="specs">{specs}</div><p class="runs">{esc(p['runs'])}</p>
+    <p class="fine" style="margin:0">{esc(p['price'])} at {esc(p['store'])} ({PICKS_CHECKED}). Prices change.</p>
+    <div class="foot"><a class="btn btn-primary" href="{esc(p['url'])}" target="_blank" rel="sponsored noopener">See today's price ↗</a></div></div></article>""")
+    return '<div class="grid-4">' + "".join(cards) + '</div>' + f'<p class="fine" style="margin-top:10px">{esc(DISCLOSURE)}</p>'
 
 
 def products_grid(line, up):
@@ -123,6 +160,7 @@ def layout(meta, body):
     canonical = SITE + "/" + meta["path"].replace("index.html", "")
     body = body.replace("{{reserve_form}}", reserve_form())
     body = re.sub(r"\{\{products:([a-z-]+)\}\}", lambda m: products_grid(m.group(1), up), body)
+    body = body.replace("{{picks}}", picks_grid(up))
     body = body.replace("{{up}}", up).replace("{{email}}", EMAIL).replace("{{address}}", ADDRESS)
     body = re.sub(r"\{\{wa:(.*?)\}\}", lambda m: wa(m.group(1)), body)
     extra_head = meta.get("head", "")
@@ -149,7 +187,7 @@ def layout(meta, body):
 {extra_head}
 </head>
 <body>
-<div class="util"><div class="wrap"><span>Island-wide delivery</span><span>Pay by card, Lynk, bank transfer or PayPal</span><span>{ADDRESS.replace(", Jamaica", "")}</span></div></div>
+<div class="util"><div class="wrap"><span>US store prices</span><span>Door-to-door in ~3 days from Florida</span><span>Every pick checked for Jamaica's 50Hz grid</span></div></div>
 <header class="site-header">
   <div class="wrap header-row">
     <a class="brand" href="{up}index.html" aria-label="S.E.T. Sustainable Energy Technology in Jamaica, home"><picture><source srcset="{up}images/logo-lockup.webp" type="image/webp"><img src="{up}images/logo-lockup.png" alt="Sustainable Energy Technology S.E.T. logo" width="554" height="180"></picture></a>
@@ -166,25 +204,25 @@ def layout(meta, body):
     <div>
       <picture><source srcset="{up}images/logo-full.webp" type="image/webp"><img class="footer-logo" src="{up}images/logo-full.png" alt="Sustainable Energy Technology S.E.T. logo" width="300" height="421" loading="lazy"></picture>
       <p class="footer-brand">S.E.T. Sustainable Energy Technology in Jamaica</p>
-      <p>Solar batteries, power stations and solar gear, stocked in Kingston. Every AC product is checked for Jamaica's 110V / 50Hz grid.</p>
-      <p>{ADDRESS}<br>Pickup by appointment</p>
+      <p>We help Jamaica buy backup power that works on our 110V / 50Hz grid, at US store prices, and ship it home door-to-door.</p>
+      <p>{ADDRESS}</p>
     </div>
     <div>
       <p class="footer-head">Shop</p>
-      <a href="{up}shop/#power-stations">Power stations</a><a href="{up}shop/#batteries">Home batteries</a><a href="{up}shop/#everyday-solar">Everyday solar</a><a href="{up}diaspora.html">Send power home</a>
+      <a href="{up}shop-and-ship.html">Shop &amp; Ship</a><a href="{up}shop/">50Hz picks</a><a href="{up}diaspora.html">Send power home</a>
     </div>
     <div>
       <p class="footer-head">Help</p>
-      <a href="{up}how-to-order.html">How to order &amp; pay</a><a href="{up}warranty.html">Warranty &amp; returns</a><a href="{up}guides/50hz-power-stations-jamaica.html">Will it work on 50Hz?</a><a href="{up}guides/sizing.html">What size do I need?</a><a href="{up}blog/">Blog</a>
+      <a href="{up}how-to-order.html">How to order</a><a href="{up}warranty.html">Warranty</a><a href="{up}guides/50hz-power-stations-jamaica.html">Will it work on 50Hz?</a><a href="{up}guides/sizing.html">What size do I need?</a><a href="{up}blog/">Blog</a>
     </div>
     <div>
       <p class="footer-head">Contact</p>
       <a href="{wa('Hi S.E.T. Jamaica, I have a question.')}">WhatsApp 857-445-9407</a><a href="mailto:{EMAIL}">{EMAIL}</a><a href="{up}about.html">About</a><a href="{up}contact.html">Contact</a><a href="{up}privacy-policy.html">Privacy</a><a href="{up}terms.html">Terms</a>
     </div>
   </div>
-  <p class="wrap copyright">&copy; {YEAR} S.E.T. Sustainable Energy Technology in Jamaica. Prices in Jamaican dollars (J$), GCT included.</p>
+  <p class="wrap copyright">&copy; {YEAR} S.E.T. Sustainable Energy Technology in Jamaica. {esc(DISCLOSURE)}</p>
 </footer>
-<div class="mbar"><a class="btn btn-wa" href="{wa('Hi S.E.T. Jamaica, ')}">WhatsApp</a><a class="btn btn-primary" href="{up}index.html#reserve">Reserve now</a></div>
+<div class="mbar"><a class="btn btn-wa" href="{wa('Hi S.E.T. Jamaica, ')}">WhatsApp</a><a class="btn btn-primary" href="{up}shop-and-ship.html">Shop &amp; Ship</a></div>
 <script>
 document.querySelector('.menu-toggle').addEventListener('click', function () {{
   var nav = document.getElementById('primary-nav');

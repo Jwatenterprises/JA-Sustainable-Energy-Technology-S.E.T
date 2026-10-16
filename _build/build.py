@@ -49,6 +49,41 @@ PICKS = [
      "runs": "Recharges a power station when the grid is down for days.", "price": "US$399", "store": "BLUETTI US store",
      "url": AWIN + "59271&ued=https%3A%2F%2Fwww.bluettipower.com%2Fproducts%2Fbluetti-sp200l-solar-panel-200w&clickref=setja-picks"},
 ]
+# Solar lifestyle picks (2026-10-16): DC/USB gear (or a universal 100-240V 50/60Hz adapter), so the 50Hz rule doesn't apply.
+# Brand-store items only, official images from the brand's own store; Amazon items wait for an approved image source.
+LIFESTYLE_CHECKED = "Oct 16, 2026"
+LIFESTYLE = [
+    {"name": "EcoFlow GLACIER Classic 35L", "kicker": "Solar fridge-freezer", "img": "images/picks/ecoflow-glacier-classic-35l.webp",
+     "specs": ["35 L", "12V / solar / AC", "Fridge or freezer"],
+     "runs": "Keeps food cold through outages and beach days. Its AC adapter is rated 100–240V 50/60Hz; add the plug-in battery for about 43 hours off-grid.",
+     "price": "From US$699", "store": "EcoFlow US store",
+     "url": AWIN + "59181&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Fecoflow-glacier-classic-portable-fridge-freezer%3Fvariant%3D42093688913993&clickref=setja-lifestyle"},
+    {"name": "EcoFlow TRAIL 300 DC + 45W solar panel", "kicker": "Fans, lights & phones", "img": "images/picks/ecoflow-trail-300-dc-45w-solar.webp",
+     "specs": ["288 Wh", "USB-C / DC only", "45 W panel"],
+     "runs": "A pure-DC kit for USB fans, LED lights, Wi-Fi and phones. No AC outlet, so no 50Hz question.",
+     "price": "US$219", "store": "EcoFlow US store",
+     "url": AWIN + "59181&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Ftrail-series%3Fvariant%3D54590654808137&clickref=setja-lifestyle"},
+    {"name": "ALLPOWERS PB100 + 21W solar charger", "kicker": "Phone charging off the sun", "img": "images/picks/allpowers-pb100-sp001.webp",
+     "specs": ["24,000 mAh", "100 W USB-C", "21 W solar"],
+     "runs": "Charge the power bank on the verandah by day, charge phones all night. Good for school bags and hurricane kits.",
+     "price": "US$50", "store": "ALLPOWERS US store",
+     "url": AWIN + "40342&ued=https%3A%2F%2Fiallpowers.com%2Fproducts%2Fallpowers-pb100-portable-power-bank-100w-24000mah%3Fvariant%3D44884576600217&clickref=setja-lifestyle"},
+    {"name": "ALLPOWERS SP001 21W solar charger", "kicker": "Solar phone charger", "img": "images/picks/allpowers-sp001-21w.webp",
+     "specs": ["21 W", "5 V USB", "Folds flat"],
+     "runs": "Charges phones and power banks straight from the sun. Fits in a backpack.",
+     "price": "US$39", "store": "ALLPOWERS US store",
+     "url": AWIN + "40342&ued=https%3A%2F%2Fiallpowers.com%2Fproducts%2Fallpowers-sp001-5v-21w-portable-foldable-solar-panel%3Fvariant%3D45058752217241&clickref=setja-lifestyle"},
+    {"name": "EcoFlow RAPID Power Bank 25,000mAh", "kicker": "Work through outages", "img": "images/picks/ecoflow-rapid-25000.webp",
+     "specs": ["25,000 mAh", "170 W", "3 devices"],
+     "runs": "Charges a laptop about twice or a phone 4–5 times. Recharges to 50% in about 20 minutes.",
+     "price": "US$85.99", "store": "EcoFlow US store",
+     "url": AWIN + "59181&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Fecoflow-rapid-power-bank-25000mah-170w%3Fvariant%3D54593882128457&clickref=setja-lifestyle"},
+    {"name": "BLUETTI X20 laptop power bank", "kicker": "Laptop & Wi-Fi backup", "img": "images/picks/bluetti-x20.webp",
+     "specs": ["153.6 Wh", "288 W", "USB-C"],
+     "runs": "Keeps a laptop and router going through a long outage. Fits in a backpack.",
+     "price": "US$119", "store": "BLUETTI US store",
+     "url": AWIN + "59271&ued=https%3A%2F%2Fwww.bluettipower.com%2Fproducts%2Fx20-portable-power-bank%3Fvariant%3D46173734699227&clickref=setja-lifestyle"},
+]
 DISCLOSURE = ("We earn a commission when you buy through our store links, at no extra cost to you. "
               "As an Amazon Associate we earn from qualifying purchases. S.E.T. is not affiliated with Dennis Shipping.")
 LINES = {"power-stations": "Power station", "batteries": "Home battery", "everyday-solar": "Everyday solar"}
@@ -90,14 +125,14 @@ def product_card(p, up):
     <div class="foot">{price}{cta}</div></div></article>"""
 
 
-def picks_grid(up):
+def picks_grid(up, items=None, checked=PICKS_CHECKED, badge='<span class="badge-50">50Hz-verified</span>'):
     cards = []
-    for p in PICKS:
+    for p in items or PICKS:
         specs = "".join(f'<span class="spec">{esc(x)}</span>' for x in p["specs"])
         cards.append(f"""<article class="card pcard"><div class="pic"><img src="{up}{esc(p['img'])}" alt="{esc(p['name'])}" loading="lazy"></div>
-  <div class="body"><span class="line">{esc(p['kicker'])}</span><div><span class="badge-50">50Hz-verified</span></div>
+  <div class="body"><span class="line">{esc(p['kicker'])}</span><div>{badge}</div>
     <h3>{esc(p['name'])}</h3><div class="specs">{specs}</div><p class="runs">{esc(p['runs'])}</p>
-    <p class="fine" style="margin:0">{esc(p['price'])} at {esc(p['store'])} ({PICKS_CHECKED}). Prices change.</p>
+    <p class="fine" style="margin:0">{esc(p['price'])} at {esc(p['store'])} ({checked}). Prices change.</p>
     <div class="foot"><a class="btn btn-primary" href="{esc(p['url'])}" target="_blank" rel="sponsored noopener">See today's price ↗</a></div></div></article>""")
     return '<div class="grid-4">' + "".join(cards) + '</div>' + f'<p class="fine" style="margin-top:10px">{esc(DISCLOSURE)}</p>'
 
@@ -161,6 +196,7 @@ def layout(meta, body):
     body = body.replace("{{reserve_form}}", reserve_form())
     body = re.sub(r"\{\{products:([a-z-]+)\}\}", lambda m: products_grid(m.group(1), up), body)
     body = body.replace("{{picks}}", picks_grid(up))
+    body = body.replace("{{lifestyle}}", picks_grid(up, LIFESTYLE, LIFESTYLE_CHECKED, '<span class="badge-50">No 50Hz issue</span>'))
     if "{{parish_map}}" in body:
         body = body.replace("{{parish_map}}", (ROOT / "_build" / "parish_map.svg").read_text(encoding="utf-8"))
     if "{{solar_calc_js}}" in body:

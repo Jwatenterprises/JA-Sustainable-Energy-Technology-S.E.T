@@ -1,41 +1,19 @@
-<!-- title: S.E.T. Jamaica | Power Stations at US Prices, Delivered in Jamaica | description: Backup power that works on Jamaica's 50Hz grid, at US store prices. Pick a 50Hz-verified power station, ship it with Dennis Shipping from Florida, and get it door-to-door in about 3 days. | path: index.html | nav: home -->
+<!-- title: Solar &amp; Backup Power Solutions in Jamaica | S.E.T. Jamaica | description: Solar generators, panels and backup power made for Jamaica's 50Hz grid, at US store prices, delivered door-to-door in about 3 days. Free solar calculator with real sun hours for all 14 parishes. | path: index.html | nav: home -->
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <p class="eyebrow">Backup power for Jamaican homes &amp; shops</p>
-      <h1>When JPS goes, <em>your lights don't.</em></h1>
-      <p class="lead">Power stations that work on Jamaica's 50Hz grid, at US store prices, delivered to your door with Dennis Shipping in about 3 days from Florida.</p>
-      <div class="btn-row"><a class="btn btn-primary" href="{{up}}shop-and-ship.html">How Shop &amp; Ship works</a><a class="btn btn-ghost" href="#calc">What size do I need?</a></div>
-      <div class="chips"><span class="chip">✓ Works on 110V / 50Hz</span><span class="chip">✓ US store prices</span><span class="chip">✓ Door-to-door delivery</span></div>
+      <p class="eyebrow">Sustainable energy for Jamaican homes &amp; businesses</p>
+      <h1>Solar &amp; backup power solutions, <em>made for Jamaica.</em></h1>
+      <p class="lead">S.E.T. Jamaica helps homes and businesses in all 14 parishes run on the sun: solar generators and panels checked for Jamaica's 50Hz grid, at US store prices, delivered door-to-door in about 3 days.</p>
+      <div class="btn-row"><a class="btn btn-primary" href="#calc">Solar calculator for my parish</a><a class="btn btn-ghost" href="{{up}}shop-and-ship.html">How Shop &amp; Ship works</a></div>
+      <div class="chips"><span class="chip">✓ Works on 110V / 50Hz</span><span class="chip">✓ US store prices</span><span class="chip">✓ All 14 parishes</span></div>
     </div>
-    <div class="scene" id="scene">
-      <svg viewBox="0 0 500 400" role="img" aria-label="A Kingston street at dusk. During an outage, only the house with a power station stays lit.">
-        <defs>
-          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--sky-top)"/><stop offset="1" style="stop-color:var(--sky-bot)"/></linearGradient>
-          <radialGradient id="halo"><stop offset="0" style="stop-color:var(--win-on);stop-opacity:.9"/><stop offset="1" style="stop-color:var(--win-on);stop-opacity:0"/></radialGradient>
-        </defs>
-        <rect width="500" height="400" fill="url(#sky)"/>
-        <circle cx="390" cy="205" r="26" style="fill:var(--sun)" opacity=".85"/>
-        <path d="M0 230 L60 190 L120 215 L190 165 L250 200 L320 160 L390 195 L450 175 L500 195 L500 290 L0 290Z" style="fill:var(--hill)" opacity=".75"/>
-        <path d="M0 255 L80 225 L160 245 L240 220 L330 240 L420 222 L500 238 L500 300 L0 300Z" style="fill:var(--hill)"/>
-        <rect y="330" width="500" height="70" style="fill:var(--street)"/>
-        <g><rect x="18" y="262" width="110" height="70" style="fill:var(--house-shade)"/><path d="M10 266 L73 228 L136 266Z" style="fill:var(--roof)"/>
-          <rect class="win grid" x="32" y="280" width="22" height="20" rx="2"/><rect class="win grid" x="92" y="280" width="22" height="20" rx="2"/><rect x="62" y="296" width="20" height="36" style="fill:var(--street)"/></g>
-        <circle class="glow" cx="250" cy="290" r="95" fill="url(#halo)"/>
-        <g><rect x="182" y="250" width="138" height="82" style="fill:var(--house)"/><path d="M172 254 L251 206 L330 254Z" style="fill:var(--roof)"/>
-          <rect class="win" x="198" y="270" width="28" height="24" rx="2"/><rect class="win" x="276" y="270" width="28" height="24" rx="2"/><rect class="win" x="238" y="290" width="26" height="42" rx="2"/>
-          <rect x="300" y="312" width="16" height="12" rx="2" style="fill:var(--leaf)"/><rect x="303" y="315" width="10" height="3" style="fill:var(--sun)"/></g>
-        <g><rect x="368" y="268" width="104" height="64" style="fill:var(--house-shade)"/><path d="M360 272 L420 236 L480 272Z" style="fill:var(--roof)"/>
-          <rect class="win grid" x="382" y="284" width="20" height="18" rx="2"/><rect class="win grid" x="440" y="284" width="20" height="18" rx="2"/></g>
-        <g><rect x="150" y="270" width="3" height="62" style="fill:var(--street)"/><circle class="lamp" cx="151" cy="268" r="5"/></g>
-        <g><rect x="345" y="270" width="3" height="62" style="fill:var(--street)"/><circle class="lamp" cx="346" cy="268" r="5"/></g>
-      </svg>
-      <div class="meter" id="meter">JPS GRID · ON · 7:42 PM</div>
-      <div class="scene-card">
-        <p id="sceneText"><strong>Normal evening.</strong> Tap to see an outage with a 2 kWh power station.</p>
-        <button class="toggle" id="outBtn" type="button" aria-pressed="false"><span class="dot"></span><span id="outLbl">Simulate outage</span></button>
-      </div>
-    </div>
+    <figure class="hero-photo">
+      <picture><source type="image/webp" srcset="{{up}}images/hero/dunns-river-beach-ocho-rios-800.webp 800w, {{up}}images/hero/dunns-river-beach-ocho-rios-1600.webp 1600w" sizes="(max-width: 880px) 100vw, 46vw"><img src="{{up}}images/hero/dunns-river-beach-ocho-rios-800.jpg" alt="Turquoise sea and sunny sky at Dunn's River Falls beach, Ocho Rios, St Ann, Jamaica" width="800" height="450" fetchpriority="high"></picture>
+      <span class="flag-badge"><svg viewBox="0 0 12 6" aria-hidden="true"><rect width="12" height="6" fill="#009B3A"/><path d="M0,0 6,3 0,6ZM12,0 6,3 12,6Z" fill="#000"/><path d="M0,0 12,6M0,6 12,0" stroke="#FED100" stroke-width="1"/></svg>Made for Jamaica</span>
+      <div class="sun-card"><p><strong>5.2–5.7 peak sun hours a day</strong> across Jamaica's parishes (NASA satellite data). <a href="#calc">See what that powers →</a></p></div>
+      <figcaption>Dunn's River, St Ann. Photo: <a href="https://commons.wikimedia.org/wiki/File:Jamaica_Ocho_Rios_Dunn%27s_River_Falls_(beach).jpg" rel="noopener">Dr. Thomas Liptak</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener license">CC BY-SA 4.0</a></figcaption>
+    </figure>
   </div>
 </section>
 
@@ -68,19 +46,23 @@
 
 <section class="section" id="calc" style="padding-top:0">
   <div class="wrap">
-    <div class="calc-panel">
-      <div>
-        <p class="eyebrow">Power calculator</p>
-        <h2>What do you need running when the power goes?</h2>
-        <p style="opacity:.85;max-width:46ch">Tap your appliances. We'll show how many hours each option keeps them on.</p>
+    <div class="calc-panel solar-calc">
+      <div class="calc-steps">
+        <p class="eyebrow">Jamaica solar calculator</p>
+        <h2>How much solar do you need in your parish?</h2>
+        <p style="opacity:.85;max-width:52ch">Three quick steps. We size the panels and battery from your appliances and your parish's real sun hours.</p>
+        <h3 class="step-h"><span>1</span>What do you want to run?</h3>
         <div class="apps" id="apps"></div>
+        <h3 class="step-h"><span>2</span>Pick your parish</h3>
+        <div class="map-wrap">{{parish_map}}<p class="map-key"><span><i class="k-hi"></i>5.6–5.7 sun hrs</span><span><i class="k-mid"></i>5.2 sun hrs</span><span><i class="k-on"></i>Your parish</span></p></div>
+        <div class="parishes" id="parishes"></div>
+        <h3 class="step-h"><span>3</span>What's your goal?</h3>
+        <div class="goals" id="goals"></div>
+        <div class="outage" id="outageRow"><span>Outage to cover:</span></div>
       </div>
-      <div class="result" aria-live="polite">
-        <p style="margin:0;font-size:.88rem;color:var(--fg-soft)">Running load: <b id="load" style="font-family:var(--f-mono);color:var(--fg)">0 W</b></p>
-        <div id="stations" style="display:grid;gap:10px"></div>
-        <p class="fine" style="margin:0">Estimates use 85% usable energy and average running watts (a fridge cycles on and off). <a href="{{up}}guides/sizing.html">Detailed sizing guide</a>.</p>
-      </div>
+      <div class="result" id="result" aria-live="polite"></div>
     </div>
+    <p class="fine" style="margin-top:10px">Sun hours: NASA POWER satellite averages (annual mean of daily solar energy, kWh/m²). Estimates assume 75% panel-to-battery efficiency and 85% usable battery energy; JPS about J$45.8/kWh. Your real results vary with shade, roof angle and season. Parish map: <a href="https://www.geoboundaries.org/" rel="noopener">geoBoundaries</a> / OpenStreetMap, CC BY-SA 2.0.</p>
   </div>
 </section>
 
@@ -118,6 +100,19 @@
   </div>
 </section>
 
+<section class="section" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head"><div><p class="eyebrow">Solar in Jamaica: quick answers</p><h2>Questions Jamaicans ask us most</h2></div></div>
+    <div class="faq">
+      <details open><summary>How many peak sun hours does Jamaica get?</summary><p>About 5.2 to 5.7 peak sun hours a day on average, depending on the parish (NASA POWER satellite data). Clarendon, Kingston, St Catherine, St Thomas, Westmoreland and Hanover sit at the high end; the cloudier north-east and the hills average closer to 5.2. Even the dullest month stays around 4 peak sun hours.</p></details>
+      <details><summary>Will a US solar generator work in Jamaica?</summary><p>Only if it is rated for 50Hz. Jamaica uses US-style plugs at 110V, but JPS power runs at 50Hz, and many US models output 60Hz or won't charge properly. Every model we list is rated by its manufacturer to charge on 50Hz and output 110–120V at 50Hz.</p></details>
+      <details><summary>How much solar do I need to run a fridge in Jamaica?</summary><p>A typical fridge uses about 2.6 kWh a day. With around 5.5 peak sun hours, that takes roughly 650 W of solar panels plus a battery or power station of at least 2 kWh to keep it cold overnight. Use the calculator above for your exact appliances and parish.</p></details>
+      <details><summary>How do I get a solar generator delivered to Jamaica?</summary><p>Buy it at the US store price through our link, have it delivered to a Florida address, and drop it at Dennis Shipping in Lauderhill. It reaches your door in Jamaica in about 3 days, billed by box size, with the customs check at delivery. <a href="{{up}}shop-and-ship.html">Full Shop &amp; Ship guide</a>.</p></details>
+      <details><summary>Is solar cheaper than a gas generator in Jamaica?</summary><p>To run, yes. An evening outage costs about J$600 in gas for a 3,600 W generator, versus about J$80 to recharge a 2 kWh power station from JPS, or nothing from the sun. A solar generator is also quiet and safe indoors, with no fumes.</p></details>
+    </div>
+  </div>
+</section>
+
 <section class="section" style="padding-top:0">
   <div class="wrap">
     <div class="reserve-box">
@@ -131,33 +126,4 @@
   </div>
 </section>
 
-<script>
-(function () {
-  var scene = document.getElementById('scene'), btn = document.getElementById('outBtn');
-  btn.addEventListener('click', function () {
-    var out = !scene.classList.contains('out');
-    scene.classList.toggle('out', out); btn.setAttribute('aria-pressed', out);
-    document.getElementById('outLbl').textContent = out ? 'Restore power' : 'Simulate outage';
-    document.getElementById('meter').textContent = out ? 'JPS GRID · OFF · 7:42 PM' : 'JPS GRID · ON · 7:42 PM';
-    document.getElementById('sceneText').innerHTML = out ? '<strong>Outage.</strong> The street went dark. This house switched to its 2 kWh power station automatically.' : '<strong>Normal evening.</strong> Tap to see an outage with a 2 kWh power station.';
-  });
-  var apps = [{n:'Fridge',w:110,on:true},{n:'Standing fan',w:45,q:2,on:true},{n:'TV 43"',w:80,on:true},{n:'Wi-Fi router',w:12,on:true},
-    {n:'LED lights ×4',w:36},{n:'CPAP',w:40},{n:'Laptop',w:55},{n:'Phone charging',w:15},{n:'Chest freezer',w:90}];
-  var st = [{n:'EcoFlow DELTA 2 (1,024 Wh)',wh:1024,max:1800},{n:'BLUETTI AC180 (1,152 Wh)',wh:1152,max:1800},{n:'EcoFlow DELTA 2 Max (2,048 Wh)',wh:2048,max:2400}];
-  var box = document.getElementById('apps');
-  apps.forEach(function (a) { var b = document.createElement('button'); b.type = 'button'; b.className = 'app'; b.setAttribute('aria-pressed', !!a.on);
-    b.innerHTML = '<span>' + a.n + '<small>' + (a.q ? a.q + ' × ' : '') + a.w + ' W</small></span><span>' + (a.on ? '✓' : '+') + '</span>';
-    b.addEventListener('click', function () { a.on = !a.on; b.setAttribute('aria-pressed', a.on); b.lastChild.textContent = a.on ? '✓' : '+'; calc(); }); box.appendChild(b); });
-  function fmt(h) { if (h >= 48) return Math.round(h / 24) + ' days'; return (h < 10 ? h.toFixed(1) : Math.round(h)) + ' hrs'; }
-  function calc() {
-    var load = apps.reduce(function (s, a) { return s + (a.on ? a.w * (a.q || 1) : 0); }, 0);
-    document.getElementById('load').textContent = load + ' W';
-    var best = -1; st.forEach(function (s, i) { if (best < 0 && load && load <= s.max && s.wh * .85 / load >= 8) best = i; });
-    document.getElementById('stations').innerHTML = st.map(function (s, i) {
-      var h = load ? s.wh * .85 / load : 0, over = load > s.max, pct = Math.min(100, h / 24 * 100);
-      return '<div class="station' + (i === best ? ' best' : '') + '"><span class="nm">' + s.n + (i === best ? ' · best fit' : '') + '</span><span class="hrs">' + (over || !load ? '—' : fmt(h)) + '</span><div class="bar"><i style="width:' + (over ? 0 : pct) + '%"></i></div><span class="note">' + (over ? '<span class="over">Too much load: ' + load + ' W is over its ' + s.max + ' W limit.</span>' : (load ? 'Bar shows hours out of a 24-hour outage.' : 'Pick at least one appliance.')) + '</span></div>';
-    }).join('');
-  }
-  calc();
-})();
-</script>
+{{solar_calc_js}}

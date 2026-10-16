@@ -161,6 +161,11 @@ def layout(meta, body):
     body = body.replace("{{reserve_form}}", reserve_form())
     body = re.sub(r"\{\{products:([a-z-]+)\}\}", lambda m: products_grid(m.group(1), up), body)
     body = body.replace("{{picks}}", picks_grid(up))
+    if "{{parish_map}}" in body:
+        body = body.replace("{{parish_map}}", (ROOT / "_build" / "parish_map.svg").read_text(encoding="utf-8"))
+    if "{{solar_calc_js}}" in body:
+        calc_js = (ROOT / "_build" / "solar_calc.js").read_text(encoding="utf-8").replace("{{wa_number}}", WA_NUMBER)
+        body = body.replace("{{solar_calc_js}}", "<script>\n" + calc_js + "</script>")
     body = body.replace("{{up}}", up).replace("{{email}}", EMAIL).replace("{{address}}", ADDRESS)
     body = re.sub(r"\{\{wa:(.*?)\}\}", lambda m: wa(m.group(1)), body)
     extra_head = meta.get("head", "")
@@ -283,7 +288,15 @@ def main():
                 "@context": "https://schema.org", "@type": "Store", "name": "S.E.T. Sustainable Energy Technology in Jamaica",
                 "url": SITE, "email": EMAIL, "telephone": "+1-857-445-9407", "image": f"{SITE}/logo.png",
                 "address": {"@type": "PostalAddress", "streetAddress": "11 Hill View Avenue", "addressLocality": "Kingston 10",
-                            "addressRegion": "Kingston", "addressCountry": "JM"}}) + "</script>"
+                            "addressRegion": "Kingston", "addressCountry": "JM"},
+                "description": "Solar generators, solar panels and backup power made for Jamaica's 50Hz grid, at US store prices, delivered door-to-door.",
+                "areaServed": {"@type": "Country", "name": "Jamaica"}}) + "</script>"
+            faq = re.findall(r"<details[^>]*><summary>(.*?)</summary><p>(.*?)</p></details>", raw, re.S)
+            if faq:
+                meta["head"] += '\n<script type="application/ld+json">' + json.dumps({
+                    "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+                        {"@type": "Question", "name": html.unescape(q),
+                         "acceptedAnswer": {"@type": "Answer", "text": html.unescape(re.sub(r"<[^>]+>", "", a))}} for q, a in faq]}) + "</script>"
         out = ROOT / meta["path"]
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(layout(meta, raw[head.end():]), encoding="utf-8")

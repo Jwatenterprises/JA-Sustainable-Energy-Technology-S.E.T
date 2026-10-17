@@ -230,7 +230,7 @@ def layout(meta, body):
 {extra_head}
 </head>
 <body>
-<div class="util"><div class="wrap"><span>US store prices</span><span>Door-to-door in ~3 days from Florida</span><span>Every pick checked for Jamaica's 50Hz grid</span></div></div>
+<div class="util"><div class="wrap"><span>US store prices</span><span>Door-to-door from Florida</span><span>Every pick checked for Jamaica's 50Hz grid</span></div></div>
 <header class="site-header">
   <div class="wrap header-row">
     <a class="brand" href="{up}index.html" aria-label="S.E.T. Sustainable Energy Technology in Jamaica, home"><picture><source srcset="{up}images/logo-lockup.webp" type="image/webp"><img src="{up}images/logo-lockup.png" alt="Sustainable Energy Technology S.E.T. logo" width="554" height="180"></picture></a>

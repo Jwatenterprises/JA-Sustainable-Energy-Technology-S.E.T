@@ -18,7 +18,7 @@ SITE = "https://setjamaica.com"
 WA_NUMBER = "18574459407"   # Wayne's WhatsApp, temporary (2026-10-05); swap for the JA business line later
 EMAIL = "info@setjamaica.com"
 ADDRESS = "11 Hill View Avenue, Kingston 10, Jamaica"
-SOCIALS = [("Facebook", "https://www.facebook.com/profile.php?id=61595609425070"),   # Page created 2026-10-16; swap for facebook.com/setjamaica once the username is set
+SOCIALS = [("Facebook", "https://www.facebook.com/setjamaica876"),   # Page created 2026-10-16 (id 61595609425070)
            ("YouTube", "https://www.youtube.com/@S.E.T.JAMAICA")]
 FORM_ENDPOINT = "https://formsubmit.co/ajax/1aa6a339d1afc580d4f6abe8fc176a5c"   # FormSubmit alias for info@setjamaica.com (activated 2026-10-05)
 YEAR = datetime.date.today().year

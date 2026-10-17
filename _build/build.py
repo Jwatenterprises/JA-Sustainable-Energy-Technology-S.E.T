@@ -18,6 +18,8 @@ SITE = "https://setjamaica.com"
 WA_NUMBER = "18574459407"   # Wayne's WhatsApp, temporary (2026-10-05); swap for the JA business line later
 EMAIL = "info@setjamaica.com"
 ADDRESS = "11 Hill View Avenue, Kingston 10, Jamaica"
+SOCIALS = [("Facebook", "https://www.facebook.com/profile.php?id=61595609425070"),   # Page created 2026-10-16; swap for facebook.com/setjamaica once the username is set
+           ("YouTube", "https://www.youtube.com/@S.E.T.JAMAICA")]
 FORM_ENDPOINT = "https://formsubmit.co/ajax/1aa6a339d1afc580d4f6abe8fc176a5c"   # FormSubmit alias for info@setjamaica.com (activated 2026-10-05)
 YEAR = datetime.date.today().year
 FONTS = ("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800"
@@ -258,7 +260,7 @@ def layout(meta, body):
     </div>
     <div>
       <p class="footer-head">Contact</p>
-      <a href="{wa('Hi S.E.T. Jamaica, I have a question.')}">WhatsApp 857-445-9407</a><a href="mailto:{EMAIL}">{EMAIL}</a><a href="{up}about.html">About</a><a href="{up}contact.html">Contact</a><a href="{up}privacy-policy.html">Privacy</a><a href="{up}terms.html">Terms</a>
+      <a href="{wa('Hi S.E.T. Jamaica, I have a question.')}">WhatsApp 857-445-9407</a><a href="mailto:{EMAIL}">{EMAIL}</a>{''.join(f'<a href="{u}" rel="noopener me">{n}</a>' for n, u in SOCIALS)}<a href="{up}about.html">About</a><a href="{up}contact.html">Contact</a><a href="{up}privacy-policy.html">Privacy</a><a href="{up}terms.html">Terms</a>
     </div>
   </div>
   <p class="wrap copyright">&copy; {YEAR} S.E.T. Sustainable Energy Technology in Jamaica. {esc(DISCLOSURE)}</p>
@@ -325,6 +327,7 @@ def main():
                 "url": SITE, "email": EMAIL, "telephone": "+1-857-445-9407", "image": f"{SITE}/logo.png",
                 "address": {"@type": "PostalAddress", "streetAddress": "11 Hill View Avenue", "addressLocality": "Kingston 10",
                             "addressRegion": "Kingston", "addressCountry": "JM"},
+                "sameAs": [u for _, u in SOCIALS],
                 "description": "Solar generators, solar panels and backup power made for Jamaica's 50Hz grid, at US store prices, delivered door-to-door.",
                 "areaServed": {"@type": "Country", "name": "Jamaica"}}) + "</script>"
             faq = re.findall(r"<details[^>]*><summary>(.*?)</summary><p>(.*?)</p></details>", raw, re.S)

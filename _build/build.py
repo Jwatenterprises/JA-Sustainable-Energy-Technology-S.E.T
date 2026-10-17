@@ -19,7 +19,8 @@ WA_NUMBER = "18574459407"   # Wayne's WhatsApp, temporary (2026-10-05); swap for
 EMAIL = "info@setjamaica.com"
 ADDRESS = "11 Hill View Avenue, Kingston 10, Jamaica"
 SOCIALS = [("Facebook", "https://www.facebook.com/setjamaica876"),   # Page created 2026-10-16 (id 61595609425070)
-           ("YouTube", "https://www.youtube.com/@S.E.T.JAMAICA")]
+           ("YouTube", "https://www.youtube.com/@S.E.T.JAMAICA"),
+           ("TikTok", "https://www.tiktok.com/@setjamaica876")]   # Business account, created 2026-10-17
 FORM_ENDPOINT = "https://formsubmit.co/ajax/1aa6a339d1afc580d4f6abe8fc176a5c"   # FormSubmit alias for info@setjamaica.com (activated 2026-10-05)
 YEAR = datetime.date.today().year
 FONTS = ("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800"
@@ -27,7 +28,7 @@ FONTS = ("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght
 
 NAV = [("shopship", "Shop & Ship", "shop-and-ship.html"), ("shop", "50Hz picks", "shop/"),
        ("sizing", "What size do I need?", "guides/sizing.html"), ("hurricane", "Hurricane ready", "guides/hurricane-prep.html"),
-       ("diaspora", "Send power home", "diaspora.html"), ("guides", "Guides", "guides/")]
+       ("ebikes", "E-bikes", "shop/#ebikes"), ("diaspora", "Send power home", "diaspora.html"), ("guides", "Guides", "guides/")]
 # Shop & Ship model (2026-10-15): S.E.T. recommends 50Hz-verified US models and earns an affiliate commission;
 # the buyer purchases from the US store and ships it home with Dennis Shipping as a personal import.
 # Prices are what the brand store showed on PICKS_CHECKED; the button always opens today's price.
@@ -85,6 +86,29 @@ LIFESTYLE = [
      "runs": "Keeps a laptop and router going through a long outage. Fits in a backpack.",
      "price": "US$119", "store": "BLUETTI US store",
      "url": AWIN + "59271&ued=https%3A%2F%2Fwww.bluettipower.com%2Fproducts%2Fx20-portable-power-bank%3Fvariant%3D46173734699227&clickref=setja-lifestyle"},
+    {"name": "EcoFlow 28W Ultra-Light Solar Panel", "kicker": "Pocket solar charger", "img": "images/picks/ecoflow-28w-solar-panel.webp",
+     "specs": ["28 W", "USB direct charging", "IP68, 1.3 lb"], "checked": "Oct 17, 2026",
+     "runs": "Charges phones and power banks straight from the sun, no grid needed. Tablet-sized and waterproof, for the yard, the beach or a blackout.",
+     "price": "US$99", "store": "EcoFlow US store",
+     "url": AWIN + "59181&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Fecoflow-28w-ultra-light-solar-panel&clickref=setja-lifestyle"},
+]
+# E-bikes & trikes (2026-10-17): Mooncool confirmed in writing (ticket 175302) that POP / TK2 / TK2 PRO chargers are
+# rated 110-240V~ 50/60Hz. FT1 not confirmed yet -> not listed. US-only warranty, parts ship to US only, USD.
+EBIKES_CHECKED = "Oct 17, 2026"
+MOONCOOL = AWIN + "66494&ued=https%3A%2F%2Fwww.mooncool.com%2Fproducts%2F"
+EBIKES = [
+    {"name": "Mooncool POP Folding E-Bike", "kicker": "Folding e-bike", "img": "images/picks/mooncool-pop-folding-ebike.webp",
+     "specs": ["1200W peak", "20 mph", "30–60 mi range"],
+     "runs": "Folds down for the barrel or the car trunk. Good for town runs, school and work.",
+     "price": "US$1,199.99", "store": "Mooncool US store", "url": MOONCOOL + "pop-folding-electric-bike&clickref=setja-ebikes"},
+    {"name": "Mooncool TK2 Folding Electric Trike", "kicker": "Electric trike", "img": "images/picks/mooncool-tk2-trike.webp",
+     "specs": ["1092W peak", "15.5 mph", "35–75 mi range"],
+     "runs": "Three wheels, a backrest seat and two baskets. Steady for older riders and market runs.",
+     "price": "US$1,499.99", "store": "Mooncool US store", "url": MOONCOOL + "tk2-electric-trike&clickref=setja-ebikes"},
+    {"name": "Mooncool TK2 PRO Electric Trike", "kicker": "Electric trike", "img": "images/picks/mooncool-tk2-pro-trike.webp",
+     "specs": ["48V 20Ah", "1310W peak", "450 lb load"],
+     "runs": "More power and battery than the TK2, for hills and heavier loads. Up to 100 miles in Mooncool's testing.",
+     "price": "US$1,999.99", "store": "Mooncool US store", "url": MOONCOOL + "tk2-pro-electric-trike&clickref=setja-ebikes"},
 ]
 DISCLOSURE = ("We earn a commission when you buy through our store links, at no extra cost to you. "
               "As an Amazon Associate we earn from qualifying purchases. S.E.T. is not affiliated with Dennis Shipping.")
@@ -134,7 +158,7 @@ def picks_grid(up, items=None, checked=PICKS_CHECKED, badge='<span class="badge-
         cards.append(f"""<article class="card pcard"><div class="pic"><img src="{up}{esc(p['img'])}" alt="{esc(p['name'])}" loading="lazy"></div>
   <div class="body"><span class="line">{esc(p['kicker'])}</span><div>{badge}</div>
     <h3>{esc(p['name'])}</h3><div class="specs">{specs}</div><p class="runs">{esc(p['runs'])}</p>
-    <p class="fine" style="margin:0">{esc(p['price'])} at {esc(p['store'])} ({checked}). Prices change.</p>
+    <p class="fine" style="margin:0">{esc(p['price'])} at {esc(p['store'])} ({p.get('checked', checked)}). Prices change.</p>
     <div class="foot"><a class="btn btn-primary" href="{esc(p['url'])}" target="_blank" rel="sponsored noopener">See today's price ↗</a></div></div></article>""")
     return '<div class="grid-4">' + "".join(cards) + '</div>' + f'<p class="fine" style="margin-top:10px">{esc(DISCLOSURE)}</p>'
 
@@ -198,6 +222,7 @@ def layout(meta, body):
     body = body.replace("{{reserve_form}}", reserve_form())
     body = re.sub(r"\{\{products:([a-z-]+)\}\}", lambda m: products_grid(m.group(1), up), body)
     body = body.replace("{{picks}}", picks_grid(up))
+    body = body.replace("{{ebikes}}", picks_grid(up, EBIKES, EBIKES_CHECKED))
     body = body.replace("{{lifestyle}}", picks_grid(up, LIFESTYLE, LIFESTYLE_CHECKED, '<span class="badge-50">No 50Hz issue</span>'))
     if "{{parish_map}}" in body:
         body = body.replace("{{parish_map}}", (ROOT / "_build" / "parish_map.svg").read_text(encoding="utf-8"))

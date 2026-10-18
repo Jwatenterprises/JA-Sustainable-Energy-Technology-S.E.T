@@ -34,6 +34,7 @@ NAV = [("shopship", "Shop & Ship", "shop-and-ship.html"), ("shop", "50Hz picks",
 # Prices are what the brand store showed on PICKS_CHECKED; the button always opens today's price.
 PICKS_CHECKED = "Oct 15, 2026"
 AWIN = "https://www.awin1.com/cread.php?awinaffid=2881111&awinmid="
+RENOGY = "https://renogy.sjv.io/c/6782322/1182656/14864?u=https%3A%2F%2Fwww.renogy.com%2Fproducts%2F"   # Impact, approved
 PICKS = [
     {"name": "EcoFlow DELTA 2 Max", "kicker": "Best for a whole-home outage", "img": "images/picks/ecoflow-delta-2-max.webp",
      "specs": ["2,048 Wh", "2,400 W", "LiFePO4", "50/60Hz in & out"],
@@ -91,6 +92,16 @@ LIFESTYLE = [
      "runs": "Charges phones and power banks straight from the sun, no grid needed. Tablet-sized and waterproof, for the yard, the beach or a blackout.",
      "price": "US$99", "store": "EcoFlow US store",
      "url": AWIN + "59181&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Fecoflow-28w-ultra-light-solar-panel&clickref=setja-lifestyle"},
+    {"name": "Dr.Prepare 700-Lumen Rechargeable LED Work Light", "kicker": "Outage light", "img": "images/picks/renogy-led-work-light.webp",
+     "specs": ["700 lumens", "USB rechargeable", "Magnetic base"], "checked": "Oct 17, 2026",
+     "runs": "Charges from any USB port or power bank. Folds, hangs or sticks to metal, and lasts up to 20 hours on low when JPS goes.",
+     "price": "US$16.99", "store": "Renogy US store",
+     "url": RENOGY + "dr-prepare-700-lumens-3200mah-foldable-rechargeable-led-work-light&subId1=setja-lifestyle"},
+    {"name": "Renogy 276Wh Power Bank", "kicker": "Big power bank", "img": "images/picks/renogy-276wh-power-bank.webp",
+     "specs": ["276 Wh", "USB-C fast charge", "12V car port"], "checked": "Oct 17, 2026",
+     "runs": "Charges phones and laptops for days, and its 12V port can run most CPAP machines with a CPAP adapter (sold separately).",
+     "price": "US$139.99", "store": "Renogy US store",
+     "url": RENOGY + "2025-renogy-upgraded-76-800mah-276wh-power-bank&subId1=setja-lifestyle"},
 ]
 # E-bikes & trikes (2026-10-17): Mooncool confirmed in writing (ticket 175302) that POP / TK2 / TK2 PRO chargers are
 # rated 110-240V~ 50/60Hz. FT1 not confirmed yet -> not listed. US-only warranty, parts ship to US only, USD.

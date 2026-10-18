@@ -93,14 +93,14 @@ LIFESTYLE = [
      "price": "US$99", "store": "EcoFlow US store",
      "url": AWIN + "59181&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Fecoflow-28w-ultra-light-solar-panel&clickref=setja-lifestyle"},
     {"name": "Dr.Prepare 700-Lumen Rechargeable LED Work Light", "kicker": "Outage light", "img": "images/picks/renogy-led-work-light.webp",
-     "specs": ["700 lumens", "USB rechargeable", "Magnetic base"], "checked": "Oct 17, 2026",
+     "specs": ["700 lumens", "USB rechargeable", "Magnetic base"], "checked": "Oct 18, 2026",
      "runs": "Charges from any USB port or power bank. Folds, hangs or sticks to metal, and lasts up to 20 hours on low when JPS goes.",
      "price": "US$16.99", "store": "Renogy US store",
      "url": RENOGY + "dr-prepare-700-lumens-3200mah-foldable-rechargeable-led-work-light&subId1=setja-lifestyle"},
     {"name": "Renogy 276Wh Power Bank", "kicker": "Big power bank", "img": "images/picks/renogy-276wh-power-bank.webp",
-     "specs": ["276 Wh", "USB-C fast charge", "12V car port"], "checked": "Oct 17, 2026",
+     "specs": ["276 Wh", "USB-C fast charge", "12V car port"], "checked": "Oct 18, 2026",
      "runs": "Charges phones and laptops for days, and its 12V port can run most CPAP machines with a CPAP adapter (sold separately).",
-     "price": "US$139.99", "store": "Renogy US store",
+     "price": "US$159.99", "store": "Renogy US store",
      "url": RENOGY + "2025-renogy-upgraded-76-800mah-276wh-power-bank&subId1=setja-lifestyle"},
 ]
 # E-bikes & trikes (2026-10-17): Mooncool confirmed in writing (ticket 175302) that POP / TK2 / TK2 PRO chargers are

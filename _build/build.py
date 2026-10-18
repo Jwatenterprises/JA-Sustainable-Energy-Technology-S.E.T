@@ -104,14 +104,19 @@ LIFESTYLE = [
      "url": RENOGY + "2025-renogy-upgraded-76-800mah-276wh-power-bank&subId1=setja-lifestyle"},
 ]
 # E-bikes & trikes (2026-10-17): Mooncool confirmed in writing (ticket 175302) that POP / TK2 / TK2 PRO chargers are
-# rated 110-240V~ 50/60Hz. FT1 not confirmed yet -> not listed. US-only warranty, parts ship to US only, USD.
-EBIKES_CHECKED = "Oct 17, 2026"
+# rated 110-240V~ 50/60Hz. FT1 charger label (100-240V~ 50/60Hz) sent by Mooncool 2026-10-18 -> listed.
+# US-only warranty, parts ship to US only, USD.
+EBIKES_CHECKED = "Oct 18, 2026"
 MOONCOOL = AWIN + "66494&ued=https%3A%2F%2Fwww.mooncool.com%2Fproducts%2F"
 EBIKES = [
     {"name": "Mooncool POP Folding E-Bike", "kicker": "Folding e-bike", "img": "images/picks/mooncool-pop-folding-ebike.webp",
      "specs": ["1200W peak", "20 mph", "30–60 mi range"],
      "runs": "Folds down for the barrel or the car trunk. Good for town runs, school and work.",
      "price": "US$1,199.99", "store": "Mooncool US store", "url": MOONCOOL + "pop-folding-electric-bike&clickref=setja-ebikes"},
+    {"name": "Mooncool FT1 Fat Tire Electric Trike", "kicker": "Fat-tire trike", "img": "images/picks/mooncool-ft1-fat-tire-trike.webp",
+     "specs": ["500W motor", "35–60 mi range", "400 lb load"],
+     "runs": "Wide 20 x 4 inch tires and a 7-speed Shimano for gravel, grass and rough country roads. Baskets front and back.",
+     "price": "US$1,349.99", "store": "Mooncool US store", "url": MOONCOOL + "ft1-electric-trike&clickref=setja-ebikes"},
     {"name": "Mooncool TK2 Folding Electric Trike", "kicker": "Electric trike", "img": "images/picks/mooncool-tk2-trike.webp",
      "specs": ["1092W peak", "15.5 mph", "35–75 mi range"],
      "runs": "Three wheels, a backrest seat and two baskets. Steady for older riders and market runs.",

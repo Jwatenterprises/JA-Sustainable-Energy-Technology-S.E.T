@@ -265,6 +265,7 @@ def layout(meta, body):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name='impact-site-verification' value='dfcfe4aa-616f-4fa5-8317-03b55c636b4b'>
 <title>{meta['title']}</title>
 <meta name="description" content="{meta['description']}">
 <link rel="canonical" href="{canonical}">

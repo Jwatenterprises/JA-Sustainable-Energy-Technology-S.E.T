@@ -35,6 +35,7 @@ NAV = [("shopship", "Shop & Ship", "shop-and-ship.html"), ("shop", "50Hz picks",
 PICKS_CHECKED = "Oct 15, 2026"
 AWIN = "https://www.awin1.com/cread.php?awinaffid=2881111&awinmid="
 RENOGY = "https://renogy.sjv.io/c/6782322/1182656/14864?u=https%3A%2F%2Fwww.renogy.com%2Fproducts%2F"   # Impact, approved
+VENTALLION = "https://ventallioncom.pxf.io/c/7998062/3869060/51724?u=https%3A%2F%2Fventallion.com%2Fproducts%2F"   # Impact acct 7998062, approved 10/19
 PICKS = [
     {"name": "EcoFlow DELTA 2 Max", "kicker": "Best for a whole-home outage", "img": "images/picks/ecoflow-delta-2-max.webp",
      "specs": ["2,048 Wh", "2,400 W", "LiFePO4", "50/60Hz in & out"],
@@ -102,6 +103,16 @@ LIFESTYLE = [
      "runs": "Charges phones and laptops for days, and its 12V port can run most CPAP machines with a CPAP adapter (sold separately).",
      "price": "US$159.99", "store": "Renogy US store",
      "url": RENOGY + "2025-renogy-upgraded-76-800mah-276wh-power-bank&subId1=setja-lifestyle"},
+    {"name": "Ventallion 42-Inch Solar Ceiling Fan with Light", "kicker": "Solar ceiling fan", "img": "images/picks/ventallion-42in-solar-ceiling-fan.webp",
+     "specs": ["Solar + USB-C charging", "LiFePO4 battery", "3-colour LED light"], "checked": "Oct 20, 2026",
+     "runs": "Runs off its own solar panel, no wiring to JPS. About 10 hours on high or up to 60 on low after a full charge. For the verandah, gazebo or shop front.",
+     "price": "US$319", "store": "Ventallion US store",
+     "url": VENTALLION + "42-inch-solar-ceiling-fan-with-light-and-battery&subId1=setja-lifestyle"},
+    {"name": "Ventallion 52-Inch Solar Ceiling Fan with Light", "kicker": "Big solar ceiling fan", "img": "images/picks/ventallion-52in-solar-ceiling-fan.webp",
+     "specs": ["Solar + USB-C charging", "12,000mAh LiFePO4", "3-colour LED light"], "checked": "Oct 20, 2026",
+     "runs": "A larger panel and battery than the 42-inch. About 13 hours on high or up to 50 on low, so it keeps going through a long outage.",
+     "price": "US$349", "store": "Ventallion US store",
+     "url": VENTALLION + "52-inch-solar-ceiling-fan-with-light-and-battery&subId1=setja-lifestyle"},
 ]
 # E-bikes & trikes (2026-10-17): Mooncool confirmed in writing (ticket 175302) that POP / TK2 / TK2 PRO chargers are
 # rated 110-240V~ 50/60Hz. FT1 charger label (100-240V~ 50/60Hz) sent by Mooncool 2026-10-18 -> listed.

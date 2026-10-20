@@ -35,7 +35,7 @@ NAV = [("shopship", "Shop & Ship", "shop-and-ship.html"), ("shop", "50Hz picks",
 PICKS_CHECKED = "Oct 15, 2026"
 AWIN = "https://www.awin1.com/cread.php?awinaffid=2881111&awinmid="
 RENOGY = "https://renogy.sjv.io/c/6782322/1182656/14864?u=https%3A%2F%2Fwww.renogy.com%2Fproducts%2F"   # Impact, approved
-VENTALLION = "https://ventallioncom.pxf.io/c/7998062/3869060/51724?partnerpropertyid=9027147&u=https%3A%2F%2Fventallion.com%2Fproducts%2F"   # Impact acct 7998062, approved 10/19
+VENTALLION = "https://ventallioncom.pxf.io/c/7998062/3869060/51724?partnerpropertyid=9036719&u=https%3A%2F%2Fventallion.com%2Fproducts%2F"   # Impact acct 7998062, approved 10/19
 PICKS = [
     {"name": "EcoFlow DELTA 2 Max", "kicker": "Best for a whole-home outage", "img": "images/picks/ecoflow-delta-2-max.webp",
      "specs": ["2,048 Wh", "2,400 W", "LiFePO4", "50/60Hz in & out"],

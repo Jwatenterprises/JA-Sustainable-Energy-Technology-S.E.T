@@ -39,7 +39,7 @@ VENTALLION = "https://ventallioncom.pxf.io/c/7998062/3869060/51724?partnerproper
 PICKS = [
     {"name": "EcoFlow DELTA 2 Max", "kicker": "Best for a whole-home outage", "img": "images/picks/ecoflow-delta-2-max.webp",
      "specs": ["2,048 Wh", "2,400 W", "LiFePO4", "50/60Hz in & out"],
-     "runs": "Fridge, 2 fans, TV and Wi-Fi (about 300 W) for roughly 6 hours. Sold out on EcoFlow's US store on Oct 21; tap for today's stock.", "price": "US$1,049", "store": "EcoFlow US store",
+     "runs": "Fridge, 2 fans, TV and Wi-Fi (about 300 W) for roughly 6 hours. Add up to 2 Extra Batteries for 6,144 Wh.", "price": "US$1,049", "checked": "Oct 21, 2026", "store": "EcoFlow US store",
      "url": AWIN + "59181&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Fdelta-2-max-portable-power-station&clickref=setja-picks"},
     {"name": "BLUETTI AC180", "kicker": "Best value", "img": "images/picks/bluetti-ac180.webp",
      "specs": ["1,152 Wh", "1,800 W", "LiFePO4", "50/60Hz switchable"],

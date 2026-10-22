@@ -383,12 +383,21 @@ def main():
                 "sameAs": [u for _, u in SOCIALS],
                 "description": "Solar generators, solar panels and backup power made for Jamaica's 50Hz grid, at US store prices, delivered door-to-door.",
                 "areaServed": {"@type": "Country", "name": "Jamaica"}}) + "</script>"
-            faq = re.findall(r"<details[^>]*><summary>(.*?)</summary><p>(.*?)</p></details>", raw, re.S)
-            if faq:
-                meta["head"] += '\n<script type="application/ld+json">' + json.dumps({
-                    "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
-                        {"@type": "Question", "name": html.unescape(q),
-                         "acceptedAnswer": {"@type": "Answer", "text": html.unescape(re.sub(r"<[^>]+>", "", a))}} for q, a in faq]}) + "</script>"
+        if meta["path"].startswith("blog/") and meta["path"] != "blog/index.html":
+            date = re.search(r'<time datetime="([\d-]+)"', raw)
+            meta["head"] = meta.get("head", "") + '<script type="application/ld+json">' + json.dumps({
+                "@context": "https://schema.org", "@type": "BlogPosting", "headline": html.unescape(meta["title"].split(" | ")[0]),
+                "description": html.unescape(meta["description"]), "url": f"{SITE}/{meta['path']}",
+                "datePublished": date.group(1) if date else None, "image": f"{SITE}/logo.png",
+                "author": {"@type": "Organization", "name": "S.E.T. Jamaica"},
+                "publisher": {"@type": "Organization", "name": "S.E.T. Sustainable Energy Technology in Jamaica", "logo": f"{SITE}/logo.png"},
+                "speakable": {"@type": "SpeakableSpecification", "cssSelector": [".answer"]}}) + "</script>"
+        faq = re.findall(r"<details[^>]*><summary>(.*?)</summary><p>(.*?)</p></details>", raw, re.S)
+        if faq:  # FAQ schema on any page that has Q&A details blocks
+            meta["head"] = meta.get("head", "") + '\n<script type="application/ld+json">' + json.dumps({
+                "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+                    {"@type": "Question", "name": html.unescape(q),
+                     "acceptedAnswer": {"@type": "Answer", "text": html.unescape(re.sub(r"<[^>]+>", "", a))}} for q, a in faq]}) + "</script>"
         out = ROOT / meta["path"]
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(layout(meta, raw[head.end():]), encoding="utf-8")

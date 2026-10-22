@@ -28,7 +28,7 @@ FONTS = ("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght
 
 NAV = [("shopship", "Shop & Ship", "shop-and-ship.html"), ("shop", "50Hz picks", "shop/"),
        ("sizing", "What size do I need?", "guides/sizing.html"), ("hurricane", "Hurricane ready", "guides/hurricane-prep.html"),
-       ("ebikes", "E-bikes", "shop/#ebikes"), ("diaspora", "Send power home", "diaspora.html"), ("guides", "Guides", "guides/")]
+       ("ebikes", "E-bikes &amp; scooters", "shop/#ebikes"), ("diaspora", "Send power home", "diaspora.html"), ("guides", "Guides", "guides/")]
 # Shop & Ship model (2026-10-15): S.E.T. recommends 50Hz-verified US models and earns an affiliate commission;
 # the buyer purchases from the US store and ships it home with Dennis Shipping as a personal import.
 # Prices are what the brand store showed on PICKS_CHECKED; the button always opens today's price.
@@ -147,6 +147,30 @@ EBIKES = [
      "runs": "More power and battery than the TK2, for hills and heavier loads. Up to 100 miles in Mooncool's testing.",
      "price": "US$1,999.99", "store": "Mooncool US store", "url": MOONCOOL + "tk2-pro-electric-trike&clickref=setja-ebikes"},
 ]
+# E-scooters (2026-10-22, Wayne approved): Amazon links while Segway (Awin 93539) and NIU (Awin 96629) are pending.
+# Chargers rated 100-240V 50-60Hz per maker manuals (Segway E3/Max G2 manuals; NIU KQi300 manual, AU edition).
+# Amazon price + seller checked Oct 22 (sold by Amazon.com / NIU Tech). Research: research/e-scooters-jamaica-2026-10-22.md
+ESCOOTERS_CHECKED = "Oct 22, 2026"
+AMAZON = "https://www.amazon.com/dp/{}?tag=sunenergytec2-20"
+HELMET_URL = AMAZON.format("B09BQSZYW4")   # ILM E3-10L, CPSC-certified, front/rear LED lights, US$58.49 on Oct 22
+ESCOOTERS = [
+    {"name": "Segway Ninebot E3 Pro", "kicker": "Best value", "img": "images/picks/segway-e3-pro-scooter.webp",
+     "specs": ["368 Wh", "34 mi range", "18% hills", "10\" tubeless, IPX5"],
+     "runs": "Lightest pick at 40 lb, with front and rear suspension. Best for trips up to about 8 km each way on moderate hills. About J$22 to fully charge on JPS.",
+     "price": "US$599.99", "store": "Amazon", "url": AMAZON.format("B0044PUNIG")},
+    {"name": "Segway Ninebot MAX G2", "kicker": "Best all-round", "img": "images/picks/segway-max-g2-scooter.webp",
+     "specs": ["551 Wh", "43 mi range", "22% hills", "10\" self-sealing, IPX5"],
+     "runs": "Hydraulic front suspension and traction control for mixed roads and wet days. About J$32 to fully charge on JPS, or 2.7 charges from an EcoFlow DELTA 2 Max.",
+     "price": "US$699.99", "store": "Amazon", "url": AMAZON.format("B0C65CMKTK")},
+    {"name": "NIU KQi 300P", "kicker": "Best for rough roads", "img": "images/picks/niu-kqi-300p-scooter.webp",
+     "specs": ["487 Wh", "30 mi range", "20% hills", "10.5 x 2.5\" tubeless, IP55"],
+     "runs": "Extra-wide tyres and hydraulic suspension for patchy roads. About J$29 to fully charge on JPS, or about 3 charges from a DELTA 2 Max or BLUETTI AC200L.",
+     "price": "US$749", "store": "Amazon", "url": AMAZON.format("B0GQ82YSBR")},
+    {"name": "NIU KQi 300X", "kicker": "Best for hills", "img": "images/picks/niu-kqi-300x-scooter.webp",
+     "specs": ["608 Wh", "37 mi range", "25% hills", "10.5\" self-healing, IP55"],
+     "runs": "Biggest battery here for hilly routes, with hydraulic suspension and turn signals. About J$36 to fully charge on JPS.",
+     "price": "US$899", "store": "Amazon", "url": AMAZON.format("B0GQ8SN1V9")},
+]
 DISCLOSURE = ("We earn a commission when you buy through our store links, at no extra cost to you. "
               "As an Amazon Associate we earn from qualifying purchases. S.E.T. is not affiliated with Dennis Shipping.")
 LINES = {"power-stations": "Power station", "batteries": "Home battery", "everyday-solar": "Everyday solar"}
@@ -260,6 +284,7 @@ def layout(meta, body):
     body = re.sub(r"\{\{products:([a-z-]+)\}\}", lambda m: products_grid(m.group(1), up), body)
     body = body.replace("{{picks}}", picks_grid(up))
     body = body.replace("{{ebikes}}", picks_grid(up, EBIKES, EBIKES_CHECKED))
+    body = body.replace("{{escooters}}", picks_grid(up, ESCOOTERS, ESCOOTERS_CHECKED)).replace("{{helmet_url}}", HELMET_URL)
     body = body.replace("{{lifestyle}}", picks_grid(up, LIFESTYLE, LIFESTYLE_CHECKED, '<span class="badge-50">No 50Hz issue</span>'))
     if "{{parish_map}}" in body:
         body = body.replace("{{parish_map}}", (ROOT / "_build" / "parish_map.svg").read_text(encoding="utf-8"))

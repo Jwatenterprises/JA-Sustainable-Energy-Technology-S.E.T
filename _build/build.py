@@ -29,7 +29,7 @@ FONTS = ("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght
 NAV = [("shopship", "Shop & Ship", "shop-and-ship.html"), ("shop", "50Hz picks", "shop/"),
        ("sizing", "What size do I need?", "guides/sizing.html"), ("hurricane", "Hurricane ready", "guides/hurricane-prep.html"),
        ("ebikes", "E-bikes &amp; scooters", "shop/#ebikes"), ("diaspora", "Send power home", "diaspora.html"), ("guides", "Guides", "guides/")]
-# Shop & Ship model (2026-10-15): S.E.T. recommends 50Hz-verified US models and earns an affiliate commission;
+# Shop & Ship model (2026-10-15): S.E.T. recommends 50Hz-checked US models (no 'verified' badges since 2026-10-27, per Mooncool ticket 175302 lesson) and earns an affiliate commission;
 # the buyer purchases from the US store and ships it home with Dennis Shipping as a personal import.
 # Prices are what the brand store showed on PICKS_CHECKED; the button always opens today's price.
 PICKS_CHECKED = "Oct 15, 2026"
@@ -170,7 +170,7 @@ def product_card(p, up):
     href = f'{up}shop/{p["slug"]}.html' if has_page else None
     pic = (f'<div class="pic"><img src="{up}{esc(p["photos"][0])}" alt="{esc(p["name"])}" loading="lazy"></div>'
            if has_page else "")
-    tag = '<span class="badge-50">50Hz-verified</span>' if p["line"] == "power-stations" else ""
+    tag = '<span class="badge-50">50Hz-checked</span>' if p["line"] == "power-stations" else ""
     specs = "".join(f'<span class="spec">{esc(s)}</span>' for s in p.get("specs", []))
     if p["status"] == "selling" and p.get("price_jmd"):
         price = f'<span class="price num">{jmd(p["price_jmd"])}</span>'
@@ -189,14 +189,14 @@ def product_card(p, up):
     <div class="foot">{price}{cta}</div></div></article>"""
 
 
-def picks_grid(up, items=None, checked=PICKS_CHECKED, badge='<span class="badge-50">50Hz-verified</span>'):
+def picks_grid(up, items=None, checked=PICKS_CHECKED, badge='<p class="fine" style="margin:0 0 .3rem">50Hz: S.E.T. checked the maker&#x27;s published specs. Not a brand endorsement.</p>'):
     # Items with no "img" render text-only, and items with no "price" show no price line (Amazon rules:
     # no static prices; no brand photos until that brand's programme approves us). 2026-10-27
     cards = []
     for p in items or PICKS:
         specs = "".join(f'<span class="spec">{esc(x)}</span>' for x in p["specs"])
         pic = f'<div class="pic"><img src="{up}{esc(p["img"])}" alt="{esc(p["name"])}" loading="lazy"></div>' if p.get("img") else ""
-        tag = f'<div>{badge}</div>' if badge else ""
+        tag = badge
         price = (f'<p class="fine" style="margin:0">{esc(p["price"])} at {esc(p["store"])} ({p.get("checked", checked)}). Prices change.</p>'
                  if p.get("price") else f'<p class="fine" style="margin:0">{esc(p.get("note", "Price and availability change often. Check today's price at " + p["store"] + "."))}</p>')
         cards.append(f"""<article class="card pcard">{pic}
@@ -374,7 +374,7 @@ def product_page(p):
     body = f"""<section class="section"><div class="wrap grid-2" style="align-items:start">
   <div class="card" style="padding:12px">{gallery}</div>
   <div><p class="eyebrow">{esc(p.get("kicker", ""))}</p><h1>{esc(p["name"])}</h1>
-    {'<p><span class="badge-50">50Hz-verified for Jamaica</span></p>' if p["line"] == "power-stations" else ""}
+    {'<p><span class="badge-50">50Hz-checked for Jamaica</span></p>' if p["line"] == "power-stations" else ""}
     <div class="specs">{specs}</div><p class="lead" style="margin-top:1rem">{esc(p.get("runs", ""))}</p>{price}
     <div class="btn-row">{''.join(btns)}</div>
     <p class="small muted" style="margin-top:1rem">Delivery island-wide, priced by parish. Pickup at {ADDRESS} by appointment. <a href="../how-to-order.html">How ordering works</a>.</p>

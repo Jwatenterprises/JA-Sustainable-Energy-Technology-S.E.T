@@ -129,27 +129,24 @@ LIFESTYLE = [
 # editorially in guides/ebike-vs-taxi-jamaica.html with plain-text Awin links only.
 # E-scooters (2026-10-22, Wayne approved): Amazon links while Segway (Awin 93539) and NIU (Awin 96629) are pending.
 # Chargers rated 100-240V 50-60Hz per maker manuals (Segway E3/Max G2 manuals; NIU KQi300 manual, AU edition).
+# 2026-10-27: Amazon prices, Segway/NIU photos and 50Hz badges removed (Amazon no-static-price rule; brands not yet approved on Awin).
 # Amazon price + seller checked Oct 22 (sold by Amazon.com / NIU Tech). Research: research/e-scooters-jamaica-2026-10-22.md
 ESCOOTERS_CHECKED = "Oct 22, 2026"
 AMAZON = "https://www.amazon.com/dp/{}?tag=sunenergytec2-20"
 HELMET_URL = AMAZON.format("B09BQSZYW4")   # ILM E3-10L, CPSC-certified, front/rear LED lights, US$58.49 on Oct 22
 ESCOOTERS = [
-    {"name": "Segway Ninebot E3 Pro", "kicker": "Best value", "img": "images/picks/segway-e3-pro-scooter.webp",
-     "specs": ["368 Wh", "34 mi range", "18% hills", "10\" tubeless, IPX5"],
-     "runs": "Lightest pick at 40 lb, with front and rear suspension. Best for trips up to about 8 km each way on moderate hills. About J$22 to fully charge on JPS.",
-     "price": "US$599.99", "store": "Amazon", "url": AMAZON.format("B0044PUNIG")},
-    {"name": "Segway Ninebot MAX G2", "kicker": "Best all-round", "img": "images/picks/segway-max-g2-scooter.webp",
-     "specs": ["551 Wh", "43 mi range", "22% hills", "10\" self-sealing, IPX5"],
-     "runs": "Hydraulic front suspension and traction control for mixed roads and wet days. About J$32 to fully charge on JPS, or 2.7 charges from an EcoFlow DELTA 2 Max.",
-     "price": "US$699.99", "store": "Amazon", "url": AMAZON.format("B0C65CMKTK")},
-    {"name": "NIU KQi 300P", "kicker": "Best for rough roads", "img": "images/picks/niu-kqi-300p-scooter.webp",
-     "specs": ["487 Wh", "30 mi range", "20% hills", "10.5 x 2.5\" tubeless, IP55"],
-     "runs": "Extra-wide tyres and hydraulic suspension for patchy roads. About J$29 to fully charge on JPS, or about 3 charges from a DELTA 2 Max or BLUETTI AC200L.",
-     "price": "US$749", "store": "Amazon", "url": AMAZON.format("B0GQ82YSBR")},
-    {"name": "NIU KQi 300X", "kicker": "Best for hills", "img": "images/picks/niu-kqi-300x-scooter.webp",
-     "specs": ["608 Wh", "37 mi range", "25% hills", "10.5\" self-healing, IP55"],
-     "runs": "Biggest battery here for hilly routes, with hydraulic suspension and turn signals. About J$36 to fully charge on JPS.",
-     "price": "US$899", "store": "Amazon", "url": AMAZON.format("B0GQ8SN1V9")},
+    {"name": "Segway Ninebot E3 Pro", "kicker": "Best value",
+     "specs": ["Charger 100–240V 50–60Hz (maker manual)", "368 Wh", "34 mi range", "18% hills", "10\" tubeless, IPX5"],
+     "runs": "Lightest pick at 40 lb, with front and rear suspension. Best for trips up to about 8 km each way on moderate hills. About J$22 to fully charge on JPS.", "store": "Amazon", "url": AMAZON.format("B0044PUNIG")},
+    {"name": "Segway Ninebot MAX G2", "kicker": "Best all-round",
+     "specs": ["Charger 100–240V 50–60Hz (maker manual)", "551 Wh", "43 mi range", "22% hills", "10\" self-sealing, IPX5"],
+     "runs": "Hydraulic front suspension and traction control for mixed roads and wet days. About J$32 to fully charge on JPS, or 2.7 charges from an EcoFlow DELTA 2 Max.", "store": "Amazon", "url": AMAZON.format("B0C65CMKTK")},
+    {"name": "NIU KQi 300P", "kicker": "Best for rough roads",
+     "specs": ["Charger 100–240V 50–60Hz (maker manual)", "487 Wh", "30 mi range", "20% hills", "10.5 x 2.5\" tubeless, IP55"],
+     "runs": "Extra-wide tyres and hydraulic suspension for patchy roads. About J$29 to fully charge on JPS, or about 3 charges from a DELTA 2 Max or BLUETTI AC200L.", "store": "Amazon", "url": AMAZON.format("B0GQ82YSBR")},
+    {"name": "NIU KQi 300X", "kicker": "Best for hills",
+     "specs": ["Charger 100–240V 50–60Hz (maker manual)", "608 Wh", "37 mi range", "25% hills", "10.5\" self-healing, IP55"],
+     "runs": "Biggest battery here for hilly routes, with hydraulic suspension and turn signals. About J$36 to fully charge on JPS.", "store": "Amazon", "url": AMAZON.format("B0GQ8SN1V9")},
 ]
 DISCLOSURE = ("We earn a commission when you buy through our store links, at no extra cost to you. "
               "As an Amazon Associate we earn from qualifying purchases. S.E.T. is not affiliated with Dennis Shipping.")
@@ -193,13 +190,19 @@ def product_card(p, up):
 
 
 def picks_grid(up, items=None, checked=PICKS_CHECKED, badge='<span class="badge-50">50Hz-verified</span>'):
+    # Items with no "img" render text-only, and items with no "price" show no price line (Amazon rules:
+    # no static prices; no brand photos until that brand's programme approves us). 2026-10-27
     cards = []
     for p in items or PICKS:
         specs = "".join(f'<span class="spec">{esc(x)}</span>' for x in p["specs"])
-        cards.append(f"""<article class="card pcard"><div class="pic"><img src="{up}{esc(p['img'])}" alt="{esc(p['name'])}" loading="lazy"></div>
-  <div class="body"><span class="line">{esc(p['kicker'])}</span><div>{badge}</div>
+        pic = f'<div class="pic"><img src="{up}{esc(p["img"])}" alt="{esc(p["name"])}" loading="lazy"></div>' if p.get("img") else ""
+        tag = f'<div>{badge}</div>' if badge else ""
+        price = (f'<p class="fine" style="margin:0">{esc(p["price"])} at {esc(p["store"])} ({p.get("checked", checked)}). Prices change.</p>'
+                 if p.get("price") else f'<p class="fine" style="margin:0">{esc(p.get("note", "Price and availability change often. Check today's price at " + p["store"] + "."))}</p>')
+        cards.append(f"""<article class="card pcard">{pic}
+  <div class="body"><span class="line">{esc(p['kicker'])}</span>{tag}
     <h3>{esc(p['name'])}</h3><div class="specs">{specs}</div><p class="runs">{esc(p['runs'])}</p>
-    <p class="fine" style="margin:0">{esc(p['price'])} at {esc(p['store'])} ({p.get('checked', checked)}). Prices change.</p>
+    {price}
     <div class="foot"><a class="btn btn-primary" href="{esc(p['url'])}" target="_blank" rel="sponsored noopener">See today's price ↗</a></div></div></article>""")
     return '<div class="grid-4">' + "".join(cards) + '</div>' + f'<p class="fine" style="margin-top:10px">{esc(DISCLOSURE)}</p>'
 
@@ -263,7 +266,7 @@ def layout(meta, body):
     body = body.replace("{{reserve_form}}", reserve_form())
     body = re.sub(r"\{\{products:([a-z-]+)\}\}", lambda m: products_grid(m.group(1), up), body)
     body = body.replace("{{picks}}", picks_grid(up))
-    body = body.replace("{{escooters}}", picks_grid(up, ESCOOTERS, ESCOOTERS_CHECKED)).replace("{{helmet_url}}", HELMET_URL)
+    body = body.replace("{{escooters}}", picks_grid(up, ESCOOTERS, ESCOOTERS_CHECKED, "")).replace("{{helmet_url}}", HELMET_URL)
     body = body.replace("{{lifestyle}}", picks_grid(up, LIFESTYLE, LIFESTYLE_CHECKED, '<span class="badge-50">No 50Hz issue</span>'))
     if "{{parish_map}}" in body:
         body = body.replace("{{parish_map}}", (ROOT / "_build" / "parish_map.svg").read_text(encoding="utf-8"))

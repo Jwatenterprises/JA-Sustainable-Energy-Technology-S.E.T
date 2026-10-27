@@ -124,29 +124,9 @@ LIFESTYLE = [
      "price": "US$349", "store": "Ventallion US store",
      "url": VENTALLION + "52-inch-solar-ceiling-fan-with-light-and-battery&subId1=setja-lifestyle"},
 ]
-# E-bikes & trikes (2026-10-17): Mooncool confirmed in writing (ticket 175302) that POP / TK2 / TK2 PRO chargers are
-# rated 110-240V~ 50/60Hz. FT1 charger label (100-240V~ 50/60Hz) sent by Mooncool 2026-10-18 -> listed.
-# US-only warranty, parts ship to US only, USD.
-EBIKES_CHECKED = "Oct 18, 2026"
-MOONCOOL = AWIN + "66494&ued=https%3A%2F%2Fwww.mooncool.com%2Fproducts%2F"
-EBIKES = [
-    {"name": "Mooncool POP Folding E-Bike", "kicker": "Folding e-bike", "img": "images/picks/mooncool-pop-folding-ebike.webp",
-     "specs": ["1200W peak", "20 mph", "30–60 mi range"],
-     "runs": "Folds down for the barrel or the car trunk. Good for town runs, school and work.",
-     "price": "US$1,199.99", "store": "Mooncool US store", "url": MOONCOOL + "pop-folding-electric-bike&clickref=setja-ebikes"},
-    {"name": "Mooncool FT1 Fat Tire Electric Trike", "kicker": "Fat-tire trike", "img": "images/picks/mooncool-ft1-fat-tire-trike.webp",
-     "specs": ["500W motor", "35–60 mi range", "400 lb load"],
-     "runs": "Wide 20 x 4 inch tires and a 7-speed Shimano for gravel, grass and rough country roads. Baskets front and back.",
-     "price": "US$1,349.99", "store": "Mooncool US store", "url": MOONCOOL + "ft1-electric-trike&clickref=setja-ebikes"},
-    {"name": "Mooncool TK2 Folding Electric Trike", "kicker": "Electric trike", "img": "images/picks/mooncool-tk2-trike.webp",
-     "specs": ["1092W peak", "15.5 mph", "35–75 mi range"],
-     "runs": "Three wheels, a backrest seat and two baskets. Steady for older riders and market runs.",
-     "price": "US$1,499.99", "store": "Mooncool US store", "url": MOONCOOL + "tk2-electric-trike&clickref=setja-ebikes"},
-    {"name": "Mooncool TK2 PRO Electric Trike", "kicker": "Electric trike", "img": "images/picks/mooncool-tk2-pro-trike.webp",
-     "specs": ["48V 20Ah", "1310W peak", "450 lb load"],
-     "runs": "More power and battery than the TK2, for hills and heavier loads. Up to 100 miles in Mooncool's testing.",
-     "price": "US$1,999.99", "store": "Mooncool US store", "url": MOONCOOL + "tk2-pro-electric-trike&clickref=setja-ebikes"},
-]
+# E-bikes & trikes: the Mooncool shop grid was removed 2026-10-27 at Mooncool's request (ticket 175302:
+# no dedicated product showcase, official images, exact prices or "verified" badges). E-bikes are covered
+# editorially in guides/ebike-vs-taxi-jamaica.html with plain-text Awin links only.
 # E-scooters (2026-10-22, Wayne approved): Amazon links while Segway (Awin 93539) and NIU (Awin 96629) are pending.
 # Chargers rated 100-240V 50-60Hz per maker manuals (Segway E3/Max G2 manuals; NIU KQi300 manual, AU edition).
 # Amazon price + seller checked Oct 22 (sold by Amazon.com / NIU Tech). Research: research/e-scooters-jamaica-2026-10-22.md
@@ -283,7 +263,6 @@ def layout(meta, body):
     body = body.replace("{{reserve_form}}", reserve_form())
     body = re.sub(r"\{\{products:([a-z-]+)\}\}", lambda m: products_grid(m.group(1), up), body)
     body = body.replace("{{picks}}", picks_grid(up))
-    body = body.replace("{{ebikes}}", picks_grid(up, EBIKES, EBIKES_CHECKED))
     body = body.replace("{{escooters}}", picks_grid(up, ESCOOTERS, ESCOOTERS_CHECKED)).replace("{{helmet_url}}", HELMET_URL)
     body = body.replace("{{lifestyle}}", picks_grid(up, LIFESTYLE, LIFESTYLE_CHECKED, '<span class="badge-50">No 50Hz issue</span>'))
     if "{{parish_map}}" in body:

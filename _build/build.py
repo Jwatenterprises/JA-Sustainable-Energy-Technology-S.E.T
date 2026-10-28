@@ -153,6 +153,39 @@ ESCOOTERS = [
      "specs": ["Charger 100–240V 50–60Hz (maker manual)", "608 Wh", "37 mi range", "25% hills", "10.5\" self-healing, IP55"],
      "runs": "Biggest battery here for hilly routes, with hydraulic suspension and turn signals. About J$36 to fully charge on JPS.", "store": "eBay", "url": EBAY("NIU KQi 300X")},
 ]
+# Home batteries (2026-10-28, Wayne: "find home hybrid batteries"): Vatrer approved on Awin 119703 on 10/28
+# (validDomains vatrerpower.com, US). DC LiFePO4, so no 50Hz issue on the battery itself. Prices from
+# vatrerpower.com products feed, Oct 28 2026. Research: research/edirt-escooter-home-battery-2026-10-28.md
+HOME_BATTERIES_CHECKED = "Oct 28, 2026"
+VATRER = AWIN + "119703&clickref=setja-batteries&ued=https%3A%2F%2Fwww.vatrerpower.com%2Fproducts%2F"
+HOME_BATTERIES = [
+    {"name": "Vatrer 48V 100Ah Wall-Mounted LiFePO4 Battery", "kicker": "Wall battery for a hybrid system", "img": "images/picks/vatrer-48v-100ah-wall-battery.webp",
+     "specs": ["51.2V 100Ah · 5.12 kWh", "LiFePO4, 6,000+ cycles", "CAN / RS485 to the inverter", "Up to 30 in parallel"],
+     "runs": "Stores 5.12 kWh for a 48V hybrid solar system and hangs on the wall. About 50 kg, so it ships as one heavy box.",
+     "price": "US$899.99", "store": "Vatrer US store",
+     "url": VATRER + "51-2v-100ah-wall-mounted-lifepo4-lithium-battery-powerwall-solution-home-energy-backup"},
+    {"name": "Vatrer 48V 100Ah Server Rack Battery (Bluetooth)", "kicker": "Rack battery, easy to stack", "img": "images/picks/vatrer-48v-100ah-server-rack.webp",
+     "specs": ["51.2V 100Ah · 5.12 kWh", "LiFePO4, 5,000+ cycles", "Bluetooth app", "Expands to 51.2 kWh"],
+     "runs": "Rack format for an installer who stacks batteries in a cabinet. Start with one and add more as your load grows. About 51 kg.",
+     "price": "US$929.99", "store": "Vatrer US store",
+     "url": VATRER + "vatrer-51-2v-100ah-lifepo4-lithium-solar-battery-built-in-100a-bms-max-5120w-load-power"},
+    {"name": "Vatrer 12V 100Ah Group 24 LiFePO4 Battery (Bluetooth)", "kicker": "Small inverter or DIY solar", "img": "images/picks/vatrer-12v-100ah-group-24.webp",
+     "specs": ["12.8V 100Ah · 1.28 kWh", "LiFePO4", "150A smart BMS", "Up to 4S4P (20.48 kWh)"],
+     "runs": "For a small 12V inverter, a DIY solar kit, or swapping out a lead-acid battery. Bluetooth shows the charge level on your phone.",
+     "price": "US$259.99", "store": "Vatrer US store",
+     "url": VATRER + "vatrer-12v-100ah-group-24-lithium-battery"},
+]
+# E-dirt bikes (2026-10-28): only models whose maker's own manual states a 50Hz-capable charger.
+# Sur-Ron Light Bee X 2025 owner's manual §8.2: "For USA and Japan: 100~120V AC, 45~65Hz". No Sur-Ron affiliate
+# programme -> eBay Partner Network search link, text-only (no brand photos). Segway X160/X260 discontinued;
+# Talaria, E Ride Pro (manual: "AC 110V / AC 220V", no Hz), Rawrr: no maker 50Hz statement -> not listed.
+EDIRT_CHECKED = "Oct 28, 2026"
+EDIRT = [
+    {"name": "Sur-Ron Light Bee X", "kicker": "Off-road e-dirt bike",
+     "specs": ["Charger 100–120V AC, 45–65Hz (US model, maker manual)", "60V system", "Off-road (X) version", "Regenerative braking"],
+     "runs": "A popular light electric dirt bike, built for trails and private land. It's big: ask your shipper for the crate price and lithium rules before you buy.",
+     "store": "eBay", "url": EBAY("Sur-Ron Light Bee X")},
+]
 DISCLOSURE = ("We earn a commission when you buy through our store links, at no extra cost to you. "
               "S.E.T. is not affiliated with Dennis Shipping.")
 LINES = {"power-stations": "Power station", "batteries": "Home battery", "everyday-solar": "Everyday solar"}
@@ -272,7 +305,9 @@ def layout(meta, body):
     body = re.sub(r"\{\{products:([a-z-]+)\}\}", lambda m: products_grid(m.group(1), up), body)
     body = body.replace("{{picks}}", picks_grid(up))
     body = body.replace("{{escooters}}", picks_grid(up, ESCOOTERS, ESCOOTERS_CHECKED, "")).replace("{{helmet_url}}", HELMET_URL)
-    body = body.replace("{{lifestyle}}", picks_grid(up, LIFESTYLE, LIFESTYLE_CHECKED, '<span class="badge-50">No 50Hz issue</span>'))
+    body = body.replace("{{home_batteries}}", picks_grid(up, HOME_BATTERIES, HOME_BATTERIES_CHECKED, '<span class="badge-50">No 50Hz issue (DC battery)</span>'))
+    body = body.replace("{{edirt}}", picks_grid(up, EDIRT, EDIRT_CHECKED, ""))
+    body = body.replace("{{lifestyle}}",picks_grid(up, LIFESTYLE, LIFESTYLE_CHECKED, '<span class="badge-50">No 50Hz issue</span>'))
     if "{{parish_map}}" in body:
         body = body.replace("{{parish_map}}", (ROOT / "_build" / "parish_map.svg").read_text(encoding="utf-8"))
     if "{{solar_calc_js}}" in body:

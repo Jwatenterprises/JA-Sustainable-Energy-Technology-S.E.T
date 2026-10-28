@@ -298,6 +298,7 @@ def layout(meta, body):
 <link rel="stylesheet" href="{FONTS}">
 <link rel="stylesheet" href="{up}assets/site.css">
 {extra_head}
+<!-- Cloudflare Web Analytics (cookieless; added 2026-10-27) --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{{"token": "bc7b0fdac8ae42348eecf20df6b24ef0"}}'></script>
 </head>
 <body>
 <div class="util"><div class="wrap"><span>US store prices</span><span>Door-to-door from Florida</span><span>Every pick checked for Jamaica's 50Hz grid</span></div></div>

@@ -175,6 +175,27 @@ HOME_BATTERIES = [
      "price": "US$259.99", "store": "Vatrer US store",
      "url": VATRER + "vatrer-12v-100ah-group-24-lithium-battery"},
 ]
+# Hybrid inverters (2026-10-28): JPS supplies 110V/220V at 50Hz, so a US 120/240V inverter qualifies only if its
+# maker's datasheet says the output can be set to 50Hz. EG4 12000XP spec sheet v1.2: "OUTPUT FREQUENCY 60 Hz (Default)
+# | 50 Hz (Configurable)". EG4 6000XP data sheet: "OUTPUT FREQUENCY 50/60Hz". Growatt SPF 4000T-12000T DVM datasheet:
+# "Output Frequency 50Hz/60Hz", output "104-110-115-120/208-220-230-240VAC (optional)". No approved programme yet ->
+# eBay search, text-only, no static price. Rejected: Vatrer 5000W (product page states no frequency), Victron
+# MultiPlus-II 120V (60Hz), Sol-Ark 15K (no frequency on the datasheets we found).
+INVERTERS_CHECKED = "Oct 28, 2026"
+INVERTERS = [
+    {"name": "EG4 6000XP Off-Grid Inverter", "kicker": "48V off-grid inverter",
+     "specs": ["Output 50/60Hz (maker data sheet)", "120/240V split phase", "6,000W output", "48V battery"],
+     "runs": "An all-in-one inverter with a built-in solar charge controller for a home that runs off-grid on its own solar and batteries. Your electrician sets it to 50Hz.",
+     "store": "eBay", "url": EBAY("EG4 6000XP inverter")},
+    {"name": "EG4 12000XP Hybrid Inverter", "kicker": "Large 48V hybrid inverter",
+     "specs": ["50Hz configurable (maker spec sheet)", "120/240V split phase", "12,000W output", "48V battery"],
+     "runs": "For a bigger home with heavy loads such as AC units and pumps. It ships set to 60Hz; your electrician changes it to 50Hz at commissioning.",
+     "store": "eBay", "url": EBAY("EG4 12000XP inverter")},
+    {"name": "Growatt SPF 6000T DVM-MPV Inverter", "kicker": "48V off-grid inverter",
+     "specs": ["Output 50Hz/60Hz (maker datasheet)", "110/115/120V or 220–240V output", "6,000W rated", "48V battery"],
+     "runs": "A low-frequency off-grid inverter whose output voltage can be set to match JPS's 110V, or 220V for larger appliances.",
+     "store": "eBay", "url": EBAY("Growatt SPF 6000T DVM-MPV")},
+]
 # E-dirt bikes (2026-10-28): only models whose maker's own manual states a 50Hz-capable charger.
 # Sur-Ron Light Bee X 2025 owner's manual §8.2: "For USA and Japan: 100~120V AC, 45~65Hz". No Sur-Ron affiliate
 # programme -> eBay Partner Network search link, text-only (no brand photos). Segway X160/X260 discontinued;
@@ -185,6 +206,12 @@ EDIRT = [
      "specs": ["Charger 100–120V AC, 45–65Hz (US model, maker manual)", "60V system", "Off-road (X) version", "Regenerative braking"],
      "runs": "A popular light electric dirt bike, built for trails and private land. It's big: ask your shipper for the crate price and lithium rules before you buy.",
      "store": "eBay", "url": EBAY("Sur-Ron Light Bee X")},
+    # Segway Xyber user manual (store.segway.com PDF): charger DZL483007 "Input Voltage 75-270V 50-60Hz". Segway is
+    # pending on Awin (93539), so eBay for now; swap to the brand link on approval.
+    {"name": "Segway Xyber", "kicker": "E-moto style fat-tyre e-bike",
+     "specs": ["Charger 75–270V, 50–60Hz (maker manual)", "Pedals + throttle", "Fat tyres, full suspension", "Off-road capable"],
+     "runs": "A moto-style e-bike with pedals, softer and lighter than a full dirt bike. Good for rough roads, trails and beach paths.",
+     "store": "eBay", "url": EBAY("Segway Xyber")},
 ]
 DISCLOSURE = ("We earn a commission when you buy through our store links, at no extra cost to you. "
               "S.E.T. is not affiliated with Dennis Shipping.")
@@ -307,6 +334,7 @@ def layout(meta, body):
     body = body.replace("{{escooters}}", picks_grid(up, ESCOOTERS, ESCOOTERS_CHECKED, "")).replace("{{helmet_url}}", HELMET_URL)
     body = body.replace("{{home_batteries}}", picks_grid(up, HOME_BATTERIES, HOME_BATTERIES_CHECKED, '<span class="badge-50">No 50Hz issue (DC battery)</span>'))
     body = body.replace("{{edirt}}", picks_grid(up, EDIRT, EDIRT_CHECKED, ""))
+    body = body.replace("{{inverters}}", picks_grid(up, INVERTERS, INVERTERS_CHECKED, '<span class="badge-50">50Hz-settable (maker spec)</span>'))
     body = body.replace("{{lifestyle}}",picks_grid(up, LIFESTYLE, LIFESTYLE_CHECKED, '<span class="badge-50">No 50Hz issue</span>'))
     if "{{parish_map}}" in body:
         body = body.replace("{{parish_map}}", (ROOT / "_build" / "parish_map.svg").read_text(encoding="utf-8"))

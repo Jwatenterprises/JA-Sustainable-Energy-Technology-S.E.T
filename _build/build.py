@@ -58,7 +58,7 @@ PICKS = [
     {"name": "EcoFlow DELTA 2", "kicker": "Mid-size backup", "img": "images/picks/ecoflow-delta-2.webp",
      "specs": ["1,024 Wh", "1,800 W", "LiFePO4", "50/60Hz in & out"],
      "runs": "Fridge and a fan (about 150 W) for roughly 5 hours. No longer on EcoFlow's US store, so compare sellers on Amazon.", "price": "Varies", "store": "Amazon",
-     "url": "https://www.amazon.com/s?k=EcoFlow+DELTA+2+Portable+Power+Station&tag=sunenergytec2-20"},
+     "url": "https://www.amazon.com/s?k=EcoFlow+DELTA+2+Portable+Power+Station"},
     {"name": "BLUETTI 200W Solar Panel", "kicker": "Recharge from the sun", "img": "images/picks/bluetti-200w-solar-panel.webp",
      "specs": ["200 W", "Folding", "DC: no 50Hz issue"],
      "runs": "Recharges a power station when the grid is down for days.", "price": "US$399", "store": "BLUETTI US store",
@@ -132,7 +132,7 @@ LIFESTYLE = [
 # 2026-10-27: Amazon prices, Segway/NIU photos and 50Hz badges removed (Amazon no-static-price rule; brands not yet approved on Awin).
 # Amazon price + seller checked Oct 22 (sold by Amazon.com / NIU Tech). Research: research/e-scooters-jamaica-2026-10-22.md
 ESCOOTERS_CHECKED = "Oct 22, 2026"
-AMAZON = "https://www.amazon.com/dp/{}?tag=sunenergytec2-20"
+AMAZON = "https://www.amazon.com/dp/{}"
 HELMET_URL = AMAZON.format("B09BQSZYW4")   # ILM E3-10L, CPSC-certified, front/rear LED lights, US$58.49 on Oct 22
 ESCOOTERS = [
     {"name": "Segway Ninebot E3 Pro", "kicker": "Best value",
@@ -149,7 +149,7 @@ ESCOOTERS = [
      "runs": "Biggest battery here for hilly routes, with hydraulic suspension and turn signals. About J$36 to fully charge on JPS.", "store": "Amazon", "url": AMAZON.format("B0GQ8SN1V9")},
 ]
 DISCLOSURE = ("We earn a commission when you buy through our store links, at no extra cost to you. "
-              "As an Amazon Associate we earn from qualifying purchases. S.E.T. is not affiliated with Dennis Shipping.")
+              "S.E.T. is not affiliated with Dennis Shipping.")
 LINES = {"power-stations": "Power station", "batteries": "Home battery", "everyday-solar": "Everyday solar"}
 
 

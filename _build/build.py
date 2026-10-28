@@ -26,6 +26,11 @@ YEAR = datetime.date.today().year
 FONTS = ("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800"
          "&family=Plus+Jakarta+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap")
 
+from urllib.parse import quote_plus as _qp
+def EBAY(q):
+    return ("https://www.ebay.com/sch/i.html?_nkw=" + _qp(q) + "&mkcid=1&mkrid=711-53200-19255-0&siteid=0"
+            "&campid=5339209381&customid=setja-shop&toolid=10001&mkevt=1")
+
 NAV = [("shopship", "Shop & Ship", "shop-and-ship.html"), ("shop", "50Hz picks", "shop/"),
        ("sizing", "What size do I need?", "guides/sizing.html"), ("hurricane", "Hurricane ready", "guides/hurricane-prep.html"),
        ("ebikes", "E-bikes &amp; scooters", "shop/#ebikes"), ("diaspora", "Send power home", "diaspora.html"), ("guides", "Guides", "guides/")]
@@ -57,8 +62,8 @@ PICKS = [
      "url": AWIN + "59271&ued=https%3A%2F%2Fwww.bluettipower.com%2Fproducts%2Felite-200-v2-portable-power-station&clickref=setja-picks"},
     {"name": "EcoFlow DELTA 2", "kicker": "Mid-size backup", "img": "images/picks/ecoflow-delta-2.webp",
      "specs": ["1,024 Wh", "1,800 W", "LiFePO4", "50/60Hz in & out"],
-     "runs": "Fridge and a fan (about 150 W) for roughly 5 hours. No longer on EcoFlow's US store, so compare sellers on Amazon.", "price": "Varies", "store": "Amazon",
-     "url": "https://www.amazon.com/s?k=EcoFlow+DELTA+2+Portable+Power+Station"},
+     "runs": "Fridge and a fan (about 150 W) for roughly 5 hours. No longer on EcoFlow's US store, so compare sellers on eBay.", "price": "Varies", "store": "eBay",
+     "url": EBAY("EcoFlow DELTA 2 portable power station")},
     {"name": "BLUETTI 200W Solar Panel", "kicker": "Recharge from the sun", "img": "images/picks/bluetti-200w-solar-panel.webp",
      "specs": ["200 W", "Folding", "DC: no 50Hz issue"],
      "runs": "Recharges a power station when the grid is down for days.", "price": "US$399", "store": "BLUETTI US store",
@@ -132,21 +137,21 @@ LIFESTYLE = [
 # 2026-10-27: Amazon prices, Segway/NIU photos and 50Hz badges removed (Amazon no-static-price rule; brands not yet approved on Awin).
 # Amazon price + seller checked Oct 22 (sold by Amazon.com / NIU Tech). Research: research/e-scooters-jamaica-2026-10-22.md
 ESCOOTERS_CHECKED = "Oct 22, 2026"
-AMAZON = "https://www.amazon.com/dp/{}"
-HELMET_URL = AMAZON.format("B09BQSZYW4")   # ILM E3-10L, CPSC-certified, front/rear LED lights, US$58.49 on Oct 22
+# 2026-10-28: Amazon Associates closed -> eBay Partner Network search links (campid 5339209381).
+HELMET_URL = EBAY("ILM E3-10L helmet lights")   # ILM E3-10L, CPSC-certified, front/rear LED lights, US$58.49 on Oct 22
 ESCOOTERS = [
     {"name": "Segway Ninebot E3 Pro", "kicker": "Best value",
      "specs": ["Charger 100–240V 50–60Hz (maker manual)", "368 Wh", "34 mi range", "18% hills", "10\" tubeless, IPX5"],
-     "runs": "Lightest pick at 40 lb, with front and rear suspension. Best for trips up to about 8 km each way on moderate hills. About J$22 to fully charge on JPS.", "store": "Amazon", "url": AMAZON.format("B0044PUNIG")},
+     "runs": "Lightest pick at 40 lb, with front and rear suspension. Best for trips up to about 8 km each way on moderate hills. About J$22 to fully charge on JPS.", "store": "eBay", "url": EBAY("Segway Ninebot E3 Pro")},
     {"name": "Segway Ninebot MAX G2", "kicker": "Best all-round",
      "specs": ["Charger 100–240V 50–60Hz (maker manual)", "551 Wh", "43 mi range", "22% hills", "10\" self-sealing, IPX5"],
-     "runs": "Hydraulic front suspension and traction control for mixed roads and wet days. About J$32 to fully charge on JPS, or 2.7 charges from an EcoFlow DELTA 2 Max.", "store": "Amazon", "url": AMAZON.format("B0C65CMKTK")},
+     "runs": "Hydraulic front suspension and traction control for mixed roads and wet days. About J$32 to fully charge on JPS, or 2.7 charges from an EcoFlow DELTA 2 Max.", "store": "eBay", "url": EBAY("Segway Ninebot MAX G2")},
     {"name": "NIU KQi 300P", "kicker": "Best for rough roads",
      "specs": ["Charger 100–240V 50–60Hz (maker manual)", "487 Wh", "30 mi range", "20% hills", "10.5 x 2.5\" tubeless, IP55"],
-     "runs": "Extra-wide tyres and hydraulic suspension for patchy roads. About J$29 to fully charge on JPS, or about 3 charges from a DELTA 2 Max or BLUETTI AC200L.", "store": "Amazon", "url": AMAZON.format("B0GQ82YSBR")},
+     "runs": "Extra-wide tyres and hydraulic suspension for patchy roads. About J$29 to fully charge on JPS, or about 3 charges from a DELTA 2 Max or BLUETTI AC200L.", "store": "eBay", "url": EBAY("NIU KQi 300P")},
     {"name": "NIU KQi 300X", "kicker": "Best for hills",
      "specs": ["Charger 100–240V 50–60Hz (maker manual)", "608 Wh", "37 mi range", "25% hills", "10.5\" self-healing, IP55"],
-     "runs": "Biggest battery here for hilly routes, with hydraulic suspension and turn signals. About J$36 to fully charge on JPS.", "store": "Amazon", "url": AMAZON.format("B0GQ8SN1V9")},
+     "runs": "Biggest battery here for hilly routes, with hydraulic suspension and turn signals. About J$36 to fully charge on JPS.", "store": "eBay", "url": EBAY("NIU KQi 300X")},
 ]
 DISCLOSURE = ("We earn a commission when you buy through our store links, at no extra cost to you. "
               "S.E.T. is not affiliated with Dennis Shipping.")

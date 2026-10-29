@@ -394,7 +394,7 @@ def layout(meta, body):
     </div>
     <div>
       <p class="footer-head">Contact</p>
-      <a href="{wa('Hi S.E.T. Jamaica, I have a question.')}">WhatsApp 857-445-9407</a><a href="mailto:{EMAIL}">{EMAIL}</a>{''.join(f'<a href="{u}" rel="noopener me">{n}</a>' for n, u in SOCIALS)}<a href="{up}about.html">About</a><a href="{up}contact.html">Contact</a><a href="{up}privacy-policy.html">Privacy</a><a href="{up}terms.html">Terms</a>
+      <a href="{wa('Hi S.E.T. Jamaica, I have a question.')}">WhatsApp 857-445-9407</a><a href="mailto:{EMAIL}">{EMAIL}</a>{''.join(f'<a href="{u}" rel="noopener me">{n}</a>' for n, u in SOCIALS)}<a href="{up}about.html">About</a><a href="{up}giving-back.html">Giving back</a><a href="{up}contact.html">Contact</a><a href="{up}privacy-policy.html">Privacy</a><a href="{up}terms.html">Terms</a>
     </div>
   </div>
   <p class="wrap copyright">&copy; {YEAR} S.E.T. Sustainable Energy Technology in Jamaica. {esc(DISCLOSURE)}</p>

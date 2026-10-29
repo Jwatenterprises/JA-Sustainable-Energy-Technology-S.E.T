@@ -196,10 +196,18 @@ td.n { font-family: var(--f-mono); text-align: right; white-space: nowrap; }
 .calc-panel h2 { color: var(--bg); }
 .calc-panel .eyebrow { color: color-mix(in srgb, var(--bg) 70%, transparent); }
 @media (min-width: 900px) { .calc-panel { grid-template-columns: 1.1fr .9fr; padding: 40px; gap: 36px; } }
-.apps { display: grid; grid-template-columns: repeat(auto-fill, minmax(136px, 1fr)); gap: 8px; margin-top: 18px; }
-.app { display: flex; align-items: center; justify-content: space-between; gap: 8px; background: color-mix(in srgb, var(--bg) 10%, transparent); border: 1px solid color-mix(in srgb, var(--bg) 22%, transparent); border-radius: 12px; padding: 10px 12px; color: var(--bg); font: inherit; font-size: .88rem; font-weight: 600; cursor: pointer; text-align: left; }
+.apps { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; margin-top: 12px; }
+.app { display: flex; flex-direction: column; background: color-mix(in srgb, var(--bg) 10%, transparent); border: 1px solid color-mix(in srgb, var(--bg) 22%, transparent); border-radius: 12px; color: var(--bg); overflow: hidden; transition: background .15s ease, border-color .15s ease; }
+.app.on { background: var(--sun); color: #2A1A00; border-color: var(--sun); }
+.app-t { display: flex; align-items: flex-start; gap: 8px; width: 100%; background: none; border: 0; color: inherit; font: inherit; font-size: .88rem; font-weight: 600; cursor: pointer; text-align: left; padding: 10px 12px; }
+.app-t .tick { flex: none; width: 20px; height: 20px; border-radius: 50%; display: grid; place-items: center; font-size: .72rem; background: color-mix(in srgb, currentColor 16%, transparent); }
 .app small { display: block; font-family: var(--f-mono); font-size: .7rem; opacity: .75; font-weight: 500; }
-.app[aria-pressed="true"] { background: var(--sun); color: #2A1A00; border-color: var(--sun); }
+.qty { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 0 10px 9px 38px; }
+.qty[hidden] { display: none; }
+.qb { width: 30px; height: 30px; border-radius: 50%; border: 0; background: #2A1A00; color: var(--sun); font: inherit; font-size: 1.05rem; font-weight: 800; line-height: 1; cursor: pointer; }
+.qb:focus-visible, .app-t:focus-visible { outline: 2px solid #2A1A00; outline-offset: 2px; }
+.qn { font-family: var(--f-mono); font-weight: 700; font-size: .95rem; min-width: 2ch; text-align: center; }
+.step-tip { margin: 6px 0 0; font-size: .8rem; opacity: .75; }
 .result { background: var(--bg); color: var(--fg); border-radius: 16px; padding: 22px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
 .station { display: grid; grid-template-columns: 1fr auto; gap: 6px 10px; align-items: center; padding: 12px; border: 1px solid var(--line); border-radius: 12px; }
 .station.best { border-color: var(--leaf); box-shadow: 0 0 0 2px color-mix(in srgb, var(--leaf) 25%, transparent); }
@@ -242,6 +250,36 @@ td.n { font-family: var(--f-mono); text-align: right; white-space: nowrap; }
 .r-grid .s { display: block; font-size: .74rem; color: var(--fg-soft); }
 .r-save { margin: 0; background: var(--green-soft); border-radius: 12px; padding: 10px 12px; font-size: .92rem; }
 @media (min-width: 900px) { .solar-calc .result { position: sticky; top: 96px; } }
+.result .btn { justify-content: center; text-align: center; }
+/* Solar calculator options (2026-10-29) */
+.options { margin-top: 28px; scroll-margin-top: 90px; }
+.opts-head h2 { margin: .2rem 0 .3rem; }
+.opts-head p { margin: 0; }
+.opts { display: grid; gap: 14px; margin-top: 16px; }
+@media (min-width: 700px) { .opts { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1180px) { .opts { grid-template-columns: repeat(4, 1fr); } }
+.opt { display: flex; flex-direction: column; gap: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; min-width: 0; }
+.opt.best { border-color: var(--leaf); box-shadow: 0 0 0 3px color-mix(in srgb, var(--leaf) 22%, transparent), var(--shadow); }
+.opt h3 { margin: 0; font-size: 1.05rem; line-height: 1.25; }
+.opt-tag { margin: 0; display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: .72rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--sun-deep); }
+.badge-best { background: var(--leaf); color: var(--leaf-ink); border-radius: 99px; padding: 3px 9px; letter-spacing: .03em; }
+.opt-what { margin: 0; font-size: .86rem; color: var(--fg-soft); }
+.meter .m-top { display: flex; justify-content: space-between; gap: 8px; font-size: .78rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .03em; margin-bottom: 5px; }
+.meter b { font-family: var(--f-display); font-size: 1rem; text-transform: none; letter-spacing: 0; }
+.meter b.ok { color: var(--leaf); } .meter b.short { color: var(--red); }
+.meter .bar i.short { background: var(--red); }
+.m-sub { margin: 4px 0 0; font-size: .74rem; color: var(--muted); }
+.plan { margin: 0; padding: 10px 12px 10px 28px; background: var(--surface-2); border-radius: 10px; font-size: .8rem; }
+.plan li + li { margin-top: 3px; }
+.opt-solar { margin: 0; font-size: .82rem; color: var(--fg-soft); }
+.pc { list-style: none; margin: 0; padding: 0; font-size: .82rem; display: grid; gap: 4px; }
+.pc li { padding-left: 20px; position: relative; }
+.pc .pro::before { content: "✓"; position: absolute; left: 0; color: var(--leaf); font-weight: 800; }
+.pc .con::before { content: "!"; position: absolute; left: 4px; color: var(--sun-deep); font-weight: 800; }
+.opt-price { margin: auto 0 0; font-family: var(--f-display); font-weight: 800; font-size: 1.25rem; color: var(--island); }
+.opt-price span { font-family: var(--f-body); font-size: .8rem; font-weight: 600; color: var(--muted); }
+.opt .fine { margin: -6px 0 0; }
+.opt .btn { justify-content: center; text-align: center; }
 /* FAQ */
 .faq { display: grid; gap: 10px; }
 .faq details { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 18px; }
@@ -334,3 +372,7 @@ td.n { font-family: var(--f-mono); text-align: right; white-space: nowrap; }
 .card.promo .btn { margin-top: 10px; }
 .card.promo:hover { border-color: var(--leaf); }
 @media (max-width: 560px) { .card.promo { flex-direction: column; align-items: stretch; } .card.promo img { width: 100%; max-width: none; max-height: 220px; } }
+.kit { background: var(--surface-2); border-radius: 10px; padding: 8px 12px; font-size: .8rem; }
+.kit summary { font-weight: 700; cursor: pointer; color: var(--island); }
+.kit ul { margin: 6px 0 2px; padding-left: 18px; }
+.kit li + li { margin-top: 3px; }

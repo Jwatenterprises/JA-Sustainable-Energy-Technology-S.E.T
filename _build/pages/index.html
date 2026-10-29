@@ -56,8 +56,9 @@
       <div class="calc-steps">
         <p class="eyebrow">Jamaica solar calculator</p>
         <h2>How much solar do you need in your parish?</h2>
-        <p style="opacity:.85;max-width:52ch">Three quick steps. We size the panels and battery from your appliances and your parish's real sun hours.</p>
+        <p style="opacity:.85;max-width:52ch">Three quick steps. We size the panels and battery from your appliances and your parish's real sun hours, then compare every way to power them: one unit, extra batteries, several units, or a full home system.</p>
         <h3 class="step-h"><span>1</span>What do you want to run?</h3>
+        <p class="step-tip">Tap to add. Use − and + to set how many.</p>
         <div class="apps" id="apps"></div>
         <h3 class="step-h"><span>2</span>Pick your parish</h3>
         <div class="map-wrap">{{parish_map}}<p class="map-key"><span><i class="k-hi"></i>5.6–5.7 sun hrs</span><span><i class="k-mid"></i>5.2 sun hrs</span><span><i class="k-on"></i>Your parish</span></p></div>
@@ -68,7 +69,8 @@
       </div>
       <div class="result" id="result" aria-live="polite"></div>
     </div>
-    <p class="fine" style="margin-top:10px">Sun hours: NASA POWER satellite averages (annual mean of daily solar energy, kWh/m²). Estimates assume 75% panel-to-battery efficiency and 85% usable battery energy; JPS about J$45.8/kWh. Your real results vary with shade, roof angle and season. Parish map: <a href="https://www.geoboundaries.org/" rel="noopener">geoBoundaries</a> / OpenStreetMap, CC BY-SA 2.0.</p>
+    <div class="options" id="options" aria-live="polite"></div>
+    <p class="fine" style="margin-top:10px">Sun hours: NASA POWER satellite averages (annual mean of daily solar energy, kWh/m²). Estimates assume 75% panel-to-battery efficiency, 85% usable energy in a power station and 90% in a home battery; JPS about J$45.8/kWh; J$160 = US$1. Prices are from each brand's US store on the dates shown, before shipping and customs. Your real results vary with shade, roof angle and season. Parish map: <a href="https://www.geoboundaries.org/" rel="noopener">geoBoundaries</a> / OpenStreetMap, CC BY-SA 2.0.</p>
   </div>
 </section>
 

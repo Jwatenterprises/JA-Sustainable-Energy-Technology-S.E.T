@@ -37,25 +37,20 @@ NAV = [("shopship", "Shop & Ship", "shop-and-ship.html"), ("shop", "50Hz picks",
 # Shop & Ship model (2026-10-15): S.E.T. recommends 50Hz-checked US models (no 'verified' badges since 2026-10-27, per Mooncool ticket 175302 lesson) and earns an affiliate commission;
 # the buyer purchases from the US store and ships it home with Dennis Shipping as a personal import.
 # Prices are what the brand store showed on PICKS_CHECKED; the button always opens today's price.
-PICKS_CHECKED = "Oct 15, 2026"
+PICKS_CHECKED = "Oct 28, 2026"
 AWIN = "https://www.awin1.com/cread.php?awinaffid=2881111&awinmid="
 RENOGY = "https://renogy.sjv.io/c/6782322/1182656/14864?u=https%3A%2F%2Fwww.renogy.com%2Fproducts%2F"   # Impact, approved
 VENTALLION = "https://ventallioncom.pxf.io/c/7998062/3869060/51724?partnerpropertyid=9036719&u=https%3A%2F%2Fventallion.com%2Fproducts%2F"   # Impact acct 7998062, approved 10/19
 PICKS = [
     {"name": "EcoFlow DELTA 2 Max", "kicker": "Best for a whole-home outage", "img": "images/picks/ecoflow-delta-2-max.webp",
      "specs": ["2,048 Wh", "2,400 W", "LiFePO4", "50/60Hz in & out"],
-     "runs": "Fridge, 2 fans, TV and Wi-Fi (about 300 W) for roughly 6 hours. Add up to 2 Extra Batteries for 6,144 Wh.", "price": "US$1,049", "checked": "Oct 21, 2026", "store": "EcoFlow US store",
+     "runs": "Fridge, 2 fans, TV and Wi-Fi (about 300 W) for roughly 6 hours. Add up to 2 Extra Batteries for 6,144 Wh.", "price": "US$1,049", "checked": "Oct 28, 2026", "store": "EcoFlow US store",
      "url": AWIN + "59181&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Fdelta-2-max-portable-power-station&clickref=setja-picks"},
     {"name": "BLUETTI AC180", "kicker": "Best value", "img": "images/picks/bluetti-ac180.webp",
      "specs": ["1,152 Wh", "1,800 W", "LiFePO4", "50/60Hz switchable"],
-     "runs": "Fans, LED lights and Wi-Fi (about 150 W) for roughly 6 hours. Set it to 50Hz once (2-button switch). Out of stock on BLUETTI's US store on Oct 21 (restock expected late November).", "price": "US$499", "store": "BLUETTI US store",
+     "runs": "Fans, LED lights and Wi-Fi (about 150 W) for roughly 6 hours. Set it to 50Hz once (2-button switch).", "price": "US$499", "store": "BLUETTI US store",
      "url": AWIN + "59271&ued=https%3A%2F%2Fwww.bluettipower.com%2Fproducts%2Fac180&clickref=setja-picks"},
-    {"name": "BLUETTI AC200L", "kicker": "Big, expandable backup", "img": "images/picks/bluetti-ac200l.webp", "checked": "Oct 21, 2026",
-     "specs": ["2,048 Wh", "2,400 W", "LiFePO4", "50/60Hz in & out"],
-     "runs": "Fridge, 2 fans, TV and Wi-Fi (about 300 W) for roughly 6 hours. Add BLUETTI batteries for more hours, and its 12–145 V solar input takes rooftop-size panels. Switch it to 50Hz once in the settings.",
-     "price": "US$899", "store": "BLUETTI US store",
-     "url": AWIN + "59271&ued=https%3A%2F%2Fwww.bluettipower.com%2Fproducts%2Fac200l-portable-power-station&clickref=setja-picks"},
-    {"name": "BLUETTI Elite 200 V2", "kicker": "Most power for the price", "img": "images/picks/bluetti-elite-200-v2.webp", "checked": "Oct 21, 2026",
+    {"name": "BLUETTI Elite 200 V2", "kicker": "Most power for the price", "img": "images/picks/bluetti-elite-200-v2.webp", "checked": "Oct 28, 2026",
      "specs": ["2,073 Wh", "2,600 W", "LiFePO4", "50/60Hz in & out"],
      "runs": "Fridge, 2 fans, TV and Wi-Fi (about 300 W) for roughly 6 hours, with 2,600 W for a microwave or kettle. Not expandable. Set it to 50Hz once in the settings (P01).",
      "price": "US$899", "store": "BLUETTI US store",
@@ -66,12 +61,12 @@ PICKS = [
      "url": EBAY("EcoFlow DELTA 2 portable power station")},
     {"name": "BLUETTI 200W Solar Panel", "kicker": "Recharge from the sun", "img": "images/picks/bluetti-200w-solar-panel.webp",
      "specs": ["200 W", "Folding", "DC: no 50Hz issue"],
-     "runs": "Recharges a power station when the grid is down for days.", "price": "US$399", "store": "BLUETTI US store",
+     "runs": "Recharges a power station when the grid is down for days.", "price": "US$349", "store": "BLUETTI US store",
      "url": AWIN + "59271&ued=https%3A%2F%2Fwww.bluettipower.com%2Fproducts%2Fbluetti-sp200l-solar-panel-200w&clickref=setja-picks"},
 ]
 # Solar lifestyle picks (2026-10-16): DC/USB gear (or a universal 100-240V 50/60Hz adapter), so the 50Hz rule doesn't apply.
 # Brand-store items only, official images from the brand's own store; Amazon items wait for an approved image source.
-LIFESTYLE_CHECKED = "Oct 16, 2026"
+LIFESTYLE_CHECKED = "Oct 28, 2026"
 LIFESTYLE = [
     {"name": "EcoFlow GLACIER Classic 35L", "kicker": "Solar fridge-freezer", "img": "images/picks/ecoflow-glacier-classic-35l.webp",
      "specs": ["35 L", "12V / solar / AC", "Fridge or freezer"],
@@ -104,27 +99,27 @@ LIFESTYLE = [
      "price": "US$119", "store": "BLUETTI US store",
      "url": AWIN + "59271&ued=https%3A%2F%2Fwww.bluettipower.com%2Fproducts%2Fx20-portable-power-bank%3Fvariant%3D46173734699227&clickref=setja-lifestyle"},
     {"name": "EcoFlow 28W Ultra-Light Solar Panel", "kicker": "Pocket solar charger", "img": "images/picks/ecoflow-28w-solar-panel.webp",
-     "specs": ["28 W", "USB direct charging", "IP68, 1.3 lb"], "checked": "Oct 17, 2026",
+     "specs": ["28 W", "USB direct charging", "IP68, 1.3 lb"], "checked": "Oct 28, 2026",
      "runs": "Charges phones and power banks straight from the sun, no grid needed. Tablet-sized and waterproof, for the yard, the beach or a blackout.",
      "price": "US$99", "store": "EcoFlow US store",
      "url": AWIN + "59181&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Fecoflow-28w-ultra-light-solar-panel&clickref=setja-lifestyle"},
     {"name": "Dr.Prepare 700-Lumen Rechargeable LED Work Light", "kicker": "Outage light", "img": "images/picks/renogy-led-work-light.webp",
-     "specs": ["700 lumens", "USB rechargeable", "Magnetic base"], "checked": "Oct 18, 2026",
+     "specs": ["700 lumens", "USB rechargeable", "Magnetic base"], "checked": "Oct 28, 2026",
      "runs": "Charges from any USB port or power bank. Folds, hangs or sticks to metal, and lasts up to 20 hours on low when JPS goes.",
      "price": "US$16.99", "store": "Renogy US store",
      "url": RENOGY + "dr-prepare-700-lumens-3200mah-foldable-rechargeable-led-work-light&subId1=setja-lifestyle"},
     {"name": "Renogy 276Wh Power Bank", "kicker": "Big power bank", "img": "images/picks/renogy-276wh-power-bank.webp",
-     "specs": ["276 Wh", "USB-C fast charge", "12V car port"], "checked": "Oct 18, 2026",
+     "specs": ["276 Wh", "USB-C fast charge", "12V car port"], "checked": "Oct 28, 2026",
      "runs": "Charges phones and laptops for days, and its 12V port can run most CPAP machines with a CPAP adapter (sold separately).",
      "price": "US$159.99", "store": "Renogy US store",
      "url": RENOGY + "2025-renogy-upgraded-76-800mah-276wh-power-bank&subId1=setja-lifestyle"},
     {"name": "Ventallion 42-Inch Solar Ceiling Fan with Light", "kicker": "Solar ceiling fan", "img": "images/picks/ventallion-42in-solar-ceiling-fan.webp",
-     "specs": ["Solar + USB-C charging", "LiFePO4 battery", "3-colour LED light"], "checked": "Oct 20, 2026",
+     "specs": ["Solar + USB-C charging", "LiFePO4 battery", "3-colour LED light"], "checked": "Oct 28, 2026",
      "runs": "Runs off its own solar panel, no wiring to JPS. About 10 hours on high or up to 60 on low after a full charge. For the verandah, gazebo or shop front.",
      "price": "US$319", "store": "Ventallion US store",
      "url": VENTALLION + "42-inch-solar-ceiling-fan-with-light-and-battery&subId1=setja-lifestyle"},
     {"name": "Ventallion 52-Inch Solar Ceiling Fan with Light", "kicker": "Big solar ceiling fan", "img": "images/picks/ventallion-52in-solar-ceiling-fan.webp",
-     "specs": ["Solar + USB-C charging", "12,000mAh LiFePO4", "3-colour LED light"], "checked": "Oct 20, 2026",
+     "specs": ["Solar + USB-C charging", "12,000mAh LiFePO4", "3-colour LED light"], "checked": "Oct 28, 2026",
      "runs": "A larger panel and battery than the 42-inch. About 13 hours on high or up to 50 on low, so it keeps going through a long outage.",
      "price": "US$349", "store": "Ventallion US store",
      "url": VENTALLION + "52-inch-solar-ceiling-fan-with-light-and-battery&subId1=setja-lifestyle"},
@@ -148,7 +143,7 @@ ESCOOTERS = [
      "runs": "Hydraulic front suspension and traction control for mixed roads and wet days. About J$32 to fully charge on JPS, or 2.7 charges from an EcoFlow DELTA 2 Max.", "store": "eBay", "url": EBAY("Segway Ninebot MAX G2")},
     {"name": "NIU KQi 300P", "kicker": "Best for rough roads",
      "specs": ["Charger 100–240V 50–60Hz (maker manual)", "487 Wh", "30 mi range", "20% hills", "10.5 x 2.5\" tubeless, IP55"],
-     "runs": "Extra-wide tyres and hydraulic suspension for patchy roads. About J$29 to fully charge on JPS, or about 3 charges from a DELTA 2 Max or BLUETTI AC200L.", "store": "eBay", "url": EBAY("NIU KQi 300P")},
+     "runs": "Extra-wide tyres and hydraulic suspension for patchy roads. About J$29 to fully charge on JPS, or about 3 charges from a DELTA 2 Max or BLUETTI Elite 200 V2.", "store": "eBay", "url": EBAY("NIU KQi 300P")},
     {"name": "NIU KQi 300X", "kicker": "Best for hills",
      "specs": ["Charger 100–240V 50–60Hz (maker manual)", "608 Wh", "37 mi range", "25% hills", "10.5\" self-healing, IP55"],
      "runs": "Biggest battery here for hilly routes, with hydraulic suspension and turn signals. About J$36 to fully charge on JPS.", "store": "eBay", "url": EBAY("NIU KQi 300X")},

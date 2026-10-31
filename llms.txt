@@ -1,0 +1,32 @@
+# S.E.T. Sustainable Energy Technology in Jamaica
+
+> Kingston, Jamaica store for solar generators, solar panels and backup power checked for Jamaica's 50Hz grid, sold at US store prices and delivered door-to-door from Florida.
+
+- Jamaica's grid runs at 50Hz; S.E.T. checks each product's published specs for 50Hz compatibility before listing it.
+- Prices are US store prices; how ordering and shipping to Jamaica work is explained on the How to Order page.
+
+## Main pages
+
+- [About S.E.T. Jamaica | Sustainable Energy Technology](https://setjamaica.com/about.html): S.E.T. Sustainable Energy Technology in Jamaica helps Jamaicans buy backup power that works on our 50Hz grid, at US store prices, and ship it home.
+- [Contact S.E.T. Jamaica | WhatsApp & Email](https://setjamaica.com/contact.html): Contact S.E.T. Jamaica on WhatsApp or email for free sizing help, Shop & Ship questions or help with your power station.
+- [Power for Family Back Home | Send a Power Station to Jamaica](https://setjamaica.com/diaspora.html): Living in the US? Buy a power station checked for Jamaica's 50Hz grid at the US price, drop it at Dennis Shipping in Florida, and it goes door-to-door to your family in Jamaica.
+- [Giving Back: 10% to the Shirley Walters Foundation](https://setjamaica.com/giving-back.html): S.E.T. Sustainable Energy Technology in Jamaica gives 10% of its profits to the Shirley Walters Foundation, which helps Jamaican students from struggling families pay for their education.
+- [How to Order | Buy at US Prices, Ship Home with Dennis Shipping](https://setjamaica.com/how-to-order.html): How ordering works with S.E.T. Jamaica: you buy a power station checked for Jamaica's 50Hz grid from the US store through our link, then ship it home with Dennis Shipping. No S.E.T. fee.
+- [Solar & Backup Power Solutions in Jamaica](https://setjamaica.com/): Solar generators, panels and backup power made for Jamaica's 50Hz grid, at US store prices, delivered door-to-door from Florida. Free solar calculator with real sun hours for all 14 parishes.
+- [Privacy Policy](https://setjamaica.com/privacy-policy.html): How S.E.T. Jamaica collects and uses information when you contact us or use our links.
+- [Shop & Ship | US Prices on Power Stations, Delivered in Jamaica](https://setjamaica.com/shop-and-ship.html): Buy a power station checked for Jamaica's 50Hz grid at its US store price, ship it with Dennis Shipping from Florida, and get it delivered door-to-door in Jamaica. Step-by-step guide.
+- [Solar Generators & Solar Products for Jamaica | US Prices](https://setjamaica.com/shop/): Solar generators checked for Jamaica's 50Hz grid plus everyday solar for Jamaica: solar fridges, solar phone chargers, power banks and DC kits for fans and lights, at US store prices, shipped home with Dennis Shipping.
+- [Terms of Use](https://setjamaica.com/terms.html): Terms for using the S.E.T. Jamaica website, our product recommendations, affiliate links and Shop & Ship guide.
+- [Warranty | US Power Stations in Jamaica](https://setjamaica.com/warranty.html): How warranties work when you buy a power station in the US and ship it to Jamaica, and what to check before you buy.
+
+## Blog and guides
+
+- [What It Really Costs to Ship a Power Station to Jamaica (2026)](https://setjamaica.com/blog/ship-power-station-to-jamaica-cost.html): A worked 2026 breakdown of the landed cost of a US power station in Jamaica: store price, Florida sales tax, Dennis Shipping, and Jamaica customs (duty, GCT and fees), with EcoFlow DELTA 2 Max and BLUETTI AC180 examples.
+- [Blog | Solar, Batteries & Backup Power in Jamaica](https://setjamaica.com/blog/): News and practical advice on solar batteries, power stations and outages in Jamaica from S.E.T. Jamaica.
+- [Will a US Power Station Work in Jamaica? The 50Hz Check](https://setjamaica.com/guides/50hz-power-stations-jamaica.html): Jamaica's grid is 110V like the US but 50Hz, not 60Hz. See which popular US power stations are rated to charge on 50Hz, which aren't, and the 3 checks to make before you buy.
+- [E-Bike vs Route Taxi in Jamaica: What It Really Costs (2026)](https://setjamaica.com/guides/ebike-vs-taxi-jamaica.html): What a daily commute costs by route taxi, car or e-bike in Jamaica in 2026, how long an e-bike takes to pay for itself, charging from JPS or solar, and the road rules to check first.
+- [Hurricane Power Checklist for Jamaican Homes](https://setjamaica.com/guides/hurricane-prep.html): A practical power checklist for Jamaica's hurricane season: what to charge, what to unplug, how to run backup power safely, and lessons from Hurricane Melissa's island-wide outages.
+- [Plug-and-Play Solar Backup in Jamaica: Set It Up in 3 Steps](https://setjamaica.com/guides/plug-and-play-solar.html): Set up solar backup for a Jamaican home yourself, with no electrician and no wiring: charge a power station, unfold a solar panel, plug in your fridge, fans, lights and Wi-Fi. Kit, prices and safety tips.
+- [What Size Power Station or Battery Do I Need? Jamaica Outage Calculator](https://setjamaica.com/guides/sizing.html): Add the appliances you want to keep running during a JPS outage and see the battery size and power rating you need. Free calculator for Jamaican homes.
+- [Stacking Power Stations in Jamaica: More Hours or More Power?](https://setjamaica.com/guides/stack-power-stations.html): Should you add extra batteries or buy more units? Compare 1 EcoFlow DELTA 2 Max + 2 Extra Batteries with 3 DELTA 2 Max units for Jamaican homes: price, storage, power and how to use them on 50Hz.
+- [Solar & Backup Power Guides for Jamaica](https://setjamaica.com/guides/): Practical guides for Jamaican homes: whether a US power station works on 50Hz, what size backup you need, and a hurricane power checklist.

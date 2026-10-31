@@ -473,7 +473,18 @@ def main():
                 "author": {"@type": "Organization", "name": "S.E.T. Jamaica"},
                 "publisher": {"@type": "Organization", "name": "S.E.T. Sustainable Energy Technology in Jamaica", "logo": f"{SITE}/logo.png"},
                 "speakable": {"@type": "SpeakableSpecification", "cssSelector": [".answer"]}}) + "</script>"
-        faq = re.findall(r"<details[^>]*><summary>(.*?)</summary><p>(.*?)</p></details>", raw, re.S)
+        if meta["path"].startswith("guides/") and meta["path"] != "guides/index.html" and 'class="answer"' in raw:
+            date = re.search(r'<time datetime="([\d-]+)"', raw)
+            article = {
+                "@context": "https://schema.org", "@type": "Article", "headline": html.unescape(meta["title"].split(" | ")[0]),
+                "description": html.unescape(meta["description"]), "url": f"{SITE}/{meta['path']}", "image": f"{SITE}/logo.png",
+                "author": {"@type": "Organization", "name": "S.E.T. Jamaica"},
+                "publisher": {"@type": "Organization", "name": "S.E.T. Sustainable Energy Technology in Jamaica", "logo": f"{SITE}/logo.png"},
+                "speakable": {"@type": "SpeakableSpecification", "cssSelector": [".answer"]}}
+            if date:
+                article["datePublished"] = date.group(1)
+            meta["head"] = meta.get("head", "") + '<script type="application/ld+json">' + json.dumps(article) + "</script>"
+        faq =re.findall(r"<details[^>]*><summary>(.*?)</summary><p>(.*?)</p></details>", raw, re.S)
         if faq:  # FAQ schema on any page that has Q&A details blocks
             meta["head"] = meta.get("head", "") + '\n<script type="application/ld+json">' + json.dumps({
                 "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [

@@ -48,7 +48,7 @@ PICKS = [
      "url": AWIN + "59181&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Fdelta-2-max-portable-power-station&clickref=setja-picks"},
     {"name": "BLUETTI AC180", "kicker": "Best value", "img": "images/picks/bluetti-ac180.webp",
      "specs": ["1,152 Wh", "1,800 W", "LiFePO4", "50/60Hz switchable"],
-     "runs": "Fans, LED lights and Wi-Fi (about 150 W) for roughly 6 hours. Set it to 50Hz once (2-button switch).", "price": "US$499", "store": "BLUETTI US store",
+     "runs": "Fans, LED lights and Wi-Fi (about 150 W) for roughly 6 hours. Set it to 50Hz once (2-button switch).", "price": "US$449", "checked": "Nov 1, 2026", "store": "BLUETTI US store",
      "url": AWIN + "59271&ued=https%3A%2F%2Fwww.bluettipower.com%2Fproducts%2Fac180&clickref=setja-picks"},
     {"name": "BLUETTI Elite 200 V2", "kicker": "Most power for the price", "img": "images/picks/bluetti-elite-200-v2.webp", "checked": "Oct 28, 2026",
      "specs": ["2,073 Wh", "2,600 W", "LiFePO4", "50/60Hz in & out"],
@@ -61,68 +61,84 @@ PICKS = [
      "url": EBAY("EcoFlow DELTA 2 portable power station")},
     {"name": "BLUETTI 200W Solar Panel", "kicker": "Recharge from the sun", "img": "images/picks/bluetti-200w-solar-panel.webp",
      "specs": ["200 W", "Folding", "DC: no 50Hz issue"],
-     "runs": "Recharges a power station when the grid is down for days.", "price": "US$349", "store": "BLUETTI US store",
+     "runs": "Recharges a power station when the grid is down for days.", "price": "US$399", "checked": "Nov 1, 2026", "store": "BLUETTI US store",
      "url": AWIN + "59271&ued=https%3A%2F%2Fwww.bluettipower.com%2Fproducts%2Fbluetti-sp200l-solar-panel-200w&clickref=setja-picks"},
 ]
 # Solar lifestyle picks (2026-10-16): DC/USB gear (or a universal 100-240V 50/60Hz adapter), so the 50Hz rule doesn't apply.
 # Brand-store items only, official images from the brand's own store; Amazon items wait for an approved image source.
 LIFESTYLE_CHECKED = "Oct 28, 2026"
 LIFESTYLE = [
-    {"name": "EcoFlow GLACIER Classic 35L", "kicker": "Solar fridge-freezer", "img": "images/picks/ecoflow-glacier-classic-35l.webp",
+    {"name": "EcoFlow GLACIER Classic 35L", "group": "camp", "kicker": "Solar fridge-freezer", "img": "images/picks/ecoflow-glacier-classic-35l.webp",
      "specs": ["35 L", "12V / solar / AC", "Fridge or freezer"],
      "runs": "Keeps food cold through outages and beach days. Its AC adapter is rated 100–240V 50/60Hz; add the plug-in battery for about 43 hours off-grid.",
      "price": "From US$699", "store": "EcoFlow US store",
      "url": AWIN + "59181&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Fecoflow-glacier-classic-portable-fridge-freezer%3Fvariant%3D42093688913993&clickref=setja-lifestyle"},
-    {"name": "EcoFlow TRAIL 300 DC + 45W solar panel", "kicker": "Fans, lights & phones", "img": "images/picks/ecoflow-trail-300-dc-45w-solar.webp",
+    {"name": "EcoFlow TRAIL 300 DC + 45W solar panel", "group": "camp", "kicker": "Fans, lights & phones", "img": "images/picks/ecoflow-trail-300-dc-45w-solar.webp",
      "specs": ["288 Wh", "USB-C / DC only", "45 W panel"],
      "runs": "A pure-DC kit for USB fans, LED lights, Wi-Fi and phones. No AC outlet, so no 50Hz question.",
      "price": "US$219", "store": "EcoFlow US store",
      "url": AWIN + "59181&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Ftrail-series%3Fvariant%3D54590654808137&clickref=setja-lifestyle"},
-    {"name": "ALLPOWERS PB100 + 21W solar charger", "kicker": "Phone charging off the sun", "img": "images/picks/allpowers-pb100-sp001.webp",
+    {"name": "ALLPOWERS PB100 + 21W solar charger", "group": "home", "kicker": "Phone charging off the sun", "img": "images/picks/allpowers-pb100-sp001.webp",
      "specs": ["24,000 mAh", "100 W USB-C", "21 W solar"],
      "runs": "Charge the power bank on the verandah by day, charge phones all night. Good for school bags and hurricane kits.",
      "price": "US$50", "store": "ALLPOWERS US store",
      "url": AWIN + "40342&ued=https%3A%2F%2Fiallpowers.com%2Fproducts%2Fallpowers-pb100-portable-power-bank-100w-24000mah%3Fvariant%3D44884576600217&clickref=setja-lifestyle"},
-    {"name": "ALLPOWERS SP001 21W solar charger", "kicker": "Solar phone charger", "img": "images/picks/allpowers-sp001-21w.webp",
+    {"name": "ALLPOWERS SP001 21W solar charger", "group": "camp", "kicker": "Solar phone charger", "img": "images/picks/allpowers-sp001-21w.webp",
      "specs": ["21 W", "5 V USB", "Folds flat"],
      "runs": "Charges phones and power banks straight from the sun. Fits in a backpack.",
      "price": "US$39", "store": "ALLPOWERS US store",
      "url": AWIN + "40342&ued=https%3A%2F%2Fiallpowers.com%2Fproducts%2Fallpowers-sp001-5v-21w-portable-foldable-solar-panel%3Fvariant%3D45058752217241&clickref=setja-lifestyle"},
-    {"name": "EcoFlow RAPID Power Bank 25,000mAh", "kicker": "Work through outages", "img": "images/picks/ecoflow-rapid-25000.webp",
+    {"name": "EcoFlow RAPID Power Bank 25,000mAh", "group": "home", "kicker": "Work through outages", "img": "images/picks/ecoflow-rapid-25000.webp",
      "specs": ["25,000 mAh", "170 W", "3 devices"],
      "runs": "Charges a laptop about twice or a phone 4–5 times. Recharges to 50% in about 20 minutes.",
      "price": "US$85.99", "store": "EcoFlow US store",
      "url": AWIN + "59181&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Fecoflow-rapid-power-bank-25000mah-170w%3Fvariant%3D54593882128457&clickref=setja-lifestyle"},
-    {"name": "BLUETTI X20 laptop power bank", "kicker": "Laptop & Wi-Fi backup", "img": "images/picks/bluetti-x20.webp",
+    {"name": "BLUETTI X20 laptop power bank", "group": "home", "kicker": "Laptop & Wi-Fi backup", "img": "images/picks/bluetti-x20.webp",
      "specs": ["153.6 Wh", "288 W", "USB-C"],
      "runs": "Keeps a laptop and router going through a long outage. Fits in a backpack.",
      "price": "US$119", "store": "BLUETTI US store",
      "url": AWIN + "59271&ued=https%3A%2F%2Fwww.bluettipower.com%2Fproducts%2Fx20-portable-power-bank%3Fvariant%3D46173734699227&clickref=setja-lifestyle"},
-    {"name": "EcoFlow 28W Ultra-Light Solar Panel", "kicker": "Pocket solar charger", "img": "images/picks/ecoflow-28w-solar-panel.webp",
+    {"name": "EcoFlow 28W Ultra-Light Solar Panel", "group": "camp", "kicker": "Pocket solar charger", "img": "images/picks/ecoflow-28w-solar-panel.webp",
      "specs": ["28 W", "USB direct charging", "IP68, 1.3 lb"], "checked": "Oct 28, 2026",
      "runs": "Charges phones and power banks straight from the sun, no grid needed. Tablet-sized and waterproof, for the yard, the beach or a blackout.",
      "price": "US$99", "store": "EcoFlow US store",
      "url": AWIN + "59181&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Fecoflow-28w-ultra-light-solar-panel&clickref=setja-lifestyle"},
-    {"name": "Dr.Prepare 700-Lumen Rechargeable LED Work Light", "kicker": "Outage light", "img": "images/picks/renogy-led-work-light.webp",
+    {"name": "Dr.Prepare 700-Lumen Rechargeable LED Work Light", "group": "farm", "kicker": "Barn & night-chore light", "img": "images/picks/renogy-led-work-light.webp",
      "specs": ["700 lumens", "USB rechargeable", "Magnetic base"], "checked": "Oct 28, 2026",
-     "runs": "Charges from any USB port or power bank. Folds, hangs or sticks to metal, and lasts up to 20 hours on low when JPS goes.",
+     "runs": "For feeding and checks after dark in the pen, barn or packing shed. Charges from any USB port or power bank, folds, hangs or sticks to metal, and lasts up to 20 hours on low.",
      "price": "US$16.99", "store": "Renogy US store",
      "url": RENOGY + "dr-prepare-700-lumens-3200mah-foldable-rechargeable-led-work-light&subId1=setja-lifestyle"},
-    {"name": "Renogy 276Wh Power Bank", "kicker": "Big power bank", "img": "images/picks/renogy-276wh-power-bank.webp",
+    {"name": "Renogy 276Wh Power Bank", "group": "farm", "kicker": "Power out in the field", "img": "images/picks/renogy-276wh-power-bank.webp",
      "specs": ["276 Wh", "USB-C fast charge", "12V car port"], "checked": "Oct 28, 2026",
-     "runs": "Charges phones and laptops for days, and its 12V port can run most CPAP machines with a CPAP adapter (sold separately).",
+     "runs": "Charges phones, radios and a laptop for days away from JPS, and its 12V car port runs small 12V gear. At home it can also run most CPAP machines with a CPAP adapter (sold separately).",
      "price": "US$159.99", "store": "Renogy US store",
      "url": RENOGY + "2025-renogy-upgraded-76-800mah-276wh-power-bank&subId1=setja-lifestyle"},
-    {"name": "Ventallion 42-Inch Solar Ceiling Fan with Light", "kicker": "Solar ceiling fan", "img": "images/picks/ventallion-42in-solar-ceiling-fan.webp",
+    {"name": "Ventallion 42-Inch Solar Ceiling Fan with Light", "group": "home", "kicker": "Solar ceiling fan", "img": "images/picks/ventallion-42in-solar-ceiling-fan.webp",
      "specs": ["Solar + USB-C charging", "LiFePO4 battery", "3-colour LED light"], "checked": "Oct 28, 2026",
      "runs": "Runs off its own solar panel, no wiring to JPS. About 10 hours on high or up to 60 on low after a full charge. For the verandah, gazebo or shop front.",
      "price": "US$319", "store": "Ventallion US store",
      "url": VENTALLION + "42-inch-solar-ceiling-fan-with-light-and-battery&subId1=setja-lifestyle"},
-    {"name": "Ventallion 52-Inch Solar Ceiling Fan with Light", "kicker": "Big solar ceiling fan", "img": "images/picks/ventallion-52in-solar-ceiling-fan.webp",
+    {"name": "Ventallion 52-Inch Solar Ceiling Fan with Light", "group": "home", "kicker": "Big solar ceiling fan", "img": "images/picks/ventallion-52in-solar-ceiling-fan.webp",
      "specs": ["Solar + USB-C charging", "12,000mAh LiFePO4", "3-colour LED light"], "checked": "Oct 28, 2026",
      "runs": "A larger panel and battery than the 42-inch. About 13 hours on high or up to 50 on low, so it keeps going through a long outage.",
      "price": "US$349", "store": "Ventallion US store",
      "url": VENTALLION + "52-inch-solar-ceiling-fan-with-light-and-battery&subId1=setja-lifestyle"},
+    # 2026-11-01 (Wayne: Lifestyle split into home / farmers / campers): Renogy Impact (approved). All DC/USB.
+    {"name": "Renogy 200W 12V Solar Starter Kit", "group": "farm", "rank": 1, "kicker": "Solar for the farm shed", "img": "images/picks/renogy-200w-starter-kit.webp",
+     "specs": ["2 x 100 W panels", "30A PWM charge controller", "About 500 Wh a day", "Expands to 400 W"], "checked": "Nov 1, 2026",
+     "runs": "Charges a 12V battery (not included) to run DC water pumps, LED lights or an electric-fence energizer at the pen or field, with no JPS line. Brackets and cables are in the box. Pair it with the 12V LiFePO4 battery under Home batteries.",
+     "price": "US$229.99", "store": "Renogy US store",
+     "url": RENOGY + "200-watt-12-volt-solar-starter-kit&subId1=setja-lifestyle"},
+    {"name": "Renogy 10W Solar Battery Trickle Charger", "group": "farm", "rank": 2, "kicker": "Keep farm batteries charged", "img": "images/picks/renogy-10w-trickle-charger.webp",
+     "specs": ["10 W", "12V batteries", "Clips, ring terminals or 12V plug"], "checked": "Nov 1, 2026",
+     "runs": "Keeps a tractor, truck, boat or electric-fence battery topped up from the sun, so it isn't flat when you need it. Disconnect it before you start the engine.",
+     "price": "US$39.99", "store": "Renogy US store",
+     "url": RENOGY + "10w-solar-battery-trickle-charger-maintainer&subId1=setja-lifestyle"},
+    {"name": "Dr.Prepare Rechargeable Camping Shower Pump", "group": "camp", "kicker": "Beach & river days", "img": "images/picks/dr-prepare-camping-shower-pump.webp",
+     "specs": ["8,000 mAh pump", "Up to 180 min on low", "USB rechargeable", "5 flow settings"], "checked": "Nov 1, 2026",
+     "runs": "Drop the pump in a bucket of water and you have a shower: rinse off sand after the beach, wash up at camp, or bathe during a water lock-off. Recharges from a power bank or solar charger.",
+     "price": "US$29.99", "store": "Renogy US store",
+     "url": RENOGY + "dr-prepare-5-gallons-20l-camping-shower-with-water-pump&subId1=setja-lifestyle"},
 ]
 # E-bikes & trikes: the Mooncool shop grid was removed 2026-10-27 at Mooncool's request (ticket 175302:
 # no dedicated product showcase, official images, exact prices or "verified" badges). E-bikes are covered
@@ -271,7 +287,7 @@ def product_card(p, up):
     <div class="foot">{price}{cta}</div></div></article>"""
 
 
-def picks_grid(up, items=None, checked=PICKS_CHECKED, badge='<p class="fine" style="margin:0 0 .3rem">50Hz: S.E.T. checked the maker&#x27;s published specs. Not a brand endorsement.</p>'):
+def picks_grid(up, items=None, checked=PICKS_CHECKED, badge='<p class="fine" style="margin:0 0 .3rem">50Hz: S.E.T. checked the maker&#x27;s published specs. Not a brand endorsement.</p>', disclose=True):
     # Items with no "img" render text-only, and items with no "price" show no price line (Amazon rules:
     # no static prices; no brand photos until that brand's programme approves us). 2026-10-27
     cards = []
@@ -286,7 +302,21 @@ def picks_grid(up, items=None, checked=PICKS_CHECKED, badge='<p class="fine" sty
     <h3>{esc(p['name'])}</h3><div class="specs">{specs}</div><p class="runs">{esc(p['runs'])}</p>
     {price}
     <div class="foot"><a class="btn btn-primary" href="{esc(p['url'])}" target="_blank" rel="sponsored noopener">See today's price ↗</a></div></div></article>""")
-    return '<div class="grid-4">' + "".join(cards) + '</div>' + f'<p class="fine" style="margin-top:10px">{esc(DISCLOSURE)}</p>'
+    return '<div class="grid-4">' + "".join(cards) + '</div>' + (f'<p class="fine" style="margin-top:10px">{esc(DISCLOSURE)}</p>' if disclose else "")
+
+
+LIFESTYLE_GROUPS = [("home", "For the home", "Fans, power banks and chargers that keep the house going when JPS goes."),
+                    ("farm", "For farmers", "12V solar for pumps, lights and fence batteries out at the pen or field, plus light for night chores."),
+                    ("camp", "Camping &amp; beach days", "Cold drinks, charged phones and a rinse-off shower, away from any outlet.")]
+
+
+def lifestyle_grid(up):
+    out = []
+    for gid, title, blurb in LIFESTYLE_GROUPS:
+        items = sorted((p for p in LIFESTYLE if p.get("group") == gid), key=lambda p: p.get("rank", 9))
+        grid = picks_grid(up, items, LIFESTYLE_CHECKED, '<span class="badge-50">No 50Hz issue</span>', disclose=False)
+        out.append(f'<div class="ls-group" id="lifestyle-{gid}"><h3 class="ls-title">{title}</h3><p class="ls-blurb">{blurb}</p>{grid}</div>')
+    return "".join(out) + f'<p class="fine" style="margin-top:10px">{esc(DISCLOSURE)}</p>'
 
 
 def products_grid(line, up):
@@ -353,7 +383,7 @@ def layout(meta, body):
     body = body.replace("{{edirt}}", picks_grid(up, EDIRT, EDIRT_CHECKED, ""))
     body = body.replace("{{ebikes}}", picks_grid(up, EBIKES, EBIKES_CHECKED, ""))
     body = body.replace("{{inverters}}", picks_grid(up, INVERTERS, INVERTERS_CHECKED, '<span class="badge-50">50Hz-settable (maker spec)</span>'))
-    body = body.replace("{{lifestyle}}",picks_grid(up, LIFESTYLE, LIFESTYLE_CHECKED, '<span class="badge-50">No 50Hz issue</span>'))
+    body = body.replace("{{lifestyle}}", lifestyle_grid(up))
     if "{{parish_map}}" in body:
         body = body.replace("{{parish_map}}", (ROOT / "_build" / "parish_map.svg").read_text(encoding="utf-8"))
     if "{{solar_calc_js}}" in body:

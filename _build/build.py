@@ -148,6 +148,28 @@ ESCOOTERS = [
      "specs": ["Charger 100–240V 50–60Hz (maker manual)", "608 Wh", "37 mi range", "25% hills", "10.5\" self-healing, IP55"],
      "runs": "Biggest battery here for hilly routes, with hydraulic suspension and turn signals. About J$36 to fully charge on JPS.", "store": "eBay", "url": EBAY("NIU KQi 300X")},
 ]
+# E-bikes (2026-10-31, Wayne approved listing now; 50Hz follow-up later). Heybike replied in writing 10/28:
+# Mars 3.0 / Ranger 3.0 Pro chargers 100-240V (no Hz stated; Heybike's charger page says 50-60Hz), images + prices
+# allowed with branding and a "not an authorized Heybike dealer" line. Heybike Awin 36464 is PENDING -> direct
+# heybike.com links until approved, then swap. Heybike warranty excludes use outside the US.
+# NIU BQi-C3 Pro: NIU support (10/28) says charger 100-240V AC; NIU's own store charger listing says
+# "100-240V ~ 2.0A MAX 50-60 Hz". NIU gave no answer on images/prices -> text-only + eBay, like the NIU scooters.
+# Specs/prices from heybike.com product pages and shop.niu.com, Oct 31 2026. Charge cost uses ~J$0.059/Wh (same basis as e-scooters).
+EBIKES_CHECKED = "Oct 31, 2026"
+EBIKES = [
+    {"name": "Heybike Mars 3.0", "kicker": "Folding fat-tyre, full suspension", "img": "images/picks/heybike-mars-3-0.webp",
+     "specs": ["Charger 100–240V (Heybike, in writing)", "624 Wh · up to 65 mi", "750W (1,400W peak) · 95 Nm", "20 x 4\" fat tyres", "UL 2271 + UL 2849"],
+     "runs": "Full suspension and fat tyres soak up rough roads, and it folds to fit a car boot. About J$37 to fully charge on JPS.",
+     "price": "US$1,099", "store": "Heybike US store", "url": "https://www.heybike.com/products/mars-3-0"},
+    {"name": "Heybike Ranger 3.0 Pro", "kicker": "Step-through, longest range", "img": "images/picks/heybike-ranger-3-0-pro.webp",
+     "specs": ["Charger 100–240V (Heybike, in writing)", "720 Wh · up to 90 mi", "750W · hydraulic disc brakes", "Step-through, folding", "UL 2849"],
+     "runs": "Low step-through frame that's easy to get on, with the most range of the three for longer daily trips. About J$43 to fully charge on JPS.",
+     "price": "US$1,399", "store": "Heybike US store", "url": "https://www.heybike.com/products/ranger-3-0-pro"},
+    {"name": "NIU BQi-C3 Pro", "kicker": "Commuter, twin batteries",
+     "specs": ["Charger 100–240V, 50–60Hz (NIU store listing)", "2 x 480 Wh swappable · up to 90 mi", "750W max · 20 mph", "Gates belt drive", "Kevlar-lined tyres"],
+     "runs": "Two swappable batteries, so you can charge one indoors while you ride on the other. Belt drive means no chain to oil. About J$57 to charge both on JPS.",
+     "store": "eBay", "url": EBAY("NIU BQi-C3 Pro")},
+]
 # Home batteries (2026-10-28, Wayne: "find home hybrid batteries"): Vatrer approved on Awin 119703 on 10/28
 # (validDomains vatrerpower.com, US). DC LiFePO4, so no 50Hz issue on the battery itself. Prices from
 # vatrerpower.com products feed, Oct 28 2026. Research: research/edirt-escooter-home-battery-2026-10-28.md
@@ -329,6 +351,7 @@ def layout(meta, body):
     body = body.replace("{{escooters}}", picks_grid(up, ESCOOTERS, ESCOOTERS_CHECKED, "")).replace("{{helmet_url}}", HELMET_URL)
     body = body.replace("{{home_batteries}}", picks_grid(up, HOME_BATTERIES, HOME_BATTERIES_CHECKED, '<span class="badge-50">No 50Hz issue (DC battery)</span>'))
     body = body.replace("{{edirt}}", picks_grid(up, EDIRT, EDIRT_CHECKED, ""))
+    body = body.replace("{{ebikes}}", picks_grid(up, EBIKES, EBIKES_CHECKED, ""))
     body = body.replace("{{inverters}}", picks_grid(up, INVERTERS, INVERTERS_CHECKED, '<span class="badge-50">50Hz-settable (maker spec)</span>'))
     body = body.replace("{{lifestyle}}",picks_grid(up, LIFESTYLE, LIFESTYLE_CHECKED, '<span class="badge-50">No 50Hz issue</span>'))
     if "{{parish_map}}" in body:

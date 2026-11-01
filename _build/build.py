@@ -134,6 +134,12 @@ LIFESTYLE = [
      "runs": "Keeps a tractor, truck, boat or electric-fence battery topped up from the sun, so it isn't flat when you need it. Disconnect it before you start the engine.",
      "price": "US$39.99", "store": "Renogy US store",
      "url": RENOGY + "10w-solar-battery-trickle-charger-maintainer&subId1=setja-lifestyle"},
+    # 2026-11-01 Wayne: add solar fan hat to farmers. No approved brand sells one (EcoFlow Power Hat = solar
+    # charging hat, NO fan) -> generic eBay EPN search, text-only, no static price (same rule as inverters).
+    {"name": "Solar Fan Hat", "group": "farm", "rank": 3, "kicker": "Shade + a breeze in the field",
+     "specs": ["Solar panel powers a brim fan", "Pick one with USB backup", "Wide brim for sun"],
+     "runs": "A wide-brim hat with a small fan in the brim, run by a solar panel on top. Good for long hours in the field, at the market stall or on the farm road. It's a light breeze, not air conditioning; choose one with a USB-rechargeable battery so it keeps blowing under cloud.",
+     "store": "eBay", "url": EBAY("solar fan hat")},
     {"name": "Dr.Prepare Rechargeable Camping Shower Pump", "group": "camp", "kicker": "Beach & river days", "img": "images/picks/dr-prepare-camping-shower-pump.webp",
      "specs": ["8,000 mAh pump", "Up to 180 min on low", "USB rechargeable", "5 flow settings"], "checked": "Nov 1, 2026",
      "runs": "Drop the pump in a bucket of water and you have a shower: rinse off sand after the beach, wash up at camp, or bathe during a water lock-off. Recharges from a power bank or solar charger.",

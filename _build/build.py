@@ -140,6 +140,13 @@ LIFESTYLE = [
      "specs": ["Solar panel powers a brim fan", "Pick one with USB backup", "Wide brim for sun"],
      "runs": "A wide-brim hat with a small fan in the brim, run by a solar panel on top. Good for long hours in the field, at the market stall or on the farm road. It's a light breeze, not air conditioning; choose one with a USB-rechargeable battery so it keeps blowing under cloud.",
      "store": "eBay", "url": EBAY("solar fan hat")},
+    # 2026-11-01 Wayne: add the solar panel hat that charges phones. EcoFlow Awin 59181 (approved); us.ecoflow.com, Nov 1:
+    # M-L US$99, L-XL US$129, in stock. Official image. Solar charging only, no fan.
+    {"name": "EcoFlow Power Hat", "group": "farm", "rank": 4, "kicker": "Charge your phone from your hat", "img": "images/picks/ecoflow-power-hat.webp",
+     "specs": ["Solar panel brim", "USB-A + USB-C out", "UPF 50+", "IP65 waterproof"], "checked": "Nov 1, 2026",
+     "runs": "A wide-brim sun hat with solar panels built in. Plug your phone into its USB-C or USB-A port and it charges while you work the field or walk the farm. Two sizes: M-L (56-58 cm) and L-XL (59-61 cm). It has no fan; for a breeze, see the Solar Fan Hat.",
+     "price": "From US$99", "store": "EcoFlow US store",
+     "url": AWIN + "59181&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Fsolar-power-hat&clickref=setja-lifestyle"},
     {"name": "Dr.Prepare Rechargeable Camping Shower Pump", "group": "camp", "kicker": "Beach & river days", "img": "images/picks/dr-prepare-camping-shower-pump.webp",
      "specs": ["8,000 mAh pump", "Up to 180 min on low", "USB rechargeable", "5 flow settings"], "checked": "Nov 1, 2026",
      "runs": "Drop the pump in a bucket of water and you have a shower: rinse off sand after the beach, wash up at camp, or bathe during a water lock-off. Recharges from a power bank or solar charger.",

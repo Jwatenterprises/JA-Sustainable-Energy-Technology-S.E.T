@@ -21,6 +21,7 @@
 
 ## Blog and guides
 
+- [Renogy Black Friday 2026 for Jamaica](https://setjamaica.com/blog/renogy-black-friday-jamaica.html): Renogy's Black Friday deals checked for Jamaica: 50Hz compatibility, setting the 3500W 48V inverter to 50Hz/110V, and landed costs to Kingston.
 - [What It Really Costs to Ship a Power Station to Jamaica (2026)](https://setjamaica.com/blog/ship-power-station-to-jamaica-cost.html): A worked 2026 breakdown of the landed cost of a US power station in Jamaica: store price, Florida sales tax, Dennis Shipping, and Jamaica customs (duty, GCT and fees), with EcoFlow DELTA 2 Max and BLUETTI AC180 examples.
 - [Blog | Solar, Batteries & Backup Power in Jamaica](https://setjamaica.com/blog/): News and practical advice on solar batteries, power stations and outages in Jamaica from S.E.T. Jamaica.
 - [Will a US Power Station Work in Jamaica? The 50Hz Check](https://setjamaica.com/guides/50hz-power-stations-jamaica.html): Jamaica's grid is 110V like the US but 50Hz, not 60Hz. See which popular US power stations are rated to charge on 50Hz, which aren't, and the 3 checks to make before you buy.

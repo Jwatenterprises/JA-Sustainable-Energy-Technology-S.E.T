@@ -229,6 +229,10 @@ HOME_BATTERIES = [
 # MultiPlus-II 120V (60Hz), Sol-Ark 15K (no frequency on the datasheets we found).
 INVERTERS_CHECKED = "Oct 28, 2026"
 INVERTERS = [
+    {"name": "Renogy 3500W 48V Solar Inverter Charger", "kicker": "Black Friday: 51% off", "img": "images/picks/renogy-3500w-48v-inverter-charger.webp",
+     "specs": ["50/60Hz adjustable (maker spec)", "Output 100–120V adjustable", "3,500W (7kW surge)", "48V battery, 80A MPPT built in"],
+     "runs": "An all-in-one 48V inverter with a solar charge controller and a 40A charger. Your electrician sets it to 50Hz and 110V. Black Friday price to Nov 30.",
+     "price": "US$599.99", "checked": "Nov 2, 2026", "store": "Renogy US store", "url": RENOGY + "48v-3500w-pure-sine-wave-solar-inverter-charger"},
     {"name": "EG4 6000XP Off-Grid Inverter", "kicker": "48V off-grid inverter",
      "specs": ["Output 50/60Hz (maker data sheet)", "120/240V split phase", "6,000W output", "48V battery"],
      "runs": "An all-in-one inverter with a built-in solar charge controller for a home that runs off-grid on its own solar and batteries. Your electrician sets it to 50Hz.",
@@ -241,6 +245,24 @@ INVERTERS = [
      "specs": ["Output 50Hz/60Hz (maker datasheet)", "110/115/120V or 220–240V output", "6,000W rated", "48V battery"],
      "runs": "A low-frequency off-grid inverter whose output voltage can be set to match JPS's 110V, or 220V for larger appliances.",
      "store": "eBay", "url": EBAY("Growatt SPF 6000T DVM-MPV")},
+]
+
+# Renogy Black Friday 2026 (Impact, approved). Prices on renogy.com Nov 2, 2026; pre-sale to Nov 15, BF/CM Nov 16-30.
+RENOGY_BF_CHECKED = "Nov 2, 2026"
+RENOGY_BF = [
+    INVERTERS[0],
+    {"name": "Renogy Rover 60A MPPT Charge Controller", "kicker": "31% off + free Bluetooth module", "img": "images/picks/renogy-rover-60a-mppt.webp",
+     "specs": ["DC: no 50Hz issue", "12V / 24V", "60A MPPT", "Up to 150V of panels"],
+     "runs": "A full-size solar charge controller for a 12V or 24V battery bank. Set the battery type to LiFePO4 for lithium.",
+     "price": "US$276", "store": "Renogy US store", "url": RENOGY + "rover-60-amp-mppt-solar-charge-controller"},
+    {"name": "Renogy Core Mini LiFePO4 Battery", "kicker": "100Ah from US$269", "img": "images/picks/renogy-core-mini-12v.webp",
+     "specs": ["DC: no 50Hz issue", "12.8V", "100 / 200 / 300Ah", "IP65"],
+     "runs": "Compact lithium batteries: 100Ah US$269, 200Ah US$549.99, 300Ah US$699.99. Ask your shipper about lithium rules first.",
+     "price": "from US$269", "store": "Renogy US store", "url": RENOGY + "renogy-12-8v-mini-size-lithium-iron-phosphate-battery"},
+    {"name": "Renogy ShadowFlux 200W Solar Panel", "kicker": "4 for US$789.99", "img": "images/picks/renogy-shadowflux-200w.webp",
+     "specs": ["DC: no 50Hz issue", "200W N-type", "Anti-shading", "IP67"],
+     "runs": "Keeps producing in partial shade from trees or a neighbour's roof. Solar panels are duty-free and GCT-exempt in Jamaica.",
+     "price": "US$201.99", "store": "Renogy US store", "url": RENOGY + "renogy-200w-shadowflux-anti-shading-n-type-solar-panel"},
 ]
 # E-dirt bikes (2026-10-28): only models whose maker's own manual states a 50Hz-capable charger.
 # Sur-Ron Light Bee X 2025 owner's manual §8.2: "For USA and Japan: 100~120V AC, 45~65Hz". No Sur-Ron affiliate
@@ -395,6 +417,7 @@ def layout(meta, body):
     body = body.replace("{{home_batteries}}", picks_grid(up, HOME_BATTERIES, HOME_BATTERIES_CHECKED, '<span class="badge-50">No 50Hz issue (DC battery)</span>'))
     body = body.replace("{{edirt}}", picks_grid(up, EDIRT, EDIRT_CHECKED, ""))
     body = body.replace("{{ebikes}}", picks_grid(up, EBIKES, EBIKES_CHECKED, ""))
+    body = body.replace("{{renogy_bf_grid}}", picks_grid(up, RENOGY_BF, RENOGY_BF_CHECKED)).replace("{{renogy_shop}}", "https://renogy.sjv.io/c/6782322/1182656/14864?u=https%3A%2F%2Fwww.renogy.com%2F")
     body = body.replace("{{inverters}}", picks_grid(up, INVERTERS, INVERTERS_CHECKED, '<span class="badge-50">50Hz-settable (maker spec)</span>'))
     body = body.replace("{{lifestyle}}", lifestyle_grid(up))
     if "{{parish_map}}" in body:

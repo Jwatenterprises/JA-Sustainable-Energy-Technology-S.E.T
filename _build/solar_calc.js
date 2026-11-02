@@ -12,6 +12,9 @@
   var EXPAND = [{n:'EcoFlow DELTA 2 Max + 1 Extra Battery',wh:4096,w:2400,usd:1899,solar:1000,note:'EcoFlow bundle'},
     {n:'EcoFlow DELTA 2 Max + 2 Extra Batteries',wh:6144,w:2400,usd:2847,solar:1000,note:'1 unit + 2 batteries, Oct 21 prices'}];
   var PANEL = {w:200, usd:399}, HOME_BATT = {n:'Vatrer 48V 100Ah wall battery', wh:5120, usd:899.99};
+  // DIY 48V kit (Renogy Black Friday, renogy.com Nov 2, 2026): 3500W 48V inverter charger, 50/60Hz + 100-120V adjustable,
+  // 80A/150V MPPT built in (~4 kW of panels at 48V). Panels: ShadowFlux 200W US$201.99. Battery: Vatrer 48V wall battery (above).
+  var DIY = {n:'Renogy 3500W 48V inverter charger', w:3500, usd:599.99, pv:4000, panel:201.99, checked:'Nov 2, 2026'};
   var GOALS = [{id:'backup',n:'Backup when JPS goes',d:'Keep things running through outages'},{id:'bill',n:'Cut my JPS bill',d:'Make your own power every day'},
     {id:'offgrid',n:'Off-grid',d:'Cabin, farm, shop or yard with no JPS'}];
   // Installed home system (JMD), from published Jamaican installer prices in 2026: solar + inverter + install J$350K-500K per kW
@@ -140,6 +143,17 @@
         pros: ['Up to ' + num(best.u.w * best.n) + ' W across the house', 'If one unit is busy, the others keep going'],
         cons: ['Don\'t link them into one outlet'], cta: ['How to stack power stations', '{{up}}guides/stack-power-stations.html']});
     }
+    // D2: build-it-yourself 48V kit around the Renogy inverter (parts only; a licensed electrician wires it)
+    if (load <= DIY.w * .9 && big <= DIY.w) {
+      var db = Math.max(1, Math.ceil(store * USE / (HOME_BATT.wh * HOME_USE))), dpan = Math.max(1, Math.min(Math.ceil(panel / PANEL.w), Math.floor(DIY.pv / PANEL.w)));
+      var dUse = db * HOME_BATT.wh * HOME_USE;
+      opts.push({id:'diy', tag:'Build it yourself', name: 'Renogy 48V kit: inverter + ' + db + ' × 5 kWh battery', power: true, date: DIY.checked + ' (Black Friday)',
+        r: {usable: dUse, cap: DIY.w, hours: dUse / avg, panels: dpan, capped: Math.ceil(panel / PANEL.w) > dpan, cost: DIY.usd + db * HOME_BATT.usd + dpan * DIY.panel},
+        what: 'A Renogy 3500W 48V inverter charger, ' + db + ' × 5 kWh wall battery and ' + dpan + ' × 200 W panel' + (dpan > 1 ? 's' : '') + '. You buy the parts; a licensed electrician wires it in and sets it to 50Hz and 110V.',
+        pros: ['Black Friday: inverter US$599.99 (was US$1,215.99)', 'Switches to battery by itself when JPS goes', 'Parts cost far below a fully installed system'],
+        cons: ['Needs a licensed electrician', 'Several boxes to ship; sale ends Nov 30'],
+        cta: ['Renogy Black Friday for Jamaica', '{{up}}blog/renogy-black-friday-jamaica.html']});
+    }
     // D: home battery + hybrid inverter, installed by a licensed electrician
     var hb = Math.max(1, Math.ceil(store * USE / (HOME_BATT.wh * HOME_USE))), kwp = Math.max(3, Math.ceil(panel / 1000)), roof = Math.ceil(kwp * 1000 / 400), bkwh = hb * HOME_BATT.wh / 1000;
     var lo = kwp * PV_JMD[0] + bkwh * BATT_JMD[0], hi = kwp * PV_JMD[1] + bkwh * BATT_JMD[1];
@@ -170,7 +184,7 @@
       '<p class="fine" style="margin:0">Estimates only. <a href="{{up}}guides/sizing.html">Detailed sizing guide</a>.</p>';
     $('result').innerHTML = html;
 
-    $('options').innerHTML = '<div class="opts-head"><p class="eyebrow">Your options</p><h2>' + ['', 'One way', 'Two ways', 'Three ways', 'Four ways'][opts.length] + ' to power the same appliances.</h2>' +
+    $('options').innerHTML = '<div class="opts-head"><p class="eyebrow">Your options</p><h2>' + ['', 'One way', 'Two ways', 'Three ways', 'Four ways', 'Five ways'][opts.length] + ' to power the same appliances.</h2>' +
       '<p class="muted">Sized for ' + kwh(daily) + ' a day, ' + num(load) + ' W at once' + (g === 'backup' ? ', through ' + outageLabel(state.outage) : '') + ', in ' + p[1] + '.</p></div>' +
       '<div class="opts">' + opts.map(function (o) {
         var hPct = Math.min(100, o.r.hours / target * 100), wPct = Math.min(100, load / o.r.cap * 100), okH = o.r.hours >= target * .98, okW = o.power && load <= o.r.cap;
@@ -187,7 +201,7 @@
           (o.home ? '<p class="opt-price">' + jm(o.lo) + '–' + jm(o.hi).slice(2) + ' <span>installed, all in (≈ US$' + num(o.lo / FX / 1000) + 'K–' + num(o.hi / FX / 1000) + 'K)</span></p>' +
             '<p class="fine">Typical range from published Jamaican installer prices, 2026. Your quote depends on your roof, wiring and brands.</p>'
           : '<p class="opt-price">About ' + money(o.r.cost) + '</p>' +
-            '<p class="fine">Brand US stores incl. panels, ' + (o.date || 'Oct 29, 2026') + '. Before shipping and customs. Prices change.</p>') +
+            '<p class="fine">Brand US stores incl. panels' + (o.id === 'diy' ? ', parts only (add your electrician)' : '') + ', ' + (o.date || 'Oct 29, 2026') + '. Before shipping and customs. Prices change.</p>') +
           '<a class="btn ' + (o.home ? 'btn-wa' : 'btn-ghost') + '" href="' + o.cta[1] + '">' + o.cta[0] + '</a></article>';
       }).join('') + '</div>';
   }

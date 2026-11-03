@@ -48,7 +48,7 @@ PICKS = [
      "url": AWIN + "59181&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Fdelta-2-max-portable-power-station&clickref=setja-picks"},
     {"name": "BLUETTI AC180", "kicker": "Best value", "img": "images/picks/bluetti-ac180.webp",
      "specs": ["1,152 Wh", "1,800 W", "LiFePO4", "50/60Hz switchable"],
-     "runs": "Fans, LED lights and Wi-Fi (about 150 W) for roughly 6 hours. Set it to 50Hz once (2-button switch).", "price": "US$449", "checked": "Nov 1, 2026", "store": "BLUETTI US store",
+     "runs": "Fans, LED lights and Wi-Fi (about 150 W) for roughly 6 hours. Set it to 50Hz once (2-button switch).", "price": "US$499", "checked": "Nov 2, 2026", "store": "BLUETTI US store",
      "url": AWIN + "59271&ued=https%3A%2F%2Fwww.bluettipower.com%2Fproducts%2Fac180&clickref=setja-picks"},
     {"name": "BLUETTI Elite 200 V2", "kicker": "Most power for the price", "img": "images/picks/bluetti-elite-200-v2.webp", "checked": "Oct 28, 2026",
      "specs": ["2,073 Wh", "2,600 W", "LiFePO4", "50/60Hz in & out"],

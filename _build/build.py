@@ -457,7 +457,7 @@ def layout(meta, body):
 <div class="util"><div class="wrap"><span>US store prices</span><span>Door-to-door from Florida</span><span>Every pick checked for Jamaica's 50Hz grid</span></div></div>
 <header class="site-header">
   <div class="wrap header-row">
-    <a class="brand" href="{up}index.html" aria-label="S.E.T. Sustainable Energy Technology in Jamaica, home"><picture><source srcset="{up}images/logo-lockup.webp" type="image/webp"><img src="{up}images/logo-lockup.png" alt="Sustainable Energy Technology S.E.T. logo" width="554" height="180"></picture></a>
+    <a class="brand" href="/" aria-label="S.E.T. Sustainable Energy Technology in Jamaica, home"><picture><source srcset="{up}images/logo-lockup.webp" type="image/webp"><img src="{up}images/logo-lockup.png" alt="Sustainable Energy Technology S.E.T. logo" width="554" height="180"></picture></a>
     <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
     <nav id="primary-nav" class="nav" aria-label="Primary">{nav}</nav>
     <div class="header-cta"><a class="btn btn-wa" href="{wa('Hi S.E.T. Jamaica, ')}">WhatsApp us</a></div>
@@ -519,7 +519,7 @@ def product_page(p):
         offer = {"@type": "Offer", "price": p["price_jmd"], "priceCurrency": "JMD", "availability": "https://schema.org/InStock"}
     else:
         price = f'<p class="price-tba">Lands {esc(p.get("eta", "soon"))}. Reserve now, pay nothing until it arrives.</p>'
-        btns = ['<a class="btn btn-primary" href="../index.html#reserve">Reserve</a>',
+        btns = ['<a class="btn btn-primary" href="/#reserve">Reserve</a>',
                 f'<a class="btn btn-wa" href="{wa("Hi S.E.T. Jamaica, please reserve the " + p["name"] + " for me.")}">Reserve on WhatsApp</a>']
         offer = {"@type": "Offer", "priceCurrency": "JMD", "availability": "https://schema.org/PreOrder"}
     ld = json.dumps({"@context": "https://schema.org", "@type": "Product", "name": p["name"], "sku": p["sku"],

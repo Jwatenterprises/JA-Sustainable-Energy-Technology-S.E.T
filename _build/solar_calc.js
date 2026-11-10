@@ -8,7 +8,7 @@
     {n:'Ceiling fan',w:60,h:8,q:1},{n:'Microwave',w:1100,h:.3,q:1},{n:'Water pump',w:750,h:1,q:1},{n:'Washing machine',w:500,h:1,q:1},{n:'Inverter AC 12k BTU',w:900,h:8,q:1}];
   // Brand US-store prices checked Oct 29, 2026 (AC180 US$499 Nov 2) (2 Extra Batteries: Oct 21; Vatrer: Oct 28). solar = max solar input in W.
   var UNITS = [{n:'BLUETTI AC180',wh:1152,w:1800,usd:499,solar:500},{n:'BLUETTI Elite 200 V2',wh:2073,w:2600,usd:899,solar:1200},
-    {n:'EcoFlow DELTA 2 Max',wh:2048,w:2400,usd:1049,solar:1000}];
+    {n:'EcoFlow DELTA 2 Max',wh:2048,w:2400,usd:1029,solar:1000}];
   var EXPAND = [{n:'EcoFlow DELTA 2 Max + 1 Extra Battery',wh:4096,w:2400,usd:1899,solar:1000,note:'EcoFlow bundle'},
     {n:'EcoFlow DELTA 2 Max + 2 Extra Batteries',wh:6144,w:2400,usd:2847,solar:1000,note:'1 unit + 2 batteries, Oct 21 prices'}];
   var PANEL = {w:200, usd:399}, HOME_BATT = {n:'Vatrer 48V 100Ah wall battery', wh:5120, usd:899.99};

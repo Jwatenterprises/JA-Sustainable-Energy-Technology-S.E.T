@@ -1,4 +1,12 @@
 <!-- title: What Size Power Station or Battery Do I Need? Jamaica Outage Calculator | S.E.T. Jamaica | description: Add the appliances you want to keep running during a JPS outage and see the battery size and power rating you need. Free calculator for Jamaican homes. | path: guides/sizing.html | nav: guides -->
+<style>
+.calc-match{margin:18px 0 8px}.calc-match h3{margin:0 0 10px}
+.cm-card{display:flex;gap:14px;align-items:center;border:1px solid #e2e8f0;border-radius:12px;padding:12px;margin-bottom:10px;background:#fff}
+.cm-card img{width:84px;height:84px;object-fit:contain;flex:none}.cm-card strong{display:block}
+.cm-spec,.cm-why,.cm-fine{display:block;font-size:.9rem;margin:2px 0}.cm-spec{color:#0f766e;font-weight:600}.cm-fine{color:#64748b;font-size:.82rem}
+.cm-card .btn{margin-top:6px;display:inline-block}.cm-big{background:#fff8ec;border-left:4px solid #f59e0b;padding:10px 14px;border-radius:0 8px 8px 0}
+@media(max-width:560px){.cm-card{align-items:flex-start}.cm-card img{width:64px;height:64px}}
+</style>
 <article class="article">
   <div class="wrap narrow">
     <p class="eyebrow">Sizing guide</p>
@@ -100,7 +108,49 @@
     document.getElementById("r-bat").textContent = bat.toLocaleString() + " Wh+";
     document.getElementById("r-w").textContent = w.toLocaleString() + " W";
   }
-  calc.addEventListener("input", update);
-  update();
+  // Model match (added 2026-11-10): 50Hz-verified picks from the S.E.T. catalog
+  var PICKS = [
+    {n:"BLUETTI AC180", wh:1152, w:1800, price:499, p:"US$499 (BLUETTI US store, Nov 2, 2026)", img:"../images/picks/bluetti-ac180.webp",
+     u:"https://www.awin1.com/cread.php?awinaffid=2881111&awinmid=59271&ued=https%3A%2F%2Fwww.bluettipower.com%2Fproducts%2Fac180&clickref=setja-calc", note:"Set it to 50Hz once (2-button switch)."},
+    {n:"BLUETTI Elite 200 V2", wh:2073, w:2600, price:899, p:"US$899 (BLUETTI US store, Oct 28, 2026)", img:"../images/picks/bluetti-elite-200-v2.webp",
+     u:"https://www.awin1.com/cread.php?awinaffid=2881111&awinmid=59271&ued=https%3A%2F%2Fwww.bluettipower.com%2Fproducts%2Felite-200-v2-portable-power-station&clickref=setja-calc", note:"Most watts for the price. Not expandable. Set 50Hz once in settings (P01)."},
+    {n:"EcoFlow DELTA 2 Max", wh:2048, w:2400, price:1029, p:"US$1,029 (EcoFlow US store, Nov 9, 2026)", img:"../images/picks/ecoflow-delta-2-max.webp",
+     u:"https://www.awin1.com/cread.php?awinaffid=2881111&awinmid=59181&ued=https%3A%2F%2Fus.ecoflow.com%2Fproducts%2Fdelta-2-max-portable-power-station&clickref=setja-calc", note:"Handles 50Hz automatically. Expands to 6,144 Wh with up to 2 Extra Batteries (sold separately)."}
+  ];
+  var match = document.createElement("div");
+  match.className = "calc-match";
+  match.setAttribute("aria-live", "polite");
+  calc.parentNode.insertBefore(match, calc.nextSibling);
+  function card(p, why) {
+    return '<div class="cm-card"><img src="' + p.img + '" alt="' + p.n + '" loading="lazy"><div><strong>' + p.n + '</strong>' +
+      '<span class="cm-spec">' + p.wh.toLocaleString() + ' Wh &middot; ' + p.w.toLocaleString() + ' W &middot; 50Hz</span>' +
+      '<span class="cm-why">' + why + '</span><span class="cm-fine">' + p.note + ' ' + p.p + '. Prices change.</span>' +
+      '<a class="btn btn-primary" href="' + p.u + '" target="_blank" rel="sponsored noopener">See today&rsquo;s price &#8599;</a></div></div>';
+  }
+  function recommend(bat, w, motor) {
+    if (bat === 0) { match.innerHTML = ""; return; }
+    var fit = PICKS.filter(function (p) { return p.wh >= bat && p.w >= w; })
+      .sort(function (a, b) { return a.price - b.price; });
+    var html = '<h3>50Hz models that fit your list</h3>';
+    if (fit.length) {
+      html += fit.slice(0, 2).map(function (p, i) { return card(p, i === 0 ? "Lowest-priced 50Hz pick that covers your list." : "Another fit, with more headroom."); }).join("");
+    } else if (bat <= 6144 && w <= 2400) {
+      html += card(PICKS[2], "Your list needs more than 2 kWh: start with the DELTA 2 Max and add Extra Batteries (up to 6,144 Wh).");
+    } else {
+      html += '<p class="cm-big">That&rsquo;s more than a power station is built for. Look at a <a href="../shop/">48V home battery</a> with a solar inverter, installed by a licensed electrician, or <a href="https://wa.me/18574459407?text=Hi%20S.E.T.%20Jamaica%2C%20my%20outage%20list%20needs%20about%20' + bat + '%20Wh.%20Can%20you%20help%3F">send us your list on WhatsApp</a>.</p>';
+    }
+    if (motor) html += '<p class="cm-fine">Fridges and freezers pull a start-up surge of roughly 600&ndash;1,200 W. All three picks are pure sine wave and rated above that, but avoid starting a microwave at the same moment.</p>';
+    html += '<p class="cm-fine"><strong>Landed cost:</strong> store price, plus about US$55&ndash;95 a box with Dennis Shipping (billed by box size), plus any duty or GCT, which depends on how Customs classifies it. <a href="landed-cost.html">Estimate your total &rarr;</a></p>';
+    match.innerHTML = html;
+  }
+  function refresh() {
+    update();
+    var bat = parseInt(document.getElementById("r-bat").textContent.replace(/[^0-9]/g, ""), 10) || 0;
+    var w = parseInt(document.getElementById("r-w").textContent.replace(/[^0-9]/g, ""), 10) || 0;
+    var motor = (+document.getElementById("q0").value || 0) + (+document.getElementById("q1").value || 0) > 0;
+    recommend(bat, w, motor);
+  }
+  calc.addEventListener("input", refresh);
+  refresh();
 })();
 </script>

@@ -1,0 +1,107 @@
+<!-- title: Landed Cost Calculator: Power Station Price + Shipping + Customs to Jamaica | S.E.T. Jamaica | description: Estimate what a power station or battery really costs delivered to Jamaica: US store price, Florida sales tax, Dennis Shipping freight, and what to know about duty and GCT. | path: guides/landed-cost.html | nav: guides -->
+<style>
+.lc{border:1px solid #e2e8f0;border-radius:14px;padding:18px;background:#fff;margin:14px 0}
+.lc-row{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:8px 0;border-bottom:1px solid #f1f5f9;flex-wrap:wrap}
+.lc-row label{font-weight:600;flex:1 1 220px}.lc-row input[type=number]{width:140px;padding:9px 10px;border:1.5px solid #cbd5e1;border-radius:8px;font-size:1rem}
+.lc-row select{padding:9px 10px;border:1.5px solid #cbd5e1;border-radius:8px;font-size:.95rem;max-width:100%}
+.lc-out{background:#0f3d2e;color:#fff;border-radius:12px;padding:16px;margin-top:14px}.lc-out strong{font-size:1.5rem;display:block}
+.lc-out .lc-line{display:flex;justify-content:space-between;gap:10px;font-size:.92rem;padding:3px 0;opacity:.95}
+.lc-note{font-size:.85rem;color:#475569;margin-top:8px}
+</style>
+<article class="article">
+  <div class="wrap narrow">
+    <p class="eyebrow">Shop &amp; Ship guide</p>
+    <h1>What will it really cost to land it in Jamaica?</h1>
+    <p class="byline">By the S.E.T. Jamaica team &middot; Updated November 10, 2026 &middot; Planning estimate, not a customs ruling</p>
+
+    <div class="answer">
+      <p><strong>Short answer:</strong> your total is the US store price, plus Florida sales tax if it&rsquo;s delivered to a Florida address (typically 7% in Broward and Miami-Dade), plus about <strong>US$55&ndash;95</strong> a box with Dennis Shipping, plus any duty and GCT. Customs charges depend on the item&rsquo;s value and how Jamaica Customs classifies it, so get a quote before you ship.</p>
+    </div>
+
+    <h2>Landed cost estimator</h2>
+    <div class="lc" id="lc">
+      <div class="lc-row"><label for="lcPrice">US store price (US$)</label><input id="lcPrice" type="number" min="0" step="1" value="1029"></div>
+      <div class="lc-row"><label for="lcShipUS">Shipping to the Florida address (US$, often free)</label><input id="lcShipUS" type="number" min="0" step="1" value="0"></div>
+      <div class="lc-row"><label for="lcTax">Florida sales tax (%)</label><input id="lcTax" type="number" min="0" max="10" step="0.5" value="7"></div>
+      <div class="lc-row"><label for="lcFreight">Dennis Shipping freight</label>
+        <select id="lcFreight"><option value="range" selected>Typical power-station box: about US$55&ndash;95</option><option value="custom">I have a Dennis quote</option></select>
+        <input id="lcFreightQ" type="number" min="0" step="1" placeholder="Quote US$" hidden></div>
+      <div class="lc-row"><label for="lcCustoms">Customs situation</label>
+        <select id="lcCustoms">
+          <option value="unknown" selected>Not sure yet (show as &ldquo;get a quote&rdquo;)</option>
+          <option value="deminimis">Personal shipment, FOB value US$100 or less</option>
+          <option value="solar">Lithium battery for solar use (GCT exemption EC3)</option>
+          <option value="quoted">A broker quoted me a duty + tax rate</option>
+        </select>
+        <input id="lcRate" type="number" min="0" max="100" step="0.5" placeholder="Quoted % of CIF" hidden></div>
+      <div class="lc-out" aria-live="polite">
+        <span>Estimated landed cost</span><strong id="lcTotal">&ndash;</strong>
+        <div id="lcLines"></div>
+      </div>
+      <p class="lc-note">CIF here = store price + US shipping + freight (Customs values shipments on cost, insurance and freight). Exchange rate, local delivery, and any courier handling fees are not included.</p>
+    </div>
+
+    <h2>What we know about duty and GCT</h2>
+    <ul>
+      <li><strong>Under US$100:</strong> personal shipments with an FOB value of US$100 or less are exempt from import duties and taxes (the threshold rose from US$50 in April 2024). Above that, charges apply to the full CIF value.</li>
+      <li><strong>Lithium batteries for solar:</strong> Jamaica Customs exempts lithium-ion batteries imported for solar applications from GCT using Additional National Code <strong>EC3</strong>, and the CET import-duty suspension on lithium-ion batteries was reported extended to 2027.</li>
+      <li><strong>Power stations are a classification question.</strong> A packaged portable power station may or may not be treated the same way as a solar battery. Ask Dennis or a licensed customs broker how your exact model will be classified before you buy.</li>
+      <li><strong>Ask for the &ldquo;C number&rdquo;.</strong> Jamaica Customs has warned that some couriers add fees they call &ldquo;duty&rdquo;. The Customs Declaration (&ldquo;C&rdquo;) number lets you check what Customs actually charged.</li>
+    </ul>
+    <p class="small muted">Sources: <a href="https://jca.gov.jm/implementation-of-the-approved-suspension-of-the-cet-import-duty-on-a-list-of-eight-8-renewable-energy-and-energy-efficient-technologies/" rel="noopener">Jamaica Customs Agency</a>, <a href="https://www.dhl.com/discover/en-tw/ship-with-dhl/export-with-dhl/Jamaica-de-minimis" rel="noopener">DHL (Jamaica de minimis)</a>, <a href="https://past.jamaica-gleaner.com/article/business/20241218/tariff-suspension-lithium-ion-batteries-extended-until-2027" rel="noopener">Gleaner (CET suspension to 2027)</a>, <a href="https://jamaica-gleaner.com/index%2Ephp/article/news/20261011/downright-robbery-customs-boss-claims-some-courier-companies-including" rel="noopener">Gleaner (courier fees, Oct 2026)</a>. Rules change; confirm with Customs or a broker.</p>
+
+    <h2>Weight and size still matter</h2>
+    <ul>
+      <li>Dennis bills by <strong>box size</strong>, so a heavy battery in a normal box costs no more than a light one the same size.</li>
+      <li>48V wall and rack batteries are heavy (often around 40&ndash;50 kg each). Plan two people for delivery and a licensed electrician for the inverter hookup.</li>
+      <li>Ship in the <strong>original retail box</strong>, and ask Dennis about their current rules for lithium batteries before you drop off.</li>
+    </ul>
+
+    <h2>Before you buy</h2>
+    <ul>
+      <li>Check the model works on 50Hz: <a href="50hz-power-stations-jamaica.html">Will it work on JPS power?</a></li>
+      <li>Size it to your outage list: <a href="sizing.html">What size do I need?</a></li>
+      <li>See the full process: <a href="{{up}}shop-and-ship.html">Shop &amp; Ship in five steps</a></li>
+    </ul>
+
+    <h2>Questions</h2>
+    <h3>Do I pay customs duty on a power station shipped to Jamaica?</h3>
+    <p>It depends on the value and how Jamaica Customs classifies the item. Personal shipments with an FOB value of US$100 or less are exempt from import duties and taxes. Above that, duty and taxes are charged on the CIF value (item price plus insurance and freight). Ask Dennis Shipping or a licensed customs broker what to expect for your specific item before you ship.</p>
+    <h3>Are lithium batteries for solar exempt from GCT in Jamaica?</h3>
+    <p>Jamaica Customs has a GCT exemption for lithium-ion batteries imported for use in solar applications (Additional National Code EC3), and the CET import-duty suspension on lithium-ion batteries was reported extended to 2027. Whether a packaged portable power station qualifies is a classification question, so confirm with Customs or a broker.</p>
+    <h3>How much does Dennis Shipping charge to ship a power station to Jamaica?</h3>
+    <p>Dennis bills by box size rather than weight. For a typical power-station box, plan on roughly US$55 to US$95. Confirm the current rate with Dennis before you ship.</p>
+    <h3>Will I pay Florida sales tax?</h3>
+    <p>Usually yes, if the US store ships to a Florida address. Florida's state sales tax is 6% plus a county surtax; in Broward and Miami-Dade the total is typically 7%.</p>
+  </div>
+</article>
+<script>
+(function () {
+  function $(i) { return document.getElementById(i); }
+  function usd(n) { return "US$" + Math.round(n).toLocaleString(); }
+  function upd() {
+    var price = +$("lcPrice").value || 0, ship = +$("lcShipUS").value || 0, tax = (+$("lcTax").value || 0) / 100;
+    var fq = $("lcFreight").value === "custom"; $("lcFreightQ").hidden = !fq;
+    var cs = $("lcCustoms").value; $("lcRate").hidden = cs !== "quoted";
+    var fLo = fq ? (+$("lcFreightQ").value || 0) : 55, fHi = fq ? fLo : 95;
+    var taxAmt = price * tax, base = price + ship + taxAmt;
+    var lines = ['<div class="lc-line"><span>Store price</span><span>' + usd(price) + '</span></div>'];
+    if (ship) lines.push('<div class="lc-line"><span>US shipping</span><span>' + usd(ship) + '</span></div>');
+    if (taxAmt) lines.push('<div class="lc-line"><span>Florida sales tax</span><span>' + usd(taxAmt) + '</span></div>');
+    lines.push('<div class="lc-line"><span>Dennis freight</span><span>' + (fLo === fHi ? usd(fLo) : usd(fLo) + "&ndash;" + usd(fHi)) + '</span></div>');
+    var cLo = 0, cHi = 0, cText;
+    if (cs === "deminimis") { cText = price <= 100 ? "US$0 (under the US$100 threshold)" : "Over US$100, so this doesn&rsquo;t apply"; }
+    else if (cs === "solar") { cText = "GCT may be exempt (EC3); confirm any duty with a broker"; }
+    else if (cs === "quoted") { var r = (+$("lcRate").value || 0) / 100; cLo = (price + ship + fLo) * r; cHi = (price + ship + fHi) * r; cText = r ? (cLo === cHi ? usd(cLo) : usd(cLo) + "&ndash;" + usd(cHi)) : "Enter the quoted %"; }
+    else { cText = "Get a quote (depends on classification)"; }
+    lines.push('<div class="lc-line"><span>Duty + GCT</span><span>' + cText + '</span></div>');
+    var lo = base + fLo + cLo, hi = base + fHi + cHi;
+    var pending = cs === "unknown" || cs === "solar" || (cs === "deminimis" && price > 100);
+    $("lcTotal").innerHTML = (lo === hi ? usd(lo) : usd(lo) + "&ndash;" + usd(hi)) + (pending ? " + customs" : "");
+    $("lcLines").innerHTML = lines.join("");
+  }
+  ["lcPrice", "lcShipUS", "lcTax", "lcFreight", "lcFreightQ", "lcCustoms", "lcRate"].forEach(function (i) { $(i).addEventListener("input", upd); $(i).addEventListener("change", upd); });
+  upd();
+})();
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do I pay customs duty on a power station shipped to Jamaica?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the value and how Jamaica Customs classifies the item. Personal shipments with an FOB value of US$100 or less are exempt from import duties and taxes. Above that, duty and taxes are charged on the CIF value (item price plus insurance and freight). Ask Dennis Shipping or a licensed customs broker what to expect for your specific item before you ship."}}, {"@type": "Question", "name": "Are lithium batteries for solar exempt from GCT in Jamaica?", "acceptedAnswer": {"@type": "Answer", "text": "Jamaica Customs has a GCT exemption for lithium-ion batteries imported for use in solar applications (Additional National Code EC3), and the CET import-duty suspension on lithium-ion batteries was reported extended to 2027. Whether a packaged portable power station qualifies is a classification question, so confirm with Customs or a broker."}}, {"@type": "Question", "name": "How much does Dennis Shipping charge to ship a power station to Jamaica?", "acceptedAnswer": {"@type": "Answer", "text": "Dennis bills by box size rather than weight. For a typical power-station box, plan on roughly US$55 to US$95. Confirm the current rate with Dennis before you ship."}}, {"@type": "Question", "name": "Will I pay Florida sales tax?", "acceptedAnswer": {"@type": "Answer", "text": "Usually yes, if the US store ships to a Florida address. Florida's state sales tax is 6% plus a county surtax; in Broward and Miami-Dade the total is typically 7%."}}]}</script>
